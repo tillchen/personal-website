@@ -529,21 +529,13 @@ To be filled.
 1. Definition ($\tau$ is a sample of the random variable T):
 
     $$
-    \begin{align}
-    GE(\hat f, \tau) &= E_{X,Y}(L(Y, \hat f_T(X))|T=\tau) \\\\
-    &= \int_{R_Y}\int_{R_X}L(y, \hat f_T(x))\rho(x,y|\tau)dxdy \\\\
-    &= \int_{R_Y}\int_{R_X}L(y, \hat f_T(x))\frac{\rho(x,y,\tau)}{\rho_\tau\tau}dxdy
-    \end{align}
+    \begin{aligned} GE(\hat f, \tau) &= E_{X,Y}(L(Y, \hat f_T(X))|T=\tau) \\\\ &= \int_{R_Y}\int_{R_X}L(y, \hat f_T(x))\rho(x,y|\tau)dxdy \\\\ &= \int_{R_Y}\int_{R_X}L(y, \hat f_T(x))\frac{\rho(x,y,\tau)}{\rho_\tau\tau}dxdy \end{aligned}
     $$
 
 2. Expected generalization/test error
 
     $$
-    \begin{align}
-    EGE(\hat f, \tau) &= E_T(E_{X,Y}(L(Y, \hat f_T(X))|T=\tau)) \\\\
-    &= \int_{R_T}(\int_{R_Y}\int_{R_X}L(y, \hat f_T(x))\rho(x,y|\tau)dxdy)\rho(\tau)d\tau \\\\
-    &= \int_{R_T}\int_{R_Y}\int_{R_X}L(y, \hat f_T(x))\rho(x,y,\tau) dxdyd\tau
-    \end{align}
+    \begin{aligned} EGE(\hat f, \tau) &= E_T(E_{X,Y}(L(Y, \hat f_T(X))|T=\tau)) \\\\ &= \int_{R_T}(\int_{R_Y}\int_{R_X}L(y, \hat f_T(x))\rho(x,y|\tau)dxdy)\rho(\tau)d\tau \\\\ &= \int_{R_T}\int_{R_Y}\int_{R_X}L(y, \hat f_T(x))\rho(x,y,\tau) dxdyd\tau \end{aligned}
     $$
 
 #### Validation Set Error Estimation
