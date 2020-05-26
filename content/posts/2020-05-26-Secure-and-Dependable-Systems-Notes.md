@@ -9,6 +9,7 @@ tags: ["Computer Science"]
 * [Introduction](#introduction)
   * [Recent Computing Disasters](#recent-computing-disasters)
   * [Dependability Concepts and Terminology](#dependability-concepts-and-terminology)
+  * [Dependability Metrics](#dependability-metrics)
 * [Software Engineering Aspects](#software-engineering-aspects)
 * [Software Vulnerabilities and Exploits](#software-vulnerabilities-and-exploits)
 * [Cryptography](#cryptography)
@@ -50,6 +51,34 @@ This is the course notes for Secure and Dependable Systems by Dr. Jürgen Schön
 4. Service and correct service:
     * Service: the behavior perceived by users; a user is another system that receives service from the service provider.
     * Correct service: the service that implements the system function.
+
+5. Failure, error, and fault: (Threats)
+    * Failure: service failure, when the delivered service deviates from correct service.
+    * Error: the part of the total state that may lead to subsequent failure.
+    * Fault: the adjudged or hypothesized cause of an error. A fault is active when it produces an error, otherwise it's dormant.
+    * Fault -> Error -> Failure.
+
+6. Dependability:
+    * The ability of a system to deliver service than can justifiably be trusted.
+    * The ability to avoid service failures that are more frequent and more severe than is acceptable.
+
+7. Dependability attributes:
+    * Availability: readiness to deliver
+    * Reliability: continuity
+    * Safety: no catastrophic consequences
+    * Integrity: no improper alterations
+    * Maintainability: undergo modifications
+    * Confidentiality: no disclosure of info
+
+8. Security - confidentiality, integrity, and availability.
+
+9. Means:
+    * Prevention: preventing the occurence or introduction of faults.
+    * Tolerance: avoiding service failures in the presence of faults.
+    * Removal: reducing the number and severity of faults.
+    * Forecasting: estimating the present number, the future incidence, and the likely consequences of faults.
+
+### Dependability Metrics
 
 ## Software Engineering Aspects
 
