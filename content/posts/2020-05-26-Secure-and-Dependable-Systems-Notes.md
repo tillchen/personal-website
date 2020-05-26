@@ -11,6 +11,8 @@ tags: ["Computer Science"]
   * [Dependability Concepts and Terminology](#dependability-concepts-and-terminology)
   * [Dependability Metrics](#dependability-metrics)
 * [Software Engineering Aspects](#software-engineering-aspects)
+  * [General Aspects](#general-aspects)
+  * [Software Testing](#software-testing)
 * [Software Vulnerabilities and Exploits](#software-vulnerabilities-and-exploits)
 * [Cryptography](#cryptography)
 * [Secure Communication Protocols](#secure-communication-protocols)
@@ -94,6 +96,36 @@ This is the course notes for Secure and Dependable Systems by Dr. Jürgen Schön
     * Mean Time To Catastrophic Failure.
 
 ## Software Engineering Aspects
+
+### General Aspects
+
+1. Defensive programming: requires the preconditions to be checked when a function is called
+
+### Software Testing
+
+1. Unit and regression testing:
+    * Regression testing: testing of an entire program to ensure that a modified version of a program still handles all input correctly that an older version did.
+    * A bug reported by a customer is primarily a weakness of the regression test suite.
+
+2. Test coverages:
+    * Function coverage
+    * Statement coverage
+    * Branch coverage
+    * Predicate coverage (condition coverage): Boolean sub-expression both true and false
+
+3. Mutation testing:
+    * Mutation testing involves modifying a program in small ways.
+    * It evaluates the effectiveness of a test suite.
+    * The source code is modified algorithmically by applying mutation operations in order to produce mutants.
+    * A mutant is killed by the test suite if tests fail for the mutant. Mutants that are not killed indicate that the test suite is incomplete.
+    * The mutation score is the number of mutants killed normalized by the number of mutants.
+
+4. Fuzzing or fuzz testing feeds invalid, unexpected, or simply random data into computer programs.
+
+5. Fault injection inject faults by:
+    * modifying source code (very similar to mutation testing) or
+    * injecting faults at runtime (often via modified library calls)
+    * It's highly effective to test whether software deals with rare failure situations, e.g. the injection of system calls failures that usually work.
 
 ## Software Vulnerabilities and Exploits
 
