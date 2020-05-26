@@ -80,6 +80,19 @@ This is the course notes for Secure and Dependable Systems by Dr. Jürgen Schön
 
 ### Dependability Metrics
 
+1. Reliability and MTTF/MTBF/MTTR:
+    * Reliability: the probability that the system is delivering correct service in the time interval.
+    * MTTF (Mean Time To Failure): non repairable.
+    * MTBF (Mean Time Between Failure): repairable.
+    * MTTR (Mean Time To Repair).
+
+2. Availability: the probability that the system is delivering correct service at time t.
+    * For a repairable system, A = MTBF/(MTBF + MTTR).
+    * 5 nine availability means 99.999%.
+
+3. Safety: the probability that the system is delivering correct service or has failed in the manner that does not cause harm in the interval.
+    * Mean Time To Catastrophic Failure.
+
 ## Software Engineering Aspects
 
 ## Software Vulnerabilities and Exploits
