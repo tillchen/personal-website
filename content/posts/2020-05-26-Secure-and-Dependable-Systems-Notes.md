@@ -13,6 +13,8 @@ tags: ["Computer Science"]
 * [Software Engineering Aspects](#software-engineering-aspects)
   * [General Aspects](#general-aspects)
   * [Software Testing](#software-testing)
+  * [Software Specification](#software-specification)
+  * [Software Verification](#software-verification)
 * [Software Vulnerabilities and Exploits](#software-vulnerabilities-and-exploits)
 * [Cryptography](#cryptography)
 * [Secure Communication Protocols](#secure-communication-protocols)
@@ -126,6 +128,31 @@ This is the course notes for Secure and Dependable Systems by Dr. Jürgen Schön
     * modifying source code (very similar to mutation testing) or
     * injecting faults at runtime (often via modified library calls)
     * It's highly effective to test whether software deals with rare failure situations, e.g. the injection of system calls failures that usually work.
+
+### Software Specification
+
+1. Formal specification: uses a formal (mathematical) notation to provide a precise definition of what a program should do.
+
+2. Formal verification uses logical rules to mathematically prove that a program satisfies a formal specification.
+
+3. Hoare triple: {P}C{Q} (precondition, program, postcondition)
+
+4. Partial correctness and total correctness:
+    * Partially correct: the results satisfy the postcondition Q
+    * Totally correct: partially correct + always terminates [P]C[Q]
+
+5. Notations:
+    * V: variable
+    * E: expression
+    * S: statement (either true or false)
+    * C: command
+    * x,y: auxiliary variables
+
+6. Conditionals and while loop:
+    * IF S THEN $C_1$ ELSE $C_2$ FI
+    * WHILE S DO C OD
+
+### Software Verification
 
 ## Software Vulnerabilities and Exploits
 
