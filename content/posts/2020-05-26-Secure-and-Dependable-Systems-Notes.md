@@ -18,6 +18,12 @@ tags: ["Computer Science"]
 * [Software Vulnerabilities and Exploits](#software-vulnerabilities-and-exploits)
   * [Control Flow Exploits](#control-flow-exploits)
 * [Cryptography](#cryptography)
+  * [Cryptography Primer](#cryptography-primer)
+  * [Symmetric Encryption Algorithms and Block Ciphers](#symmetric-encryption-algorithms-and-block-ciphers)
+  * [Asymmetric Encryption Algorithms](#asymmetric-encryption-algorithms)
+  * [Cryptographic Hash Functions](#cryptographic-hash-functions)
+  * [Digital Signatures and Certificates](#digital-signatures-and-certificates)
+  * [Key Exchange Schemes](#key-exchange-schemes)
 * [Secure Communication Protocols](#secure-communication-protocols)
 * [Information Hiding and Privacy](#information-hiding-and-privacy)
 * [System Security](#system-security)
@@ -242,6 +248,37 @@ This is the course notes for Secure and Dependable Systems by Dr. Jürgen Schön
 5. Format string attack: format strings can be used to crash a program or to execute harmful code.
 
 ## Cryptography
+
+### Cryptography Primer
+
+1. Terminology:
+    * Cryptology: cryptography (secret writing) + cryptanalysis (break ciphers)
+    * Ciper: an algorithm for encryption and decryption
+    * Key: some secret info used as a parameter of a cipher and customizes the encryption algorithm.
+    * The security rests on the secrecy of the keys not the algorithms.
+
+2. Crptosystem: $D_k(E_k(m)) = m$
+
+3. Cryptographic hash function:
+    * Efficient to compute for arbitrary input.
+    * Given a hash value h, difficult to find an input m such that h = H(m) (preimage resistance).
+    * Given an input m, difficult to find another input $m' \neq m$ such that H(m) = H(m') (2nd-preimage resistance).
+    * Difficult to find two different inputs such that H(m) = H(m') (collision resistance).
+
+4. Digital signatures are used to prove the authenticity and integrity of a message.
+    * Authentication: verify the identity
+    * Non-repudiation: cant deny that it sent the message
+    * Integrity: verify it's not tampered with
+
+### Symmetric Encryption Algorithms and Block Ciphers
+
+### Asymmetric Encryption Algorithms
+
+### Cryptographic Hash Functions
+
+### Digital Signatures and Certificates
+
+### Key Exchange Schemes
 
 ## Secure Communication Protocols
 
