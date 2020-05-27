@@ -12,14 +12,14 @@ draft: false
 
 * [View Project](https://github.com/tillchen/JStore_Android)
 * Single-handedly built the Android app that enables students on campus to sell and buy items with ease.
-* 100+ commits. 5000+ LOC (Java + XML). 600+ registered users. Available on Google Play.
+* 100+ commits. 5000+ LOC (Java + XML). 600+ registered users. Available on [Google Play](https://play.google.com/store/apps/details?id=com.tillchen.jstore).
 * Utilized: Java, Android Jetpack, Firebase (Auth, Cloud Firestore (NoSQL), Storage (GCP)).
 
 ## JStore (iOS): A Marketplace for Jacobs University Bremen
 
 * [View Project](https://github.com/tillchen/JStore_iOS)
 * Single-handedly building the iOS app that enables students on campus to sell and buy items with ease.
-* 90+ commits. 2000+ LOC (Swift). 600+ registered users. Available on App Store.
+* 90+ commits. 2000+ LOC (Swift). 600+ registered users. Available on [App Store](https://apps.apple.com/us/app/jstore/id1492876079).
 * Utilized: Swift, iOS SDK, Firebase (Auth, Cloud Firestore (NoSQL), Storage (GCP)).
 
 ## 4minitz - Meeting Minutes Web App
