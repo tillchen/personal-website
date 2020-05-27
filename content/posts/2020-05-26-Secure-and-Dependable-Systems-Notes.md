@@ -25,6 +25,9 @@ tags: ["Computer Science"]
   * [Digital Signatures and Certificates](#digital-signatures-and-certificates)
   * [Key Exchange Schemes](#key-exchange-schemes)
 * [Secure Communication Protocols](#secure-communication-protocols)
+  * [Pretty Good Privacy](#pretty-good-privacy)
+  * [Transport Layer Security](#transport-layer-security)
+  * [Secure Shell](#secure-shell)
 * [Information Hiding and Privacy](#information-hiding-and-privacy)
 * [System Security](#system-security)
 * [References](#references)
@@ -420,6 +423,51 @@ This is the course notes for Secure and Dependable Systems by Dr. Jürgen Schön
 4. BAN (Burrows-Abadi-Needham) logic: a first attempt to provide formalism for authentication protocol analysis.
 
 ## Secure Communication Protocols
+
+### Pretty Good Privacy
+
+1. PGP key management:
+    * Key rings: one key ring for public keys and one key ring for private keys.
+    * Keys are identified by fingerprints.
+    * Key gen utilizes various sources of random info (/dev/random) and symmetric encryption algorithms to generate good key material.
+    * Web of trust: avoid centralized certification authorities.
+
+### Transport Layer Security
+
+1. TLS, formerly known as SSL (Secure Socket Layer) was made to enable e-commerce.
+
+2. TPS uses X.509 certificates to authenticate servers and clients.
+
+3. TLS protocols:
+    * Handshake Protocol: authenticates, negotiates cryptographic modes and parameters, and establishes shared keying material.
+    * Alert Protocol: communicates alters like closure alters and error alters.
+    * Record Protocol: uses the parameters established by the handshake protocol to protect traffic between the communicating peers.
+       * Record Protocol is the lowest internal layer and carries the handshake + alert protocol messages + app data.
+
+4. Record Protocol:
+    * Fragments the data
+    * Optionally compresses the data
+    * Adds MAC
+    * Encrypts and transmits the result
+
+5. Handshake Protocol:
+    * Agree on algorithms, exchange random numbers, and check for session resumption
+    * Agree on a premaster secret (parameters)
+    * Exchange certificates and cryptographic info to authenticate
+    * Gen a master secret
+    * Provide security parameters to the record layer
+    * Allow client and server to verify that the peer has calculated the same security parameters and the handshake completed without being tampered.
+    * A full TLS 1.2 handshake requires two round-trips.
+    * Full handshakes are expensive. A seesion resumption requires only one round-trip.
+    * TLS 1.3 supports a 0-rtt (zero round-trip) mode.
+
+6. Change Cipher Spec Protocol: signals transitions in ciphering strategies. (No longer in TLS 1.3)
+
+7. Alter Protocol: signals exceptions (warnings, errors) occured during the processing of TLS protocol messages.
+    * Used to properly close a TLS connection by exchanging close_notify alert messages.
+    * In order to scale servers, it's the best if the clients init the TCP connection teardown and end up in TIME_WAIT.
+
+### Secure Shell
 
 ## Information Hiding and Privacy
 
