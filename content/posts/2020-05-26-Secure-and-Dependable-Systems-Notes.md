@@ -272,6 +272,61 @@ This is the course notes for Secure and Dependable Systems by Dr. Jürgen Schön
 
 ### Symmetric Encryption Algorithms and Block Ciphers
 
+1. Substitution cipher: easier to attach via frequency analysis
+    * Monoaphlaetic: bijection on the set of symbols of an alphabet.
+    * Polyalphabetic: multiple bijections, i.e. a collection of monoalphabeic ciphers.
+
+2. Permutation (transposition) cipher: maps a plaintext $m_0, ... ,m_{l-1}$ to $m_{\tau(0)}, ... , m_{\tau(l-1)}$ where $\tau$ is a bijection of the positions in the message.
+
+3. Product cipher: combines two or more ciphers
+    * Multiple substitution cipher gives another substitution cipher -> little value.
+    * Multiple permutation cipher gives another permutation cipher -> little value.
+    * Substitution + permutation -> harder to break.
+
+4. Chosen plaintext attack and chosen ciphertext attack:
+    * Choose arbitrary cleartext/ciphertext and feed them into E/D to obtain the corresponding ciphertext/cleartext.
+
+5. Polynomial and negligible functions:
+    * Polynomial: $f \in O(p)$ for some polynomial p
+    * Super-polynomial: $f \notin O(p)$ for every polynomial p
+    * Negligible: $f \in O(1/|p|)$ for every polynomial p
+      * A security scheme is secure if the probability of security failure is negligible in terms of the cryptographic key length n.
+
+6. Polynomial time and probabilistic algorithms:
+    * Polynomial time: worst-case time complexity is a polynomial function
+    * Probabilistic algorithm: may return different results when called multiple times for the same input.
+    * Probabilistic polynomial algorithm.
+
+7. One-way function: f can be computed by a polynomial time algorithm, but any polynomial time randomized algorithm F that attempts to compute a pseudo-inverse for f succeeds with negligible probability.
+    * They are super-polynomial hard to invert.
+
+8. Security of ciphers:
+    * Pick two plaintexts $m_0$ and $m_1$ and randomly receives either $E(m_0)$ or $E(m_1)$.
+    * Secure if we can't distinguish between the two situations with a probability that's non-negligibly better than 1/2.
+
+9. Block cipher: a cipher that operates on fixed-length groups of bits called a block.
+    * The last block may need to be padded.
+    * Electronic codebook (ECB): simply slices the input into a sequence of blocks that are encrypted in isolation.
+      * Parallelizable for encryption and decryption; Random access; Lack of diffusion (doesn't hide data pattern)
+    * Cipher block chaining (CBC): feeds the ciphertext of the previous block to the subsequent block.
+      * Parallelizable for decryption but not for encryption; Random access.
+    * Output feedback (OFB): the encryption and decryption work exactly the same.
+      * No parallelization nor random access.
+    * Counter (CTR): improves OFB (sequential and doesn't support random access).
+      * Parallelizable for both encryption and decryption; Random access.
+
+10. Substitution-permutation network: a block cipher whose bijections arise as products of substitution and permutation ciphers.
+    * Substitution step (S-box)
+    * Permutation step (P-box)
+    * Key step (xor)
+
+11. Advanced encryption standard (AES):
+    * Characteristics:
+      * Overall blocksize: 128 bits
+      * Number of parallel S-boxes: 16
+      * Bitsize of an S-box: 8
+      * 10 rounds with 128 bit keys; 12 with 192; 14 with 256
+
 ### Asymmetric Encryption Algorithms
 
 ### Cryptographic Hash Functions
