@@ -29,6 +29,10 @@ tags: ["Computer Science"]
   * [Transport Layer Security](#transport-layer-security)
   * [Secure Shell](#secure-shell)
 * [Information Hiding and Privacy](#information-hiding-and-privacy)
+  * [Steganography and Watermarks](#steganography-and-watermarks)
+  * [Covert Channels](#covert-channels)
+  * [Anonymization Terminology](#anonymization-terminology)
+  * [Mixes and Onion Routing](#mixes-and-onion-routing)
 * [System Security](#system-security)
 * [References](#references)
 
@@ -505,6 +509,24 @@ This is the course notes for Secure and Dependable Systems by Dr. Jürgen Schön
 10. OpenSSh privilege separation: two processes (special and normal privileges).
 
 ## Information Hiding and Privacy
+
+### Steganography and Watermarks
+
+1. Information hiding: conceal the very existence of some kind of info for some specific purpose. Often used together with encryption.
+
+2. Steganography: the embedding of some info (hidden-text) within digital media (cover-text) so that the resulting digital media (stego-text) looks unchanged (imperceptible) to a human/machine.
+    * Unused or redundant bits.
+    * Robust stegnographic methods may survive some typical modifications of stego-texts (cropping/recoding or images).
+    * Media types of large size usually make it easier to hide info.
+
+3. Watermarking: the hidden info itself is not important; the watermark says something about the cover-text.
+    * Steganography: the cover-text is not important; the hidden text is the valuable info and is independent of cover-text.
+
+### Covert Channels
+
+### Anonymization Terminology
+
+### Mixes and Onion Routing
 
 ## System Security
 
