@@ -329,6 +329,24 @@ This is the course notes for Secure and Dependable Systems by Dr. Jürgen Schön
 
 ### Asymmetric Encryption Algorithms
 
+1. Encrypt using the receiver's public key. Decrypt using the receiver's private key.
+
+2. When signing, encrypt using the sender's private key. Decrypt using the sender's public key.
+
+3. Rivest-Shamir-Adleman (RSA):
+    * Key gen:
+      * Gen two large prime numbers p and q of roughly the same length
+      * Compute n = pq and $\phi (n) = (p-1)(q-1)$
+      * Choose e satisfying $1 < e < \phi (n)$ and $gcd(e, \phi (n)) = 1$
+      * Compute d satisfying $1 < d < \phi (n)$ and $ed \\ mod \\ \phi(n)= 1$
+      * Public key: (n,e); private key: (n,d)
+    * Encryption: compute $c_i = m_{i}^e \\ mod \\ n$ for all $m_i$
+    * Decryption: compute $m_i = c_{i}^d \\ mod \\ n$ for all $c_i$
+    * It's computationally intensive and hence used only on small cleartexts.
+
+4. Elliptic curve cryptography (ECC):
+    * Elliptic curve: $E = \\{(x,y)|y^2 = x^3 + ax + b\\} \cup \\{\infty \\}$
+
 ### Cryptographic Hash Functions
 
 ### Digital Signatures and Certificates
