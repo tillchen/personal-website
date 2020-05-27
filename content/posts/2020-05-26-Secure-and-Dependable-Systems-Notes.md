@@ -399,6 +399,26 @@ This is the course notes for Secure and Dependable Systems by Dr. Jürgen Schön
 
 ### Key Exchange Schemes
 
+1. Key exchange (key establishment) is any method by which cryptographic keys are exchanged between two parties.
+    * Ephemeral key: it's generated for each execution of a key establishment process.
+    * Ephemeral keys provide perfect forward secrecy: the ephemeral keys will not be compromised even if long-term keys are compromised in the future.
+    * Keys are easier to break the more they are used.
+
+2. Diffie-Hellman Key Exchange:
+    * Define a prime number p and a primitive root g with g < p.
+    * A randomly picks $x_A \in Z_p$ and computes $y_A = g^{x_a} \\ mod \\ p$ and sends it to B.
+    * B randomly picks $x_B \in Z_p$ and computes $y_B = g^{x_B} \\ mod \\ p$ and sends it to A.
+    * A computes: $K_{AB} = y_{B}^{x_A} \\ mod \\ p = g^{x_Ax_B} \\ mod \\ P$
+    * B computes: $K_{AB} = y_{A}^{x_B} \\ mod \\ p = = g^{x_Ax_B} \\ mod \\ P$
+    * g is a primitive root of $Z_p = \\{0,...,p-1\\}$ if $g^1 \\ mod \\ p$, ..., $g^{p-1} \\ mod \\ p$ produces 1, ..., p-1 in any permutation.
+    * It suffers from Man in the Middle.
+
+3. Needham-Schroeder Protocol and Kerberos Protocol.
+    * The former uses 5 messages
+    * The latter uses 4 messages. It uses time stamps to address the flaw of the former.
+
+4. BAN (Burrows-Abadi-Needham) logic: a first attempt to provide formalism for authentication protocol analysis.
+
 ## Secure Communication Protocols
 
 ## Information Hiding and Privacy
