@@ -463,11 +463,46 @@ This is the course notes for Secure and Dependable Systems by Dr. Jürgen Schön
 
 6. Change Cipher Spec Protocol: signals transitions in ciphering strategies. (No longer in TLS 1.3)
 
-7. Alter Protocol: signals exceptions (warnings, errors) occured during the processing of TLS protocol messages.
+7. Alert Protocol: signals exceptions (warnings, errors) occured during the processing of TLS protocol messages.
     * Used to properly close a TLS connection by exchanging close_notify alert messages.
     * In order to scale servers, it's the best if the clients init the TCP connection teardown and end up in TIME_WAIT.
 
 ### Secure Shell
+
+1. SSH provides a secure connection through which user authentication and several inner protocols can be run.
+
+2. SSH Protocol layers:
+    * Transport Layer Protocol: server authentication, confidentiality, and integrity with perfect forward secrecy.
+    * User Authentication Protocol: can auth by user's keys and also other means like passwords.
+    * Connection Protocol: multiplexes the encrypted data stream into several logical channels.
+
+3. SSH keys, passwords, and passphrases:
+    * Host key:
+      * Every server must have a public/private host key pair
+      * Used for server authentication
+      * Identified by their fingerprint
+    * User key:
+      * Every user must have their own public/private key pairs, optionally used to authenticate users.
+    * User password: remote accounts may use passwords to authenticate users.
+    * Passphrase: user's private key may be protected by a passphrase.
+    * In reality, users often blindly accept the host key offered at the first connection time.
+
+4. TCP forwarding: tunnel unencrypted traffic through an encrypted SSH connection,
+    * `ssh -f joe@example.com -L 2000:example.com:25 -N` creates a tunnel connecting a client to port 25 on `example.com` and provides a listening endpoint on Joe's localhost on port 2000. If a program connects to the lcoal port 2000, it's talking to `example.com` using port 25.
+
+5. X11 forwarding: a special application of TCP forwarding allowing X11 clients on remote machines to access the local X11 server (managing the display and the keyboard/mouse) (run graphical apps remotely)
+
+6. Connection sharing: new SSH connections hook as new channel into an existing SSH connection, reducing session startup times.
+
+7. IP tunneling: tunnel IP packets over an SSH connection by inserting tunnel interfaces into kernels and by configuring IP forwarding.
+    * Essentially a simple VPN over which you can securely send arbitrary IP traffic.
+
+8. SSH agent: maintains client credentials during a login session so that credentials can be reused by different SSH invocations without user interaction.
+
+9. SSh agent forwarding: an SSH server emulates an SSh agent and forwards requests to the SSH agent, creating a chain of SSH agent delegations.
+    * It enables users to access a remote system and from there to access further systems, always accessing the local SSH agent. SSH connections can go over multiple hops in a very convenient way without having to store any user keys on intermediate systems.
+
+10. OpenSSh privilege separation: two processes (special and normal privileges).
 
 ## Information Hiding and Privacy
 
