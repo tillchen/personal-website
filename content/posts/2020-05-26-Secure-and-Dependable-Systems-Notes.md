@@ -16,6 +16,7 @@ tags: ["Computer Science"]
   * [Software Specification](#software-specification)
   * [Software Verification](#software-verification)
 * [Software Vulnerabilities and Exploits](#software-vulnerabilities-and-exploits)
+  * [Control Flow Exploits](#control-flow-exploits)
 * [Cryptography](#cryptography)
 * [Secure Communication Protocols](#secure-communication-protocols)
 * [Information Hiding and Privacy](#information-hiding-and-privacy)
@@ -205,6 +206,26 @@ This is the course notes for Secure and Dependable Systems by Dr. Jürgen Schön
 14. Partial correctness and termination implies total correctness. Total correctness implies partial correctness and termination.
 
 ## Software Vulnerabilities and Exploits
+
+1. Malware:
+    * Virus: replicates by modifying other programs
+    * Worm: replicates itself to spread to other computers
+    * Trojan horse: misleads user of its true intent
+    * Ransomware: blocks access until a ransom is paid
+    * Spyware: gathers info
+
+2. Social engineering: the psychological manipulation of people into performing actions or divulging confidential information.
+    * Phishing
+    * Impersonation
+    * USB drop
+
+3. Backdoor: a method of bypassing normal authentication systems to gain access. They might be created by malicious developers, tools such as compilers, or other malware.
+
+4. Rootkit: a collection of software, typically malicious, designed to enable access that's not otherwise allowed and often masks its existence.
+
+5. Advanced persistent threat: a stealthy computer network threat actor which gains unauthorized access and remains undetected for an extended period.
+
+### Control Flow Exploits
 
 ## Cryptography
 
