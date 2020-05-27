@@ -227,6 +227,20 @@ This is the course notes for Secure and Dependable Systems by Dr. Jürgen Schön
 
 ### Control Flow Exploits
 
+1. Registers:
+    * ebp (rbp): base pointer
+    * esp (rsp): stack pointer
+    * eip (rip): instruction pointer
+
+2. Shellcode: a small piece of code used as the payload in the exploitation. (It's called shellcode because it typically starts a command shell.)
+
+3. Stack buffer overflow: a program writes to a memory address on the call stack outside of the intended data structure, which is usually a fixed-length buffer.
+    * Stack smashing: inject executable code into the program.
+
+4. Return-oriented programming: allows an attach to execute code in the presence of security defenses. An attacher gains control of the call stack to hijack the control flow and executes carefully chosen machine instruction sequences that are already present in the memory.
+
+5. Format string attack: format strings can be used to crash a program or to execute harmful code.
+
 ## Cryptography
 
 ## Secure Communication Protocols
