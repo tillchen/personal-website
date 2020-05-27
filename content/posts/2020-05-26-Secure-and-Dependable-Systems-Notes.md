@@ -349,6 +349,33 @@ This is the course notes for Secure and Dependable Systems by Dr. Jürgen Schön
 
 ### Cryptographic Hash Functions
 
+1. Purposes:
+    * Integrity verification
+    * Authentication
+    * Fingerprints for digital signatures
+    * Adjustable proof of work mechanisms
+
+2. MD (Message Digest); SHA (Secure Hash Algorithm).
+
+3. Merkle-Damgard construction: the message is padded and postfixed with a length value.
+
+4. Hashed message authentication code (HMAC): a type of message authentication code (MAC) involving a cryptographic hash function and secret cryptographic key.
+    * HMAC can be used to verify both data integrity and authenticity.
+    * HMAC doesn't encrypt the message.
+    * The message must be send with the HMAC hash. The receiver will hash it again with the key and match the hash.
+    * Computation: $HMAC_H(k,m) = H((k' \bigoplus opad) || H((k' \bigoplus ipad) || m))$
+      * k' is derived by padding k with 0s or hashing k.
+      * opad is the outer padding: 0x5c5c5c5c...5c
+      * ipad is the inner padding: 0x36363636 ... 36
+      * xor and concatenation
+
+5. Authenticated encryption with associated data:
+    * It's often necessary to combine encryption with authentication.
+    * MAC protects the data against modifications.
+    * Encrypt-then-Mac (EtM): $E_k(M) || H_k(E_k(M))$
+    * Encrypt-and-Mac (EaM): $E_k(M) || H_k(M)$
+    * Mac-then-Encrypt (MtE): $E_k(M || H_k(M))$
+
 ### Digital Signatures and Certificates
 
 ### Key Exchange Schemes
