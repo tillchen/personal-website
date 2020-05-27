@@ -375,8 +375,27 @@ This is the course notes for Secure and Dependable Systems by Dr. Jürgen Schön
     * Encrypt-then-Mac (EtM): $E_k(M) || H_k(E_k(M))$
     * Encrypt-and-Mac (EaM): $E_k(M) || H_k(M)$
     * Mac-then-Encrypt (MtE): $E_k(M || H_k(M))$
+    * EtM is preferred since it protects against chosen ciphertext attacks and avoids ay confidentiality issues from the MAC of the cleartext.
 
 ### Digital Signatures and Certificates
+
+1. Direct signature:
+    * Signer: $S = E_{k^{-1}}(m)$
+    * Verifier: $D_k(S) \stackrel{?}{=} m$
+
+2. Indirect signature of a hash: (faster and more common, but it requires the signature to be sent with the document)
+    * Signer: $S = E_{k^{-1}}(H(m))$
+    * Verifier: $D_k(S) \stackrel{?}{=} H(m)$
+
+3. Public key certificate: an electronic document to prove the ownership of a public key. It contains:
+    * Info about the public key.
+    * Info about the identity of the owner (subject).
+    * The digital signature of an entity that has verified the certificate's content (issuer).
+
+4. Public key infrastructure (PKI): a set of roles, policies, and procedures.
+    * A central element is the certificate authority (CA)
+    * CAs are hierarchically organized. A root CS may delegate some work to trusted secondary CAs.
+    * A key function of a CA is to verify the identity of the subject.
 
 ### Key Exchange Schemes
 
