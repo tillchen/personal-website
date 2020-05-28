@@ -544,6 +544,25 @@ This is the course notes for Secure and Dependable Systems by Dr. Jürgen Schön
 
 ### Covert Channels
 
+1. Covert channels represent unforeseen communication methods that break security policies. They hid the fact that communication takes place.
+
+2. Cover channels embed info in:
+    * header fields of protocol data units (protocol messages)
+    * the timing of protocol data units (inter-arrival messages)
+
+3. Cover channel patterns:
+    * Size modulation: size of a head field or protocol message
+    * Sequence: the sequence of head fields
+    * Add redundancy: new space in a header field or a message
+    * PDU (protocol data unit) corruption/loss: generates corrupted or unitizes packet loss
+    * Random value: in a head field containing a random value
+    * Value modulation: selects one of the values in a header
+    * Reserved/unused: into a reserved or unused header field
+    * Inter-arrival time: alters timing intervals
+    * Rate: alters the data rate
+    * Protocol message order: synthetic protocol message order
+    * Re-transmission: retransmits sent or received messages.
+
 ### Anonymization Terminology
 
 ### Mixes and Onion Routing
