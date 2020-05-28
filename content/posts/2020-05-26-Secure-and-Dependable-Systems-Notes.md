@@ -674,6 +674,25 @@ This is the course notes for Secure and Dependable Systems by Dr. Jürgen Schön
 
 ### Authentication
 
+1. Authentication: verify that it ahs a certain attribute value.
+    * Identificaiotn step: presenting the claimed attribute value (user identifier)
+    * Verification step: presetning or genreating authentication info (e.g. a value singed with a private key) as evidence to prove the binding.
+
+2. Authentication factors:
+    * Knowledge: passowrd, PIN
+    * Possesion: mobile phone, token
+    * Static biometrics: fingerpirnt
+    * Dynamic biometrics: voice, signature, typing rhythm
+
+3. Password authentication: store H(s||p), s is the salt that ensures that the same passwords don't havve the same hash value.
+
+4. Challegne-response authentication: require correct auth info to be provided in reposnse to a challenge.
+    * Password is a special case.
+
+5. One-time password authentication:
+    * The user computes $q = H^n(s||p)$
+    * The server verifies: $H(q) = H(H^n(s||p)) = H^{n+1}(s||p)$ and checks if it matches. If it does, set k = 1 and decrement n. If n becomes 0, a new ini must be performed.
+
 ### Authorization
 
 1. Lampson's access control matrix: greate in theory by difficult in practice (huge.)
