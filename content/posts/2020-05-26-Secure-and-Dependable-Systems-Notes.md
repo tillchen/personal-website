@@ -565,6 +565,38 @@ This is the course notes for Secure and Dependable Systems by Dr. Jürgen Schön
 
 ### Anonymization Terminology
 
+1. Anonymity: the attacker can't sufficiently identify the subject within a set of subjects, the anonymity set.
+    * Larger anonymity set & more evenly distributed -> stronger anonymity
+    * Robustness: hwo stable the quantity of anonymity is against changes
+
+2. Unlinkability
+    * Unlinkability of items of interest (IOIs), the attacker can't sufficiently distinguish whether these IOIs are related.
+    * Sender anonymity means each message is unlinkable.
+
+3. Undetectability: can't sufficiently distinguish whether an IOI exists
+
+4. Unobservability:
+    * undetectability of the IOI against all subjects uninvolved.
+    * anonymity of the subjects involved in the IOI against others involved.
+    * Sender unobservability: undetectable whether any sender within the unobservability set sends.
+    * Relaitonship unobservability: undetectable whether anything is sent out of a set of could-be senders to a set of could-be recipients.
+
+5. Relationships:
+    * unobservability $\Rightarrow$ anonymity
+    * sender/recipient anonymity/unobservability $\Rightarrow$ send/recipient anonymity/unobservability
+
+6. Pseudonymity: the use of pseudonyms as identifiers.
+    * Pseudonym: the identifier other than the real names.
+    * A public key certificate bides the public key to another pseudonym. In case the pseudonym is the real name, it's called an identity certificate.
+
+7. Identifiability: sufficiently identify the subject within the identifiability set.
+    * Identity: any subset of attribute values which sufficiently identifies the person.
+
+8. Identity management: managing various partial identities.
+    * A partial identity is a subset of attribute values of a complete identity (the union of all attribute values of all identities)
+    * A pseudonym might be an identifier for a partial identity.
+    * It's privacy-enhancing if it sufficiently preserves unlinkability
+
 ### Mixes and Onion Routing
 
 ## System Security
