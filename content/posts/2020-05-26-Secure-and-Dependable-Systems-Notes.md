@@ -631,6 +631,47 @@ This is the course notes for Secure and Dependable Systems by Dr. Jürgen Schön
 
 ### Trusted Computing
 
+1. Trusted computing base: the set of hard and software components crititcial to achvieve the systems' security properties.
+    * When other parts are attacked, the device will not misbehave.
+    * Small to veify the correctness.
+    * Tamper-resistant.
+    * Spcial hardware components.
+
+2. It's hard to design software that can be trusted.
+
+3. Goals:
+    * Isolation: separate essentail from general
+    * Attestation: prove a component is in a certain state
+    * Sealing: wrapping of code and data that can only be unwrapped under certain cicumstances.
+    * Code confidentiality: sensitive code and static data can't be obtained by untrusted.
+    * Side-channel resistence: unstructed can't deduce info about the internal state of a trusted component.
+    * Memory protection: protects the integrity and authenticity of data.
+
+4. The first candidates of functions to place into trusted hardware are cryptographic algorithms and key gen and storage.
+
+5. Attestation may be local or remote.
+
+6. Trusted platform module (TPM) is a dedicated microcontroller to secure hardware through integrated cryptographic operations and key storage.
+    * RNG, Endorsement Key (EK), Attestation Identity Keys (AIKs)
+
+7. Trusted and rich execution envrionment:
+    * Trusted Execution Environment (TEE): secure
+    * Rich Execution Environment (REE): non-secure
+    * REE resources are acccessbile from TEE
+
+8. TrustZone Cortex-A/M (ARM)
+    * The non-secure (NS) bit conveys whether the processor works in secure or normal mode.
+    * To perform a context switch, it transits through a monitor mode, which saves and restores the state.
+    * Cotex-M repalces the monitor mode with a faster mechanism to call secure code via multiple secure fucntion entry points.
+    * Cortex-A is for resoruce rich systems like mobile phones.
+    * Cortex-M is for limited systems like embedded.
+
+9. Secuity Guard Extension (SGE, Intel)
+    * Protected parts - enclaves.
+    * Non-enclave code can't access enclave code.
+    * The content of enclaves is loaded when the enclaves are created.
+    * Creation and deletion of enclaves is using the highest privilege. Entering and leaving is using the lowest privilege.
+
 ### Authentication
 
 ### Authorization
