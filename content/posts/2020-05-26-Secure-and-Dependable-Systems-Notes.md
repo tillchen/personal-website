@@ -599,6 +599,26 @@ This is the course notes for Secure and Dependable Systems by Dr. Jürgen Schön
 
 ### Mixes and Onion Routing
 
+1. Mix networks:
+    * It uses special proxies called mixes.
+    * The mixes can filter, collect, recode, and reorder messages to hid conversations.
+      * Removal or duplicate messages
+      * Collection to create an ideally large anonymity set.
+      * Recoding so that incoming and outgoing messages can't be linked.
+      * Reordering so that the order can't be used to link.
+      * Padding so that the message sizes do not reveal info to link.
+
+2. Onion routing:
+    * A message is sent via an overlay network of intermediate routers called a circuit.
+    * A message is cryptographically wrapped multiple itmes that every router unwraps one layer and learns to which router the message needs to be forwarded
+    * No node in the circuit can tell whether the node before is the originator or another intermediary.
+    * Only the final node (exit node) can determine its own location in the chain.
+    * Choose routes difficult to observe. Can provide real-time services.
+
+3. Tor:
+    * Every Tor router has a long-term identity key (sign TLS cert) and a short-term onion key (decrypt to set up circuits and ephemeral keys).
+    * Crucial to use end-to-end encryption to protect against compromised exit node.
+
 ## System Security
 
 ## References
