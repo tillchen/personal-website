@@ -516,11 +516,31 @@ This is the course notes for Secure and Dependable Systems by Dr. Jürgen Schön
 
 2. Steganography: the embedding of some info (hidden-text) within digital media (cover-text) so that the resulting digital media (stego-text) looks unchanged (imperceptible) to a human/machine.
     * Unused or redundant bits.
-    * Robust stegnographic methods may survive some typical modifications of stego-texts (cropping/recoding or images).
+    * Robust steganographic methods may survive some typical modifications of stego-texts (cropping/recoding or images).
     * Media types of large size usually make it easier to hide info.
 
 3. Watermarking: the hidden info itself is not important; the watermark says something about the cover-text.
     * Steganography: the cover-text is not important; the hidden text is the valuable info and is independent of cover-text.
+    * Digital watermarks are widely used for copyright protection and source tracking purposes.
+
+4. Classification of steganographic algorithms:
+    * Fragile vs robust (survive modifications)
+    * Blind vs semi-blind (blind needs the original cover-text for detection/extraction)
+    * Pure vs symmetric (secret key) vs asymmetric (public key) (pure needs no key) (asymmetric needs a secret key for embedding and a public key for extraction)
+
+5. LSB-based image steganography: changes the least-significant bits are difficult for humans to see (three 8-bit color values)
+    * Use a key to select some LSBs to embed info
+    * Encode the info multiple times to achieve robustness against noise.
+    * Problems:
+      * Existence of hidden info may be revealed if the statistical properties of LSBs change.
+      * Fragile against noise such as compression, resizing, cropping, rotating, or additive white Gaussian noise.
+
+6. DCT-based image steganography: image formats like JPEG use discrete cosine transforms (DCT) to encode image data. The manipulation happens in the frequency domain instead of the spatial domain, which reduces visual attacks.
+    * Replace the LSBs of some of the DCT coefficients.
+    * Use a key to select some DCT coefficients.
+    * Problem:
+      * Existence of hidden info may be revealed if the statistical properties of the DCT coefficients are changed.
+      * The risk may be reduced by using a pseudo-random number generator to select coefficients.
 
 ### Covert Channels
 
