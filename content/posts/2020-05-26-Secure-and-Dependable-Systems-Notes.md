@@ -34,6 +34,10 @@ tags: ["Computer Science"]
   * [Anonymization Terminology](#anonymization-terminology)
   * [Mixes and Onion Routing](#mixes-and-onion-routing)
 * [System Security](#system-security)
+  * [Trusted Computing](#trusted-computing)
+  * [Authentication](#authentication)
+  * [Authorization](#authorization)
+  * [Auditing](#auditing)
 * [References](#references)
 
 ## Introduction
@@ -620,6 +624,35 @@ This is the course notes for Secure and Dependable Systems by Dr. Jürgen Schön
     * Crucial to use end-to-end encryption to protect against compromised exit node.
 
 ## System Security
+
+1. Lamspson model: subject authenticates guard, which auhtorizes object. Audit trail audits guard.
+
+2. Isolation: design and deployment.
+
+### Trusted Computing
+
+### Authentication
+
+### Authorization
+
+1. Lampson's access control matrix: greate in theory by difficult in practice (huge.)
+    * Subjects are row headings and objects are column headings. (S X O)
+
+2. Access control list: the column of the matrix. Given an object, have a list of subjects X rights.
+    * Example: Unix inode.
+
+3. Capabliteies: the row of the matrix. Given a subject, have a list of obejcts X rights.
+    * Example: Unix file descriptor.
+
+4. ACL and capabilties are theorically equivalent.
+
+5. Discreiotnary vs mandatory access control:
+    * Deiscriotnary: subjects can define (Unix filesystem permissions)
+    * Mandatory: system controls
+
+### Auditing
+
+1. Auditing: keep a log (audit trail) of decisions. For debugging and forensics.
 
 ## References
 
