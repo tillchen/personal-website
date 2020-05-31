@@ -20,6 +20,8 @@ tags = ['Programming Languages']
 * [Files](#files)
 * [Exceptions](#exceptions)
 * [Testing](#testing)
+* [Install Packages](#install-packages)
+* [PEP8](#pep8)
 * [References](#references)
 
 ## Basics
@@ -279,10 +281,12 @@ tags = ['Programming Languages']
 8. Use annotations/type hints to improve the docs: (optional and informational only)
 
     ```python
-    def foo(word:str) -> str:
+    def foo(word: str) -> str:
         """Take a string and return a string"""
         return word
     ```
+
+9. Python supports both pass-by-value and pass-by-reference. Variables in Python are object references. If there's only assignment, the original object won't change.
 
 ## OOP
 
@@ -397,6 +401,16 @@ tags = ['Programming Languages']
     ```
 
 2. setUp() method can be used to test a class
+
+## Install Packages
+
+1. `sudo python3 -m pip install foo` (foo could also be a tar.gz) installs to our site-packages.
+
+2. We can generate a distribution package by using setuptools.
+
+## PEP8
+
+1. `python3 -m pip install pytest-pep8` `py.test -pep8 foo.py` tests for PEP8 compliance.
 
 ## References
 
