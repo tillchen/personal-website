@@ -307,7 +307,7 @@ disablePathToLower = true
 
 # Sitemap config
 [sitemap]
-  changefreq = "dayly"
+  changefreq = "daily"
   filename = "sitemap.xml"
   priority = 0.5
 

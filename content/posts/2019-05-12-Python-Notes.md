@@ -25,6 +25,12 @@ tags = ["Programming Languages"]
 
 1. Change Case:`.title()` `.upper()` `.lower()`
 2. f-strings are preferred.
+
+    ```python
+    name = "foo"
+    print(f"The name is {name}.")
+    ```
+
 3. Stripping Whitespace: `.lstrip()` `.rstrip()` `.strip()`
 
 ## Numbers
@@ -33,18 +39,24 @@ tags = ["Programming Languages"]
 
     ```python
     universe_age = 14_000_000_000
-    print (universe_age)
+    print(universe_age)
     # Output: 14000000000
     ```
 
 2. Multiple Assignment: `x, y, z = 1, 2, 3`
-3. Constants: No-built in constants, use uppercase as a convention (like in C/C++): `MAX = 100`
+
+3. Constants: no-built in constants, use uppercase as a convention (like in C/C++): `MAX = 100`
+
 4. Exponential: Use \*\*: `a = 2 ** 3`
+
 5. range(): `range(1,11,2)` is 1, 3, 5, 7, 9
 
 ## Lists
 
-1. Inserting: `A.insert(0, foo)`
+1. Adding:
+    * Insert: `A.insert(0, foo)`
+    * Append:`A.append(foo)`
+
 2. Removing:
     * By index
         * del: `del A[0]`
@@ -53,17 +65,23 @@ tags = ["Programming Languages"]
             * `first = A.pop(0)`
     * By value
         * remove(): `A.remove(foo)`
+
 3. Organizing:
     * Sorting (Alphabetically): `A.sort()` `A.sort(reverse=True)` `print(sorted(A))`
     * Reversing (Chronologically): `A.reverse()`
+
 4. `min(A) max(A) sum(A)`
+
 5. List Comprehensions: `A = [a ** 2 for a in range(1,3)]` `A = [1,4]`
-6. Slicing: `A = [0,1,2,3,4]`
+
+6. Slicing (not end-inclusive): `A = [0,1,2,3,4]`
     * `print (A[1:4])` gives 1,2,3
     * `print (A[:4])` is equivalent to `print (A[0:4])`
     * `print (A[1:])` is equivalent to `print (A[1:5])`
     * `print (A[-3:])` is equivalent to `print (A[2:])`
-7. Copying: `B = A[:]` (full slicing) instead of `B = A`
+
+7. Copying: `B = A[:]` (full slicing) instead of `B = A`. Or `B = A.copy()`.
+
 8. Checking existence:
 
     ```python
@@ -85,6 +103,7 @@ tags = ["Programming Languages"]
 ## Tuples
 
 1. Tuples can't be modified: `A = (1,2)` `A[0] = 3` doesn't work.
+
 2. But tuples can be reassigned: `A = (1,2)` `A = (3,2)` works.
 
 ## Dictionaries
@@ -94,12 +113,12 @@ tags = ["Programming Languages"]
     ```python
     A = {"language": "python", "age": 19}
     print(A["language"])
-    # Output: python
     A["height"] = 190 # adding a new pair
     A["language"] = "C++" # modifying
     ```
 
 2. get() (When not sure if the key exists): `print (A.get("weight", "no weight assigned"))`
+
 3. Looping through:
 
     ```python
