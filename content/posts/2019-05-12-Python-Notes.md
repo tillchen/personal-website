@@ -32,6 +32,8 @@ tags = ["Programming Languages"]
 
 4. Everything in Python is an object. Python is object-based.
 
+5. `type()` gives the type of the object.
+
 ## Strings
 
 1. Change Case:`.title()` `.upper()` `.lower()`
@@ -58,6 +60,13 @@ tags = ["Programming Languages"]
     second line
     third line
     '''
+    ```
+
+6. string to list: `string.split("delimiter")`
+
+    ```python
+    my_string = "Hello World"
+    my_list = my_string.split(" ") # ["Hello", "World"]
     ```
 
 ## Numbers
@@ -138,6 +147,8 @@ tags = ["Programming Languages"]
 
 2. But tuples can be reassigned: `A = (1,2)` `A = (3,2)` works.
 
+3. For a single-object tuple like `t = ("Python")`, it becomes a string. But if we add a comma, it becomes a tuple `t = ("Python",)`
+
 ## Dictionaries
 
 1. Basic usage:
@@ -166,6 +177,19 @@ tags = ["Programming Languages"]
 
 4. Lists and dictionaries can be nested into each other or themselves.
 
+5. Check for membership with `in` and `not in`:
+
+    ```python
+    if 'bananas' in fruits:
+        fruits['bananas'] += 1
+    else: # not in
+        fruits['bananas'] = 1
+    ```
+
+6. `setdefault()` to avoid KeyError: `fruits.setdefault(fruit, 0)`
+
+7. `import pprint` `pprint.pprint()` pretty-print for complex data structures.
+
 ## Sets
 
 1. Basic usage:
@@ -174,7 +198,11 @@ tags = ["Programming Languages"]
     languages = {"python", "C++", "C", "python"}
     print (languages)
     # Output {'python', 'C++', 'C'}
+    word = "hello"
+    wordSet = set(word)
     ```
+
+2. `.union()`, `.difference()`, `.intersection()`
 
 ## Input
 
