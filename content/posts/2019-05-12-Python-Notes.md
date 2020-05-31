@@ -38,6 +38,13 @@ tags = ['Programming Languages']
 
 6. `bool()` returns False if it's False/0/empty/None; it returns True if it's not empty.
 
+7. Generator is surrounded by parentheses: (it produces one item at a time, unlike listcomp that produces all data at once)
+
+    ```python
+    for i in (x*3 for x in [1,2,3,4,5]):
+        print(i)
+    ```
+
 ## Strings
 
 1. Change Case:`.title()` `.upper()` `.lower()`
@@ -116,7 +123,9 @@ tags = ['Programming Languages']
 
 4. `min(A) max(A) sum(A)`
 
-5. List Comprehensions: `A = [a ** 2 for a in range(1,3)]` `A = [1,4]`
+5. List Comprehensions:
+    * `A = [a ** 2 for a in range(1,3)]` `A = [1,4]`
+    * `foo = [k for k,v in foo_dictionary.items()]`
 
 6. Slicing (not end-inclusive): `A = [0,1,2,3,4]`
     * `print(A[1:4])` gives 1,2,3
@@ -196,6 +205,14 @@ tags = ['Programming Languages']
 
 7. `import pprint` `pprint.pprint()` pretty-print for complex data structures.
 
+8. Dictionary comprehension:
+
+    ```python
+    flights = {k: v.title()
+               for k,v in flights.items()
+               if v == `foo`} # optional filter
+    ```
+
 ## Sets
 
 1. Basic usage:
@@ -210,6 +227,8 @@ tags = ['Programming Languages']
     ```
 
 2. `.union()`, `.difference()`, `.intersection()`
+
+3. Set comprehension: `foo = {v for v in vowels}`
 
 ## Input
 
@@ -256,6 +275,7 @@ tags = ['Programming Languages']
             print(f'- {language}')
     # more generically, *args
     # **kwargs for key-value pairs
+    # * works on the way in as well: *foo expands the list foo to individual arguments
     ```
 
 6. Importing:
@@ -365,8 +385,8 @@ tags = ['Programming Languages']
     ```python
     try:
         print(1/0)
-    except ZeroDivisionError:
-        print('Can't divide by 0.')
+    except ZeroDivisionError as err:
+        print("Can't divide by 0.", str(err))
     else: # optional
         print('Success')
     ```
@@ -382,6 +402,8 @@ tags = ['Programming Languages']
     else:
          print(len(content.split())) # word count
     ```
+
+3. Raise an error: `raise FileNotFoundError("foo")`
 
 ## Testing
 
