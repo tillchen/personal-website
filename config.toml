@@ -120,7 +120,7 @@ disablePathToLower = true
       # LoveIt CHANGED | 0.2.7 title shown in home page (HTML format is supported)
       title = "Tianyao Chen"
       # subtitle shown in home page
-      subtitle = "Sharing thoughts on Computer Science, Software Engineering, Machine Learning, and Data Science."
+      subtitle = "Mobile (Android & iOS) Engineer. Machine Learning Enthusiast."
       # whether to use typeit animation for subtitle
       typeit = true
       # whether to show social links
