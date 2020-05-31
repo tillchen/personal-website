@@ -6,6 +6,7 @@ description = "Some notes for Python"
 tags = ["Programming Languages"]
 +++
 
+* [Basics](#basics)
 * [Strings](#strings)
 * [Numbers](#numbers)
 * [Lists](#lists)
@@ -21,6 +22,16 @@ tags = ["Programming Languages"]
 * [Testing](#testing)
 * [References](#references)
 
+## Basics
+
+1. If-elif-else
+
+2. `dir(random)` prints all the attributes of the random module.
+
+3. `help(random.randint)` gives the help.
+
+4. Everything in Python is an object. Python is object-based.
+
 ## Strings
 
 1. Change Case:`.title()` `.upper()` `.lower()`
@@ -32,6 +43,22 @@ tags = ["Programming Languages"]
     ```
 
 3. Stripping Whitespace: `.lstrip()` `.rstrip()` `.strip()`
+
+4. `join`: joins the elements of an iterable (list/tuple/dictionary) into a single string:
+
+    ```python
+    A = ["A", "B", "C"]
+    x = "#".join(A) # A#B#C
+    ```
+
+5. Multiline string (' and " are equivalent):
+
+    ```python
+    a = ''' First line
+    second line
+    third line
+    '''
+    ```
 
 ## Numbers
 
@@ -55,7 +82,9 @@ tags = ["Programming Languages"]
 
 1. Adding:
     * Insert: `A.insert(0, foo)`
-    * Append:`A.append(foo)`
+    * Append: `A.append(foo)`
+    * Extend: `A.extend([1,2])`
+    * Concatenate: `A += B`
 
 2. Removing:
     * By index
@@ -75,10 +104,13 @@ tags = ["Programming Languages"]
 5. List Comprehensions: `A = [a ** 2 for a in range(1,3)]` `A = [1,4]`
 
 6. Slicing (not end-inclusive): `A = [0,1,2,3,4]`
-    * `print (A[1:4])` gives 1,2,3
-    * `print (A[:4])` is equivalent to `print (A[0:4])`
-    * `print (A[1:])` is equivalent to `print (A[1:5])`
-    * `print (A[-3:])` is equivalent to `print (A[2:])`
+    * `print(A[1:4])` gives 1,2,3
+    * `print(A[:4])` is equivalent to `print (A[0:4])`
+    * `print(A[1:])` is equivalent to `print (A[1:5])`
+    * `print(A[-3:])` is equivalent to `print (A[2:])`
+    * `print(A[0:5:2])` or `print(A[::2])` gives every second letter.
+    * `print(A[::-1])` prints backwards.
+    * Slicing is nondestructive, while list methods change the state of a list.
 
 7. Copying: `B = A[:]` (full slicing) instead of `B = A`. Or `B = A.copy()`.
 
@@ -87,9 +119,9 @@ tags = ["Programming Languages"]
     ```python
     A = [1,2,3,4,5]
     if 1 in A:
-        print ("1 in A")
+        print("1 in A")
     if 6 not in A:
-        print ("6 not in A")
+        print("6 not in A")
     ```
 
 9. With while loops:
@@ -102,7 +134,7 @@ tags = ["Programming Languages"]
 
 ## Tuples
 
-1. Tuples can't be modified: `A = (1,2)` `A[0] = 3` doesn't work.
+1. Tuples can't be modified: `A = (1,2)` `A[0] = 3` doesn't work. (Immutable list)
 
 2. But tuples can be reassigned: `A = (1,2)` `A = (3,2)` works.
 
@@ -319,3 +351,5 @@ tags = ["Programming Languages"]
 ## References
 
 * [Python Crash Course, 2nd Edition: A Hands-On, Project-Based Introduction to Programming](https://www.amazon.com/Python-Crash-Course-2nd-Edition/dp/1593279280/ref=sr_1_1?keywords=python+crash+course&qid=1558808134&s=gateway&sr=8-1)
+
+* [Head First Python](https://www.goodreads.com/book/show/8933914-head-first-python?ac=1&from_search=true&qid=6qxJAxXHSN&rank=1)
