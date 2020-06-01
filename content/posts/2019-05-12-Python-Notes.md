@@ -187,7 +187,7 @@ tags = ['Programming Languages']
     for k in sorted(A.keys()) # sorted
 
     for v in A.values(): # just values
-    for v in set(A.values()) # unique values
+    for v in set(A.values()): # unique values
     ```
 
 4. Lists and dictionaries can be nested into each other or themselves.
@@ -201,7 +201,7 @@ tags = ['Programming Languages']
         fruits['bananas'] = 1
     ```
 
-6. `setdefault()` to avoid KeyError: `fruits.setdefault(fruit, 0)`
+6. `setdefault()` to avoid KeyError: `x = fruits.setdefault(fruit, 0)` (it returns the value. If it doesn't exist, insert the key with the specified value.)
 
 7. `import pprint` `pprint.pprint()` pretty-print for complex data structures.
 
@@ -210,7 +210,7 @@ tags = ['Programming Languages']
     ```python
     flights = {k: v.title()
                for k,v in flights.items()
-               if v == `foo`} # optional filter
+               if v == 'foo'} # optional filter
     ```
 
 ## Sets
@@ -220,7 +220,7 @@ tags = ['Programming Languages']
     ```python
     empty_set = set()
     languages = {'python', 'C++', 'C', 'python'}
-    print (languages)
+    print(languages)
     # Output {'python', 'C++', 'C'}
     word = 'hello'
     wordSet = set(word)
