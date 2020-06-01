@@ -39,12 +39,14 @@ tags = ["Programming Languages"]
 
 6. `bool()` returns False if it"s False/0/empty/None; it returns True if it"s not empty.
 
-7. Generator is surrounded by parentheses: (it produces one item at a time, unlike listcomp that produces all data at once)
+7. Generator is surrounded by parentheses: (it produces one item at a time, unlike listcomp that produces all data at once).
 
     ```python
     for i in (x*3 for x in [1,2,3,4,5]):
         print(i)
     ```
+
+8. `is` checks if the two variables refer to the same object. `if a is None:`
 
 ## Strings
 
@@ -157,6 +159,13 @@ tags = ["Programming Languages"]
     while 1 in A: # while there is 1 in A
     ```
 
+10. `enumerate()`:
+
+    ```python
+    for i, item in enumerate(a):
+        print(f"{i} - {item}")
+    ```
+
 ## Tuples
 
 1. Tuples can"t be modified: `A = (1,2)` `A[0] = 3` doesn"t work. (Immutable list)
@@ -176,7 +185,7 @@ tags = ["Programming Languages"]
     A["language"] = "C++" # modifying
     ```
 
-2. get() (When not sure if the key exists): `print (A.get("weight", "no weight assigned"))`
+2. get() (When not sure if the key exists): `print (A.get("weight", "no weight assigned"))` (preferred)
 
 3. Looping through:
 
@@ -476,7 +485,7 @@ tags = ["Programming Languages"]
     if type(obj) is type(1):
     ```
 
-7. Use the fact that empty sequences are false:
+7. Use the fact that empty sequences (strings/lists/sets/etc.) are false:
 
     ```python
     if not seq:
@@ -487,6 +496,10 @@ tags = ["Programming Languages"]
     ```
 
 8. `pip3 install autopep8` `autopep8 --in-place foo.py` auto-formats the code.
+
+9. Prefix with an underscore for "private" properties/methods. (As a convention but not a protection.)
+
+10. Add parentheses for continuing a long line of code.
 
 ## Virtual Environments
 
