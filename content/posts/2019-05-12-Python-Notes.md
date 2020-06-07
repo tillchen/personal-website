@@ -24,6 +24,7 @@ tags = ["Programming Languages"]
 * [PEP8](#pep8)
 * [Virtual Environments](#virtual-environments)
 * [Decorators](#decorators)
+* [Generators](#generators)
 * [Miscellaneous](#miscellaneous)
 * [References](#references)
 
@@ -571,6 +572,26 @@ tags = ["Programming Languages"]
         def get_radius(self):
             """Method that should do something."""
     ```
+
+## Generators
+
+1. Generators return the value but save the stack reference, which will be used to resume the execution when `next()` is called.
+
+2. Example:
+
+    ```python
+    def my_generator():
+        yield 1
+        yield 2
+        yield 'a'
+
+    g = my_generator()
+    next(g) # 1
+    next(g) # 2
+    next(g) # a
+    ```
+
+3. `range()` returns a generator, which generates the values on the fly. It's good for handling large data set.
 
 ## Miscellaneous
 
