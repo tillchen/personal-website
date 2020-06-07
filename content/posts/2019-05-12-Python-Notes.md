@@ -585,3 +585,5 @@ tags = ["Programming Languages"]
 * [Python Crash Course, 2nd Edition: A Hands-On, Project-Based Introduction to Programming](https://www.amazon.com/Python-Crash-Course-2nd-Edition/dp/1593279280/ref=sr_1_1?keywords=python+crash+course&qid=1558808134&s=gateway&sr=8-1)
 
 * [Head First Python](https://www.goodreads.com/book/show/8933914-head-first-python?ac=1&from_search=true&qid=6qxJAxXHSN&rank=1)
+
+* [Serious Python: Black-Belt Advice on Deployment, Scalability, Testing, and More](https://www.goodreads.com/book/show/43174990-serious-python?ac=1&from_search=true&qid=rJc3jJI1QR&rank=1)
