@@ -23,6 +23,7 @@ tags = ["Programming Languages"]
 * [Install Packages](#install-packages)
 * [PEP8](#pep8)
 * [Virtual Environments](#virtual-environments)
+* [Decorators](#decorators)
 * [Miscellaneous](#miscellaneous)
 * [References](#references)
 
@@ -516,11 +517,52 @@ tags = ["Programming Languages"]
     deactivate
     ```
 
+## Decorators
+
+1. A decorator is a function that takes another function as an argument and replaces it with a new modified function.
+
+2. Creation:
+
+    ```python
+    def identity(f):
+        return f
+
+    @identity
+    def foo():
+        return 'bar'
+    # This same as foo = identity(foo)
+    ```
+
+3. Static methods:
+
+    ```python
+    class Pizza:
+        @staticmethod
+        def mix_ingredients(x, y):
+            return x + y
+
+    three = Pizza.mix_ingredients(1, 2)
+    ```
+
+4. Class methods (used for factory methods. which instantiate objects using a different signature other than `__init__`):
+
+    ```python
+    class Pizza:
+        def __init__(self, ingredients):
+            self.ingredients = ingredients
+
+        @classmethod
+        def from_fridge(cls, fridge):
+            return cls(fridge.get_cheese() + fridge.get_vegetables())
+    ```
+
 ## Miscellaneous
 
 1. We can't use mutable types as dictionary keys since their hash will change. Strings are not mutable. And use tuples over lists when they are meant to be immutable.
 
 2. Use list comprehensions over loops.
+
+3. Python requires an `__init__.py` file for the directory to be considered a submodule.
 
 ## References
 
