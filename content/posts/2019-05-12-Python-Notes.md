@@ -556,6 +556,22 @@ tags = ["Programming Languages"]
             return cls(fridge.get_cheese() + fridge.get_vegetables())
     ```
 
+5. Abstract methods:
+
+    ```python
+    class Pizza:
+        @staticmethod
+        def get_radius():
+            raise NotImplementedError
+
+    # Or make the class abstract (abc: abstract base class)
+    from abc import ABC, abstractmethod
+    class BasePizza(ABC):
+        @abstractmethod
+        def get_radius(self):
+            """Method that should do something."""
+    ```
+
 ## Miscellaneous
 
 1. We can't use mutable types as dictionary keys since their hash will change. Strings are not mutable. And use tuples over lists when they are meant to be immutable.
