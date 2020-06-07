@@ -23,6 +23,7 @@ tags = ["Programming Languages"]
 * [Install Packages](#install-packages)
 * [PEP8](#pep8)
 * [Virtual Environments](#virtual-environments)
+* [Miscellaneous](#miscellaneous)
 * [References](#references)
 
 ## Basics
@@ -514,6 +515,12 @@ tags = ["Programming Languages"]
     pip install -r requirements.txt
     deactivate
     ```
+
+## Miscellaneous
+
+1. We can't use mutable types as dictionary keys since their hash will change. Strings are not mutable. And use tuples over lists when they are meant to be immutable.
+
+2. Use list comprehensions over loops.
 
 ## References
 
