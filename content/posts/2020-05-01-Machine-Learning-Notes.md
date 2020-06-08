@@ -71,7 +71,6 @@ tags = ["Machine Learning", "AI"]
     * [K-Means](#k-means)
   * [Dimensionality Reduction](#dimensionality-reduction)
     * [Principal Component Analysis (PCA)](#principal-component-analysis-pca)
-* [Other Forms of Learning](#other-forms-of-learning)
 * [References](#references)
 
 ## Introduction
@@ -799,10 +798,6 @@ To be filled.
     ![PCA algorithm](/images/PCA_algorithm.png)
     ![compression](/images/compression.png)
     ![decompression](/images/decompression.png)
-
-## Other Forms of Learning
-
-To be filled.
 
 ## References
 
