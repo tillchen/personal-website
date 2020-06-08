@@ -270,11 +270,15 @@ This post is about some basic machine learning concepts.
 
 ### Support Vector Machine
 
-To be filled.
+1. The model $f(\mathbf{x}) = sign(\mathbf{w^{\*}x} - b^{\*})$ (sign returns +1 if it's positive and -1 if it's negative) (The sign * means the optimal value.)
+
+2. We prefer the hyperplane with the largest margin, which is the distance between the closest examples of two classes. A large margin contributes to a better generalization. We achieve this by minimizing the norm of $\mathbf{w}$: $||\mathbf{w}||$.
+
+    ![SVM](/images/SVM.png)
 
 #### Dealing With Noise
 
-To be filled.
+1. We can use the hinge loss function: $\max (0, 1 - y_i(\mathbf{wx}_i - b))$ for data that's not linearly separable.
 
 ##### Dealing with Inherent Non-Linearity (Kernels)
 
