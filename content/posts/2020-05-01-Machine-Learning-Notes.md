@@ -530,7 +530,9 @@ This post is about some basic machine learning concepts.
 
 ### Hyperparameter Tuning
 
-To be filled.
+1. Grid search: use continuous parameters in the logarithmic scale to generate all the combinations.
+
+2. Some other techniques are Random Search (provide statistical distribution) and Bayesian (based on past evaluations).
 
 #### Training Error
 
