@@ -262,7 +262,11 @@ This post is about some basic machine learning concepts.
 
 1. If the value is below a specific threshold, the left branch is followed. Otherwise, the right branch is followed. The decision is made about the class when the leaf node is reached.
 
-2. We consider ID3 (Iterative Dichotomiser 3).
+2. We consider ID3 (Iterative Dichotomiser 3), which also optimizes the average log-likelihood like logistic regression. It does some approximately by constructing a nonparametric model $f_{ID3} = Pr(y=1|\mathbf{x})$.
+
+    ![decision tree learning](/images/decision_tree_learning.png)
+
+3. Entropy is a measure of uncertainty about a random variable. We find a split that minimizes the entropy.
 
 ### Support Vector Machine
 
