@@ -260,7 +260,9 @@ This post is about some basic machine learning concepts.
 
 ### Decision Tree Learning
 
-To be filled.
+1. If the value is below a specific threshold, the left branch is followed. Otherwise, the right branch is followed. The decision is made about the class when the leaf node is reached.
+
+2. We consider ID3 (Iterative Dichotomiser 3).
 
 ### Support Vector Machine
 
