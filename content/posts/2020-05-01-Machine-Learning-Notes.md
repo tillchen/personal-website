@@ -510,19 +510,23 @@ This post is about some basic machine learning concepts.
 
 #### Precision/Recall
 
-To be filled.
+1. Precision = $\frac{TP}{TP+FP}$ (TP/Positive Predictions)
+
+2. Recall = $\frac{TP}{TP+FN}$ (TP/Positive Examples)
 
 #### Accuracy
 
-To be filled.
+1. Accuracy = $\frac{TP+TN}{TP+TN+FP+FN}$
 
 #### Cost-Sensitive Accuracy
 
-To be filled.
+1. When the classes have different importance, assign cost for FP and FN then multiply before calculating the accuracy.
 
 #### Area under the ROC Curve (AUC)
 
-To be filled.
+1. ROC (Receiver Operating Characteristic) curve uses TPR (True Positive Rate -- recall) and FPR (False Positive Rate -- FP/FP+TN).
+
+2. The higher the area under the ROC curve (AUC), the better the classifier.
 
 ### Hyperparameter Tuning
 
