@@ -62,28 +62,15 @@ tags = ["Machine Learning", "AI"]
   * [Kernel Regression](#kernel-regression)
   * [Classification](#classification)
     * [Linear Discriminant Analysis](#linear-discriminant-analysis)
-  * [Multiclass Classification](#multiclass-classification)
-  * [One-Class Classification](#one-class-classification)
-  * [Multi-Label Classification](#multi-label-classification)
   * [Ensemble Learning](#ensemble-learning)
-  * [Learning to Label Sequences](#learning-to-label-sequences)
-  * [Sequence to Sequence Learning](#sequence-to-sequence-learning)
-  * [Active Learning](#active-learning)
-  * [Semi-Supervised Learning](#semi-supervised-learning-1)
-  * [One-Shot Learning](#one-shot-learning)
-  * [Zero-Shot Learning](#zero-shot-learning)
-* [Advanced Practice](#advanced-practice)
+    * [Boosting and Bagging](#boosting-and-bagging)
+    * [Random Forest](#random-forest)
 * [Unsupervised Learning](#unsupervised-learning-1)
   * [Density Estimation](#density-estimation)
   * [Clustering](#clustering)
     * [K-Means](#k-means)
-    * [DBSCAN and HDBSCAN](#dbscan-and-hdbscan)
-    * [Determining the Number of Clusters](#determining-the-number-of-clusters)
-    * [Other Clustering Algorithms](#other-clustering-algorithms)
   * [Dimensionality Reduction](#dimensionality-reduction)
     * [Principal Component Analysis (PCA)](#principal-component-analysis-pca)
-    * [UMAP](#umap)
-  * [Outlier Detection](#outlier-detection)
 * [Other Forms of Learning](#other-forms-of-learning)
 * [References](#references)
 
@@ -665,7 +652,7 @@ $$\mathbf{f}_l(\mathbf{z}) = \mathbf{g}_l(\mathbf{W}_l\mathbf{z} + \mathbf{b}_l)
 
 #### Recurrent Neural Network
 
-To be filled.
+1. RNN is the neural network whose connections between nodes form a directed graph along a temporal sequence. This allows it to exhibit temporal dynamic behavior.
 
 ## Problems and Solutions
 
@@ -727,49 +714,19 @@ To be filled.
 
 4. A non-linear classification predictor can be obtained if we use $N(\mu_g, \Sigma_g)$ instead of $N(\mu_g, \Sigma)$, i.e. a class dependent covariance.
 
-### Multiclass Classification
-
-To be filled.
-
-### One-Class Classification
-
-To be filled.
-
-### Multi-Label Classification
-
-To be filled.
-
 ### Ensemble Learning
 
-To be filled.
+1. Ensemble learning trains a large number of low-accuracy models and then combine the predictions given by the weak models to obtain a high-accuracy meta-model.
 
-### Learning to Label Sequences
+#### Boosting and Bagging
 
-To be filled.
+1. Boosting: each new model would be different from the previous ones by trying to fix the errors of the previous models.
 
-### Sequence to Sequence Learning
+2. Bagging: create many copies of the training data (each slightly different from others). Random forest is based on bagging.
 
-To be filled.
+#### Random Forest
 
-### Active Learning
-
-To be filled.
-
-### Semi-Supervised Learning
-
-To be filled.
-
-### One-Shot Learning
-
-To be filled.
-
-### Zero-Shot Learning
-
-To be filled.
-
-## Advanced Practice
-
-To be filled.
+1. Random forest avoids the correlation of the trees, which reduces the variance.
 
 ## Unsupervised Learning
 
@@ -809,18 +766,6 @@ To be filled.
 
     ![k-means](/images/k_means.png)
 
-#### DBSCAN and HDBSCAN
-
-To be filled.
-
-#### Determining the Number of Clusters
-
-To be filled.
-
-#### Other Clustering Algorithms
-
-To be filled.
-
 ### Dimensionality Reduction
 
 1. Since modern ML algorithms can handle very high-dimensional examples, dimensionality reduction techniques are used less in practice than in the past.
@@ -854,14 +799,6 @@ To be filled.
     ![PCA algorithm](/images/PCA_algorithm.png)
     ![compression](/images/compression.png)
     ![decompression](/images/decompression.png)
-
-#### UMAP
-
-To be filled.
-
-### Outlier Detection
-
-To be filled.
 
 ## Other Forms of Learning
 
