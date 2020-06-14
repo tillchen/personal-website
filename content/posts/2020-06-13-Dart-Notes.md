@@ -14,6 +14,8 @@ tags: ["Programming Languages"]
   * [Lists](#lists)
   * [Sets](#sets)
   * [Maps](#maps)
+  * [Runes and Grapheme Clusters](#runes-and-grapheme-clusters)
+  * [Symbols](#symbols)
 * [References](#references)
 
 ## Introduction
@@ -95,6 +97,8 @@ tags: ["Programming Languages"]
 
 3. Like in Python, create a multi-line string using triple quote `'''` or `"""`.
 
+4. Strings use UTF-16.
+
 ### Booleans
 
 1. Only `true` and `false` have the type `bool`, which means we have to check the values explicitly (unlike Python).
@@ -172,6 +176,28 @@ tags: ["Programming Languages"]
     ```
 
 2. The map returns a `null` if the key doesn't exist.
+
+### Runes and Grapheme Clusters
+
+1. In Dart, runes expose the Unicode code points of a string.
+
+2. Because a Dart string is a sequence of UTF-16 code units, the usual way to express a code point is `\uXXXX`, where XXXX is a 4-digit hexadecimal value. For more or less than 4 hex digits, place the value in curly brackets.
+
+    ```dart
+    import 'package:characters/characters.dart';
+
+    var hi = 'Hi 🇩🇰';
+    print('The las character: ${hi.characters.last}');
+    ```
+
+### Symbols
+
+1. A `Symbol` object represents an operator or identifier declared in a Dart program. We might never need to use symbols, but they're invaluable for APIs that refer to identifiers by name, because minification changes identifier names but not identifier symbols.
+
+    ```dart
+    #radix
+    #bar
+    ```
 
 ## References
 
