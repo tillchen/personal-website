@@ -10,6 +10,8 @@ tags: ["Programming Languages"]
 * [Built-in Types](#built-in-types)
   * [Numbers](#numbers)
   * [Strings](#strings)
+  * [Booleans](#booleans)
+  * [Lists](#lists)
 * [References](#references)
 
 ## Introduction
@@ -90,6 +92,51 @@ tags: ["Programming Languages"]
     ```
 
 3. Like in Python, create a multi-line string using triple quote `'''` or `"""`.
+
+### Booleans
+
+1. Only `true` and `false` have the type `bool`, which means we have to check the values explicitly (unlike Python).
+
+    ```dart
+    var fullName = '';
+    assert(fullName.isEmpty);
+    ```
+
+### Lists
+
+1. Example:
+
+    ```dart
+    var list = [1, 2, 3];
+    assert(list.length = 3);
+    var constantList = const [1, 2, 3];
+    // constantList[1]  = 1; // Uncommenting this causes an error.
+    ```
+
+2. Spread operator (`...`) and null-aware spread operator (`....?`) provide a concise way to insert all elements into a collection:
+
+    ```dart
+    var list = [1, 2, 3];
+    var list2 = [0, ...list]; // [0, 1, 2, 3]
+    var list3;
+    var list4 = [0, ...?list3]; // list3 might be null. Avoid exceptions.
+    ```
+
+3. Collection if and collection for (similar to list comprehension in Python):
+
+    ```dart
+    var nav = [
+        'Home',
+        'Furniture',
+        'Plants',
+        if (promoActive) 'Outlet'
+    ];
+    var listOfInts = [1, 2, 3];
+    var listOfStrings = [
+        '#0',
+        for (var i in listOfInts) `#$i`
+    ];
+    ```
 
 ## References
 
