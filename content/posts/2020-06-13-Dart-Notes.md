@@ -16,6 +16,11 @@ tags: ["Programming Languages"]
   * [Maps](#maps)
   * [Runes and Grapheme Clusters](#runes-and-grapheme-clusters)
   * [Symbols](#symbols)
+* [Functions](#functions)
+  * [Optional Parameters](#optional-parameters)
+    * [Named Parameters](#named-parameters)
+    * [Positional parameters](#positional-parameters)
+  * [Anonymous Functions](#anonymous-functions)
 * [References](#references)
 
 ## Introduction
@@ -197,6 +202,74 @@ tags: ["Programming Languages"]
     ```dart
     #radix
     #bar
+    ```
+
+## Functions
+
+1. Dart is a true object-oriented language. Even functions are objects and have a type.
+
+2. Although Effective Dart recommends type annotations for public APIs, the function still works if you omit the types.
+
+    ```dart
+    bool isNoble(int atomicNumber) {
+        return _nobleGases[atomicNumber] != null;
+    }
+    // Or the below
+    isNoble(atomicNumber) {
+        return _nobleGases[atomicNumber] != null;
+    }
+    // Or the arrow syntax
+    bool isNoble(int atomicNumber) => _nobleGases[atomicNumber] != null;
+    ```
+
+3. `..` is a cascade, which enables us to perform multiple operations on the members of a single object:
+
+    ```dart
+    querySelector('id')
+      ..text = 'Click me!'
+      ..onClick.listen(reverseText);
+    ```
+
+### Optional Parameters
+
+1. Optional parameters can be either named or positional, but not both.
+
+#### Named Parameters
+
+1. Example:
+
+    ```dart
+    void enableFlags({bool bold, bool hidden}) {...}
+
+    enableFlags(bold: true, hidden: false);
+    ```
+
+2. Although named parameters are a kind of optional parameter, we can used `@required` to make it mandatory:
+
+    ```dart
+    const Scrollbar({Key key, @required Widget child})
+    ```
+
+#### Positional parameters
+
+1. Wrapping a set of parameters in `[]` makes them optional positional:
+
+    ```dart
+    String say(String from, String msg, [String device]) {...}
+    ```
+
+### Anonymous Functions
+
+1. Example:
+
+    ```dart
+    var list = ['apples', 'bananas', 'oranges'];
+    list.forEach((item) {
+        print('${list.indexOf(item)}: $item');
+    });
+    // Or the arrow notation
+    list.forEach(
+        (item) => print('${list.indexOf(item)}: $item'));
     ```
 
 ## References
