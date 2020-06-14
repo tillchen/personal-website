@@ -21,6 +21,7 @@ tags: ["Programming Languages"]
     * [Named Parameters](#named-parameters)
     * [Positional parameters](#positional-parameters)
   * [Anonymous Functions](#anonymous-functions)
+* [Operators](#operators)
 * [References](#references)
 
 ## Introduction
@@ -230,6 +231,8 @@ tags: ["Programming Languages"]
       ..onClick.listen(reverseText);
     ```
 
+4. All functions return a value. If no return value is specified, it returns `null`.
+
 ### Optional Parameters
 
 1. Optional parameters can be either named or positional, but not both.
@@ -271,6 +274,20 @@ tags: ["Programming Languages"]
     list.forEach(
         (item) => print('${list.indexOf(item)}: $item'));
     ```
+
+## Operators
+
+1. `~/` is the floor division. The rest are the same as the ones in Java.
+
+2. `as`, `is`, and `is!`:
+    * `as`: Typecast. Use it iff we are sure the object is of that type: `(emp as Person).firstName = 'Bob'`
+    * `is` True if the object has the type. `is!` False if the object has the type.
+
+3. `b ??= value` assigns if b is null; otherwise b stays the same.
+
+4. `String playerName(String name) => name ?? 'Guest';` gives name `'Guest'`is name is null.
+
+5. `?.` conditional access like in Swift/Kotlin. `foo?.bar` is null if foo is null.
 
 ## References
 
