@@ -25,6 +25,7 @@ tags: ["Programming Languages"]
 * [Exceptions](#exceptions)
 * [Classes](#classes)
 * [Enum](#enum)
+* [Asynchrony](#asynchrony)
 * [References](#references)
 
 ## Introduction
@@ -48,7 +49,7 @@ tags: ["Programming Languages"]
 
 4. Dart supports generic types like `List<int>` or `List<dynamic>` (a list of objects of any type).
 
-5. Unlike Java, Dart doesn't have `public`, `protected`, and `private`. Prefix an underscore `_` makes it private to the library.
+5. Unlike Java, Dart doesn't have `public`, `protected`, and `private`. Prefix an underscore `_` makes it private to the library. Every Dart app is a library.
 
 ## Variables
 
@@ -382,6 +383,18 @@ tags: ["Programming Languages"]
     Vector operator +(Vector v) => Vector(x + v.x, y + v.y);
     ```
 
+11. Mixins: a way of reusing a class's code in multiple class hierarchies. Use `with`:
+
+    ```dart
+    class Musician extends Performer with Musical {
+        ...
+    }
+    // To implement, declare no constructors
+    mixin Musical { // mixin Musical on Musician to restrict the types that can use the mixin
+        ...
+    }
+    ```
+
 ## Enum
 
 1. Example:
@@ -392,6 +405,18 @@ tags: ["Programming Languages"]
     assert(Color.red.index == 0);
     List<Color> colors = Color.values;
     ```
+
+## Asynchrony
+
+1. To use `await`, code must be in an `async` function:
+
+    ```dart
+    Future checkVersion() async { // It returns a Future object
+        var version = await lookUpVersion();
+    }
+    ```
+
+2. Use `await for ()` to handle a Stream (wait for all of the streams results). But we should not use this for UI event listeners, because UI frameworks send endless streams of events.
 
 ## References
 
