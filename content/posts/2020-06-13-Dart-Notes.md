@@ -297,7 +297,7 @@ tags: ["Programming Languages"]
 
 3. `b ??= value` assigns if b is null; otherwise b stays the same.
 
-4. `String playerName(String name) => name ?? 'Guest';` gives name `'Guest'`is name is null.
+4. `String playerName(String name) => name ?? 'Guest';` gives name `'Guest'` if name is null.
 
 5. `?.` conditional access like in Swift/Kotlin. `foo?.bar` is null if foo is null.
 
