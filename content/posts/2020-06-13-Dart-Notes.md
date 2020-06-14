@@ -13,6 +13,7 @@ tags: ["Programming Languages"]
   * [Booleans](#booleans)
   * [Lists](#lists)
   * [Sets](#sets)
+  * [Maps](#maps)
 * [References](#references)
 
 ## Introduction
@@ -152,6 +153,25 @@ tags: ["Programming Languages"]
     elements.add('flourine');
     elements.addAll(halogens);
     ```
+
+### Maps
+
+1. Example:
+
+    ```dart
+    var nobleGases = {
+        2: 'helium',
+        10: 'neon',
+        18: 'argon'
+    };
+    // Or we can use the constructor
+    var nobleGases = Map(); // The new keyword is optional
+    nobleGases[2] = 'helium';
+    nobleGases[10] = 'neon';
+    nobleGases[18] = 'argon';
+    ```
+
+2. The map returns a `null` if the key doesn't exist.
 
 ## References
 
