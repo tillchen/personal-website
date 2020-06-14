@@ -7,6 +7,9 @@ tags: ["Programming Languages"]
 ---
 * [Introduction](#introduction)
 * [Variables](#variables)
+* [Built-in Types](#built-in-types)
+  * [Numbers](#numbers)
+  * [Strings](#strings)
 * [References](#references)
 
 ## Introduction
@@ -59,6 +62,34 @@ tags: ["Programming Languages"]
         const baz = []; // Equivalent to `const []`
         foo = [1, 2, 3]; // Was const []
         ```
+
+## Built-in Types
+
+### Numbers
+
+1. Both `int` and `double` are subtypes of `num`.
+
+2. Conversion between a string and a number:
+
+    ```dart
+    int one = int.parse('1');
+    double onePointOne = int.parse('1.1');
+    String oneAsString = 1.toString();
+    String piAsString = 3.14159.toStringAsFixed(2); // 3.14
+    ```
+
+### Strings
+
+1. Both single or double quotes are fine. It's easy to escape the delimiter: `'It\'s easy.'`
+
+2. String interpolation: `${expression}`. If the expression is an identifier, we can skip `{}`.
+
+    ```dart
+    var s = 'string interpolation';
+    print('Dart has $s');
+    ```
+
+3. Like in Python, create a multi-line string using triple quote `'''` or `"""`.
 
 ## References
 
