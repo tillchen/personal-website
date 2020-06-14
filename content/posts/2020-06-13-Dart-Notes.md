@@ -23,6 +23,7 @@ tags: ["Programming Languages"]
   * [Anonymous Functions](#anonymous-functions)
 * [Operators](#operators)
 * [Exceptions](#exceptions)
+* [Classes](#classes)
 * [References](#references)
 
 ## Introduction
@@ -319,6 +320,41 @@ tags: ["Programming Languages"]
         // Always executes.
     }
     ```
+
+## Classes
+
+1. All instance variables generate an implicit getter method. Non-final instance variables also generate an implicit setter. Just do `foo.x`.
+
+2. Constructor syntactic sugar:
+
+    ```dart
+    class Point {
+        double x, y;
+
+        Point(this.x, this.y);
+    }
+    ```
+
+3. Named constructors for extra clarity:
+
+    ```dart
+    Point.origin() {
+        x = 0;
+        y = 0;
+    }
+    ```
+
+4. Invoke the super constructor almost like in C++:
+
+    ```dart
+    Employee.fromJson(Map data) : super.fromJson(data) {
+        ...
+    }
+    ```
+
+5. Redirecting constructors: `Point.alongXAxis(double x) : this(x, 0)` delegates to the main constructor.
+
+6. Use `factory` for a constructor that doesn't always create a new instance of the class. It may return an instance from a cache or return an instance of a subtype.
 
 ## References
 
