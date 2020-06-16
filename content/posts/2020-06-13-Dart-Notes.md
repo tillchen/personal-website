@@ -49,7 +49,7 @@ tags: ["Programming Languages"]
 
 4. Dart supports generic types like `List<int>` or `List<dynamic>` (a list of objects of any type).
 
-5. Unlike Java, Dart doesn't have `public`, `protected`, and `private`. Prefix an underscore `_` makes it private to the library. Every Dart app is a library.
+5. Unlike Java, Dart doesn't have `public`, `protected`, and `private`. Prefix an underscore `_` makes it private to the library. It generally means that the identifier is visible only inside the file (not just the class).
 
 ## Variables
 
@@ -362,7 +362,9 @@ tags: ["Programming Languages"]
 
     ```dart
     // We can define explicit getters and setters using get and set
+    int _speed = 0;
 
+    get speed => _speed; // Read-only
     double get right => left + width;
     set right(double value) => left = value - width
     ```
