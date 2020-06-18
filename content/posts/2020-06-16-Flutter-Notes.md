@@ -15,6 +15,7 @@ tags: ["Mobile Development", "Frameworks"]
   * [How to update widgets](#how-to-update-widgets)
 * [Intents](#intents)
   * [The equivalent of an Intent in Flutter](#the-equivalent-of-an-intent-in-flutter)
+  * [How to handle incoming intents from external apps](#how-to-handle-incoming-intents-from-external-apps)
 * [References](#references)
 
 ## Introduction
@@ -157,6 +158,12 @@ This post is assuming that the reader has Android development background.
     ```
 
 5. For calling a Camera or File picker, we need a native platform integration or use plugins.
+
+### How to handle incoming intents from external apps
+
+1. Flutter handles incoming intents from Android by directly talking to the Android layer and requesting the data shared.
+
+2. The basic flow is that we first handle the shared data in `Activity` and wait until Flutter requests with a `MethodChannel`.
 
 ## References
 
