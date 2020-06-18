@@ -13,6 +13,8 @@ tags: ["Mobile Development", "Frameworks"]
 * [Views](#views)
   * [The equivalent of a view in Flutter](#the-equivalent-of-a-view-in-flutter)
   * [How to update widgets](#how-to-update-widgets)
+* [Intents](#intents)
+  * [The equivalent of an Intent in Flutter](#the-equivalent-of-an-intent-in-flutter)
 * [References](#references)
 
 ## Introduction
@@ -127,6 +129,34 @@ This post is assuming that the reader has Android development background.
     }
     ```
 
+## Intents
+
+### The equivalent of an Intent in Flutter
+
+1. Flutter doesn't have intents. And Flutter doesn't have a direct equivalent to activities and fragments; rather, we navigate between screens using a `Navigator` and `Route`s, all within the same `Activity`.
+
+2. A `Route`is an abstraction for a screen or page. And a `Navigator` is a widget that manages routes. A `Route` roughly maps to an `Activity`.
+
+3. A navigator can push and pop routes to move from screen to screen. It works like a stack on which you can `push()` new routes we want to navigate to and `pop()` routes that we want to go back.
+
+4. We specify a `Map` of route names:
+
+    ```dart
+    void main() {
+     runApp(MaterialApp(
+       home: MyAppHome(), // becomes the route named '/'
+       routes: <String, WidgetBuilder> {
+         '/a': (BuildContext context) => MyPage(title: 'page A'),
+         '/b': (BuildContext context) => MyPage(title: 'page B'),
+         '/c': (BuildContext context) => MyPage(title: 'page C'),
+       },
+     ));
+    }
+
+    Navigator.of(context).pushNamed('/b');
+    ```
+
+5. For calling a Camera or File picker, we need a native platform integration or use plugins.
 
 ## References
 
