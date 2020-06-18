@@ -16,6 +16,7 @@ tags: ["Mobile Development", "Frameworks"]
 * [Intents](#intents)
   * [The equivalent of an Intent in Flutter](#the-equivalent-of-an-intent-in-flutter)
   * [How to handle incoming intents from external apps](#how-to-handle-incoming-intents-from-external-apps)
+  * [The equivalent of startActivityForResult()](#the-equivalent-of-startactivityforresult)
 * [References](#references)
 
 ## Introduction
@@ -164,6 +165,16 @@ This post is assuming that the reader has Android development background.
 1. Flutter handles incoming intents from Android by directly talking to the Android layer and requesting the data shared.
 
 2. The basic flow is that we first handle the shared data in `Activity` and wait until Flutter requests with a `MethodChannel`.
+
+### The equivalent of startActivityForResult()
+
+1. It's done by `await`ing on the `Future` returned by `push()`:
+
+    ```dart
+    Map coordinates = await Navigator.of(context).pushNamed('/location');
+    // Then in the location route
+    Navigator.of(context).pop({"lat":43.821757,"long":-79.226392});
+    ```
 
 ## References
 
