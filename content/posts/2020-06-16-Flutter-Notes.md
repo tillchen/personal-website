@@ -17,6 +17,8 @@ tags: ["Mobile Development", "Frameworks"]
   * [The equivalent of an Intent in Flutter](#the-equivalent-of-an-intent-in-flutter)
   * [How to handle incoming intents from external apps](#how-to-handle-incoming-intents-from-external-apps)
   * [The equivalent of startActivityForResult()](#the-equivalent-of-startactivityforresult)
+* [Project structure and resources](#project-structure-and-resources)
+  * [Image files](#image-files)
 * [References](#references)
 
 ## Introduction
@@ -174,6 +176,30 @@ This post is assuming that the reader has Android development background.
     Map coordinates = await Navigator.of(context).pushNamed('/location');
     // Then in the location route
     Navigator.of(context).pop({"lat":43.821757,"long":-79.226392});
+    ```
+
+## Project structure and resources
+
+### Image files
+
+1. No predefined folder structure. We declare the assets (with location) in the `pubspec.yaml` file.
+
+2. For example:
+
+    ```code
+    images/my_icon.png       // Base: 1.0x image
+    images/2.0x/my_icon.png  // 2.0x image
+    images/3.0x/my_icon.png  // 3.0x image
+    // declare these in pubspec.yaml
+    assets:
+     - images/my_icon.jpeg
+    // Then access using AssetImage
+    return AssetImage("images/my_icon.jpeg");
+    // Or in an Image widget
+    @override
+    Widget build(BuildContext context) {
+        return Image.asset("images/my_image.png")
+    }
     ```
 
 ## References
