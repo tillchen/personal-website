@@ -19,6 +19,7 @@ tags: ["Mobile Development", "Frameworks"]
   * [The equivalent of startActivityForResult()](#the-equivalent-of-startactivityforresult)
 * [Project structure and resources](#project-structure-and-resources)
   * [Image files](#image-files)
+  * [Strings](#strings)
 * [References](#references)
 
 ## Introduction
@@ -201,6 +202,20 @@ This post is assuming that the reader has Android development background.
         return Image.asset("images/my_image.png")
     }
     ```
+
+### Strings
+
+1. No dedicated resources-like system. The best practice is:
+
+    ```dart
+    class Strings {
+        static String welcomeMessage = "Welcome to Flutter";
+    }
+    // Access
+    Text(Strings.welcomeMessage);
+    ```
+
+2. We're encouraged to use the intl package for internationalization.
 
 ## References
 
