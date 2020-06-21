@@ -24,6 +24,9 @@ tags: ["Mobile Development", "Frameworks"]
   * [Equivalent of a LinearLayout](#equivalent-of-a-linearlayout)
   * [Equivalent of a RelativeLayout](#equivalent-of-a-relativelayout)
   * [Equivalent of a ScrollView](#equivalent-of-a-scrollview)
+* [Gesture detection and touch event handling](#gesture-detection-and-touch-event-handling)
+  * [Equivalent of onClick](#equivalent-of-onclick)
+  * [Other gestures](#other-gestures)
 * [References](#references)
 
 ## Introduction
@@ -264,6 +267,53 @@ This post is assuming that the reader has Android development background.
         );
       }
     ```
+
+## Gesture detection and touch event handling
+
+### Equivalent of onClick
+
+1. If the widget supports event detection, pass a function to it and handle it in the function:
+
+    ```dart
+    @override
+    Widget build(BuildContext context) {
+      return RaisedButton(
+          onPressed: () {
+            print("click");
+          },
+          child: Text("Button"));
+    }
+    ```
+
+2. If the widget doesn't support event detection, wrap it in a GestureDetector and pass a function to the `onTap` parameter:
+
+    ```dart
+    class SampleApp extends StatelessWidget {
+      @override
+      Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+          child: GestureDetector(
+            child: FlutterLogo(
+              size: 200.0,
+            ),
+            onTap: () {
+              print("tap");
+            },
+          ),
+        ));
+      }
+    }
+    ```
+
+### Other gestures
+
+1. Using GestureDetector, we can listen to gestures such as:
+    * Tap
+    * Double tap
+    * Long press
+    * Vertical drag
+    * Horizontal drag
 
 ## References
 
