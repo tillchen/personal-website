@@ -38,6 +38,7 @@ tags: ["Mobile Development", "Frameworks"]
 * [Databases and local storage](#databases-and-local-storage)
   * [Shared Preferences](#shared-preferences)
   * [SQLite](#sqlite)
+* [Notifications](#notifications)
 * [References](#references)
 
 ## Introduction
@@ -646,6 +647,10 @@ This post is assuming that the reader has Android development background.
 ### SQLite
 
 1. Use the `SQFlite` plugin.
+
+## Notifications
+
+1. Use the `firebase_messaging` plugin.
 
 ## References
 
