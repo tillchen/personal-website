@@ -23,6 +23,8 @@ tags: ["Mobile Development", "Frameworks"]
 * [Layouts](#layouts)
   * [Equivalent of a LinearLayout](#equivalent-of-a-linearlayout)
   * [Flexible widget](#flexible-widget)
+  * [Expanded widget](#expanded-widget)
+  * [SizedBox widget](#sizedbox-widget)
   * [Equivalent of a RelativeLayout](#equivalent-of-a-relativelayout)
   * [Equivalent of a ScrollView](#equivalent-of-a-scrollview)
 * [Gesture detection and touch event handling](#gesture-detection-and-touch-event-handling)
@@ -289,6 +291,24 @@ This post is assuming that the reader has Android development background.
       }
     }
     ```
+
+### Expanded widget
+
+1. It forces the widget to fill all the empty space: `Expanded(child: BlueBox())`.
+
+### SizedBox widget
+
+1. It can be used in two ways:
+    * When it wraps a widget, it resizes the widget using `height` and `weight`.
+
+    ```dart
+    SizedBox(
+        width: 100,
+        child: BlueBox(),
+    )
+    ```
+
+    * When it doesn't wrap a widget, it can create empty space: `SizedBox(width: 25)`
 
 ### Equivalent of a RelativeLayout
 
