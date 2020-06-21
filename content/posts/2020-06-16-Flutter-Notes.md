@@ -35,6 +35,9 @@ tags: ["Mobile Development", "Frameworks"]
   * [Form input](#form-input)
     * [Equivalent of a hint](#equivalent-of-a-hint)
     * [Show validation errors](#show-validation-errors)
+* [Databases and local storage](#databases-and-local-storage)
+  * [Shared Preferences](#shared-preferences)
+  * [SQLite](#sqlite)
 * [References](#references)
 
 ## Introduction
@@ -606,6 +609,43 @@ This post is assuming that the reader has Android development background.
       }
     }
     ```
+
+## Databases and local storage
+
+### Shared Preferences
+
+1. Use the `Shared_Preferences` plugin, which wraps the functionality of both Shared Preferences and NSUserDefaults.
+
+    ```dart
+    import 'package:flutter/material.dart';
+    import 'package:shared_preferences/shared_preferences.dart';
+
+    void main() {
+      runApp(
+        MaterialApp(
+          home: Scaffold(
+            body: Center(
+              child: RaisedButton(
+                onPressed: _incrementCounter,
+                child: Text('Increment Counter'),
+              ),
+            ),
+          ),
+        ),
+      );
+    }
+
+    _incrementCounter() async {
+      SharedPreferences prefs = await SharedPreferences.getInstance();
+      int counter = (prefs.getInt('counter') ?? 0) + 1;
+      print('Pressed $counter times.');
+      prefs.setInt('counter', counter);
+    }
+    ```
+
+### SQLite
+
+1. Use the `SQFlite` plugin.
 
 ## References
 
