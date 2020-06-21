@@ -20,6 +20,10 @@ tags: ["Mobile Development", "Frameworks"]
 * [Project structure and resources](#project-structure-and-resources)
   * [Image files](#image-files)
   * [Strings](#strings)
+* [Layouts](#layouts)
+  * [Equivalent of a LinearLayout](#equivalent-of-a-linearlayout)
+  * [Equivalent of a RelativeLayout](#equivalent-of-a-relativelayout)
+  * [Equivalent of a ScrollView](#equivalent-of-a-scrollview)
 * [References](#references)
 
 ## Introduction
@@ -216,6 +220,50 @@ This post is assuming that the reader has Android development background.
     ```
 
 2. We're encouraged to use the intl package for internationalization.
+
+## Layouts
+
+### Equivalent of a LinearLayout
+
+1. The Row or Column widgets are the equivalent:
+
+    ```dart
+      @override
+      Widget build(BuildContext context) {
+        return Row(  // Or Column
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text('Row One'),
+            Text('Row Two'),
+            Text('Row Three'),
+            Text('Row Four'),
+          ],
+        );
+      }
+    ```
+
+### Equivalent of a RelativeLayout
+
+1. We can achieve the same result by using a combination of Column, Row, and Stack widgets.
+
+### Equivalent of a ScrollView
+
+1. THe equivalent is a ListView. A ListView in Flutter is both a ScrollView and an Android ListView.
+
+    ```dart
+      @override
+      Widget build(BuildContext context) {
+        return ListView(  // Or Column
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text('Row One'),
+            Text('Row Two'),
+            Text('Row Three'),
+            Text('Row Four'),
+          ],
+        );
+      }
+    ```
 
 ## References
 
