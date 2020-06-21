@@ -22,6 +22,7 @@ tags: ["Mobile Development", "Frameworks"]
   * [Strings](#strings)
 * [Layouts](#layouts)
   * [Equivalent of a LinearLayout](#equivalent-of-a-linearlayout)
+  * [Flexible widget](#flexible-widget)
   * [Equivalent of a RelativeLayout](#equivalent-of-a-relativelayout)
   * [Equivalent of a ScrollView](#equivalent-of-a-scrollview)
 * [Gesture detection and touch event handling](#gesture-detection-and-touch-event-handling)
@@ -255,6 +256,38 @@ This post is assuming that the reader has Android development background.
           ],
         );
       }
+    ```
+
+2. Noteworthy properties:
+    * `mainAxisAlignment`
+    * `mainAxisSize`
+    * `crossAxisAlignment`: the cross axis for `Row` is the vertical axis.
+
+### Flexible widget
+
+1. The `Flexible` widget wraps a widget to make it resizable:
+
+    ```dart
+    class MyWidget extends StatelessWidget {
+      @override
+      Widget build(BuildContext context) {
+        return Row(
+          children: [
+            BlueBox(),
+            Flexible(
+              fit: FlexFit.loose,  // The widget's preferred size is used
+              flex: 1,  // Determines what fraction of the remaining space each widget gets: here is 1/2
+              child: BlueBox(),
+            ),
+            Flexible(
+              fit: FlexFit.tight,  // Forces the widget to fill all of its extra space
+              flex: 1,
+              child: BlueBox(),
+            ),
+          ],
+        );
+      }
+    }
     ```
 
 ### Equivalent of a RelativeLayout
@@ -657,3 +690,5 @@ This post is assuming that the reader has Android development background.
 * [Flutter for Android Developers](https://flutter.dev/docs/get-started/flutter-for/android-devs)
 
 * [Introduction to Declarative UI](https://flutter.dev/docs/get-started/flutter-for/declarative)
+
+* [Basic Flutter Layout Concepts](https://flutter.dev/docs/codelabs/layout-basics)
