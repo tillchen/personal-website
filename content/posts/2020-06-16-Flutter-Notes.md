@@ -43,6 +43,7 @@ tags: ["Mobile Development", "Frameworks"]
   * [Shared Preferences](#shared-preferences)
   * [SQLite](#sqlite)
 * [Notifications](#notifications)
+* [Widget Lifecycles](#widget-lifecycles)
 * [References](#references)
 
 ## Introduction
@@ -710,6 +711,12 @@ This post is assuming that the reader has Android development background.
 
 1. Use the `firebase_messaging` plugin.
 
+## Widget Lifecycles
+
+1. The lifecycles:
+
+    ![Widget Lifecycles](/images/flutter_widget_lifecycles.png)
+
 ## References
 
 * [Flutter for Android Developers](https://flutter.dev/docs/get-started/flutter-for/android-devs)
@@ -717,3 +724,5 @@ This post is assuming that the reader has Android development background.
 * [Introduction to Declarative UI](https://flutter.dev/docs/get-started/flutter-for/declarative)
 
 * [Basic Flutter Layout Concepts](https://flutter.dev/docs/codelabs/layout-basics)
+
+* [Flutter in Action](https://www.goodreads.com/book/show/52728827-flutter-in-action?ac=1&from_search=true&qid=wc5jF5MNbv&rank=1)
