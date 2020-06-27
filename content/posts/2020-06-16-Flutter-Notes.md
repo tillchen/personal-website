@@ -267,6 +267,10 @@ This post is assuming that the reader has Android development background.
     * `mainAxisSize`
     * `crossAxisAlignment`: the cross axis for `Row` is the vertical axis.
 
+3. The alignment styles:
+
+  ![Flutter alignment styles](/images/flutter_alignment.jpeg)
+
 ### Flexible widget
 
 1. The `Flexible` widget wraps a widget to make it resizable:
@@ -716,6 +720,8 @@ This post is assuming that the reader has Android development background.
 1. The lifecycles:
 
     ![Widget Lifecycles](/images/flutter_widget_lifecycles.png)
+
+2. `initState()` is the method that initializes any data needed before Flutter paints it to the screen. For example, we can format a string in it.
 
 ## References
 
