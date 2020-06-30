@@ -443,6 +443,8 @@ tags: ["Programming Languages"]
     Future checkVersion() async { // It returns a Future object
         var version = await lookUpVersion();
     }
+    // Future is then-able, so can always say
+    checkVersion().then((returnValue) => foo());
     ```
 
 2. Use `await for ()` to handle a Stream (wait for all of the streams results). But we should not use this for UI event listeners, because UI frameworks send endless streams of events.
