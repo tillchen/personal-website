@@ -125,7 +125,7 @@ tags: ["Programming Languages"]
 
     ```dart
     var list = [1, 2, 3];
-    assert(list.length = 3);
+    assert(list.length == 3);
     var constantList = const [1, 2, 3];
     // constantList[1]  = 1; // Uncommenting this causes an error.
     ```
@@ -364,9 +364,9 @@ tags: ["Programming Languages"]
       factory Shape(String type) {
         if (type == 'circle') return Circle(2);
         if (type == 'square') return Square(2);
-        throw 'Can\'t create $type.';
+        throw "Can't create $type.";
       }
-    num get area;
+      num get area;
     }
 
     class Circle implements Shape {
