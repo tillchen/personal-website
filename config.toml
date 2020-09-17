@@ -376,18 +376,10 @@ disablePathToLower = true
     title = ""
     weight = 5
   [[menu.main]]
-    identifier = "testimonials"
-    pre = ""
-    post = ""
-    name = "Testimonials"
-    url = "/testimonials/"
-    title = ""
-    weight = 6
-  [[menu.main]]
     identifier = "resume"
     pre = ""
     post = ""
     name = "Resume"
     url = "/pdfs/Tianyao_Chen_resume.pdf"
     title = ""
-    weight = 7
+    weight = 6
