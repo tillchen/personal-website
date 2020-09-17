@@ -8,6 +8,8 @@ draft: false
 * [Education](#education)
   * [Jacobs University Bremen, Bremen, Germany](#jacobs-university-bremen-bremen-germany)
 * [Experience](#experience)
+  * [TeamViewer, Göppingen, Germany](#teamviewer-göppingen-germany)
+  * [Twenty Billion Neurons, Berlin, Germany](#twenty-billion-neurons-berlin-germany)
   * [Jacobs University Bremen, Bremen, Germany](#jacobs-university-bremen-bremen-germany-1)
   * [TD Tech, Beijing, China](#td-tech-beijing-china)
 
@@ -25,45 +27,63 @@ However, thanks to these three mind-blowing books:
 
 I saw the bright and limitless future of AI and was determined to enter the field of computer science.
 
-Now as a computer science undergraduate at Jacobs University Bremen (an English-speaking university in Bremen, Germany,) I'm deeply in love with not only theoretical CS, AI, and machine learning, but also practical software development. Always highly motivated and self-driven to learn new things, I'm striving to achieve both academic and technical excellence.
+Now as a computer science undergraduate at Jacobs University Bremen (an English-speaking university in Bremen, Germany), I'm deeply in love with not only theoretical CS, AI, and machine learning, but also practical software development. Always highly motivated and self-driven to learn new things, I'm striving to achieve both academic and technical excellence.
 
 Plus, as an avid book-learner, I've been enjoying many fascinating tech books during my self-study and self-improvement. You can find the list of the books [here](https://www.goodreads.com/review/list/70012245-tianyao-chen?shelf=tech-books).
 
-Favorite Language: Java; Favorite Editor: VSCode (with the Vim extension 😎); Favorite OS: macOS;
-Favorite Sport: Soccer; Favorite TV Series: Rick and Morty!
+Some quick facts:
+
+* Favorite Area of Software Engineering: Android Development.
+* Favorite Language: Python.
+* Favorite Editor: VSCode (with the Vim extension 😎).
+* Favorite OS: macOS.
+* Favorite Sport: Soccer.
+* Favorite TV Series: Rick and Morty.
 
 ## Education
 
 ### [Jacobs University Bremen](https://www.jacobs-university.de/), Bremen, Germany
 
-August 2019 - Present
+2018/08 – 2021/06
 
-[*B.S. Computer Science, Class of 2021*](/pdfs/cs_curriculum.pdf)
+[*B.S. Computer Science*](/pdfs/cs_curriculum.pdf)
+
+* *Featured courses:* ML, Algorithms & Data Structures, C & C++, OS, DB, Software Engineering.
 
 ## Experience
 
-### Jacobs University Bremen, Bremen, Germany
+### TeamViewer, Göppingen, Germany
 
-February 2020 - Present
-
-*Teaching Assistant*
-
-* Grading homework and giving tutorials for: Algorithms and Data Structures.
-* Leveraged knowledge: Algorithms & Data Structures, Java, C++, Python, C.
-
-June 2019 - December 2019
-
-*Teaching Assistant*
-
-* Graded homework, exams, and gave tutorials for: Intro to CS, Data Management (from Data Engineering).
-* Leveraged knowledge: Haskell, MySQL, Python, GCP, General Computer Science.
-
-### TD Tech, Beijing, China
-
-June 2019 - August 2019
+2020/10 – 2021/01
 
 *Software Engineer Intern*
 
-* Continuously and efficiently delivered significant new features to enterprise Android apps on top of the AOSP.
-* Wrote comprehensive Python and Batch scripts, which automated the Android custom ROM upgrading process for enterprise Android devices and reduced the upgrade time by at least 67%.
-* Leveraged knowledge: Android Development (Java), Git, Scripting, Debugging, SQLite, Linux.
+### Twenty Billion Neurons, Berlin, Germany
+
+2020/06 – 2020/09
+
+*Software Engineer Intern*
+
+* Delivered six significant features to the AI fitness app Fitness Ally by working primarily in the R&D Python team and voluntarily in the iOS team with 10k+ SLOC.
+* Built a Python CLI changelog generator inspired by GitLab, which resolved the changelog conflict issue.
+* Fixed the broken XCTest system in Xcode, which enabled the unit tests to run again.
+* *Leveraged knowledge:* Python, Swift, Objective-C, iOS SDK, Bash, Git, Linux, Firebase.
+
+### Jacobs University Bremen, Bremen, Germany
+
+2019/09 – 2020/05
+
+*Teaching Assistant*
+
+* Graded homework and gave tutorials for: Algorithms & Data Structures, Intro to CS, and Data Management.
+* *Leveraged knowledge:* Java, C++, Python, C, Haskell, MySQL, GCP.
+
+### TD Tech, Beijing, China
+
+2019/06 – 2019/08
+
+*Software Engineer Intern*
+
+* Delivered three significant features to two enterprise Android apps with 8k+ SLOC.
+* Built a CLI that automated the update of Android custom ROM, which reduced the time by at least 67%.
+* Leveraged knowledge: Android Development (Java), Python, Batch, Git, SQLite, Linux.
