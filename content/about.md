@@ -86,4 +86,4 @@ Some quick facts:
 
 * Delivered three significant features to two enterprise Android apps with 8k+ SLOC.
 * Built a CLI that automated the update of Android custom ROM, which reduced the time by at least 67%.
-* Leveraged knowledge: Android Development (Java), Python, Batch, Git, SQLite, Linux.
+* *Leveraged knowledge:* Android Development (Java), Python, Batch, Git, SQLite, Linux.
