@@ -91,6 +91,6 @@ Some quick facts:
 
 ## Skills
 
-* **Python, Java, Swift, C++, Kotlin, Dart, C, Android SDK, iOS SDK, Flutter, Git, SQL, Bash, Firebase**.
+**Python, Java, Swift, C++, Kotlin, Dart, C, Android SDK, iOS SDK, Flutter, Git, SQL, Bash, Firebase**.
 
-* Go, JavaScript, Django, Spring, HTML/CSS, GCP, Docker, Haskell.
+Go, JavaScript, Django, Spring, HTML/CSS, GCP, Docker, Haskell.
