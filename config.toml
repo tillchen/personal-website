@@ -360,18 +360,10 @@ disablePathToLower = true
     title = ""
     weight = 3
   [[menu.main]]
-    identifier = "projects"
-    pre = ""
-    post = ""
-    name = "Projects"
-    url = "/projects/"
-    title = ""
-    weight = 4
-  [[menu.main]]
     identifier = "resume"
     pre = ""
     post = ""
     name = "Resume"
     url = "/pdfs/Tianyao_Chen_resume.pdf"
     title = ""
-    weight = 5
+    weight = 4

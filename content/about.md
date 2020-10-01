@@ -12,6 +12,8 @@ draft: false
   * [Twenty Billion Neurons, Berlin, Germany](#twenty-billion-neurons-berlin-germany)
   * [Jacobs University Bremen, Bremen, Germany](#jacobs-university-bremen-bremen-germany-1)
   * [TD Tech, Beijing, China](#td-tech-beijing-china)
+* [Projects](#projects)
+  * [JStore: Marketplace for Jacobs University Bremen - Native Android & iOS Apps](#jstore-marketplace-for-jacobs-university-bremen---native-android--ios-apps)
 * [Skills](#skills)
 
 ## About Me
@@ -59,6 +61,8 @@ Some quick facts:
 
 *Software Engineer Intern*
 
+* R&D Core team. Expected to work on Android and C++ development.
+
 ### Twenty Billion Neurons, Berlin, Germany
 
 2020/06 – 2020/09
@@ -88,6 +92,13 @@ Some quick facts:
 * Delivered three significant features to two enterprise Android apps with 8k+ SLOC.
 * Built a CLI that automated the update of Android custom ROM, which reduced the time by at least 67%.
 * *Leveraged knowledge:* Android Development (Java), Python, Batch, Git, SQLite, Linux.
+
+## Projects
+
+### JStore: Marketplace for Jacobs University Bremen - Native Android & iOS Apps
+
+* 7k+ SLOC. 1k+ users. Available on [Google Play](https://play.google.com/store/apps/details?id=com.tillchen.jstore) & [App Store](https://apps.apple.com/us/app/jstore/id1492876079). GitHub repos: [Android](https://github.com/tillchen/JStore_Android) & [iOS](https://github.com/tillchen/JStore_iOS).
+* *Utilized:* Java, Swift, Android SDK, iOS SDK, Firebase (Auth, Cloud Firestore, Storage).
 
 ## Skills
 
