@@ -9,6 +9,7 @@ tags: ["Programming Languages", "Java"]
 * [Method reference and lambdas](#method-reference-and-lambdas)
 * [Streams](#streams)
 * [Default methods](#default-methods)
+* [Optional](#optional)
 * [Miscellaneous](#miscellaneous)
 * [References](#references)
 
@@ -89,7 +90,7 @@ Notes for the modern Java (Java 8+.)
 
 ## Streams
 
-1. By using streams, we get parallel processing for free.
+1. Streams let us manipulate collections in a declarative way. By using streams, we get parallel processing for free.
 
     ```java
     import static java.util.stream.Collectors.toList;
@@ -101,6 +102,32 @@ Notes for the modern Java (Java 8+.)
         .filter((Apple a) -> a.getWeight() > 150).collect(toList());
     ```
 
+2. Streams are like generators in Python. They are processed in-demand. Some stream functions:
+
+    ```java
+    List<String> lowCaloricDishesName =
+        menu.parallelStream()
+        .filter(d -> d.getCalories() < 400)
+        .sorted(comparing(Dishes::getCalories))
+        .map(Dish::getName)
+        .distinct()
+        .limit(3)
+        .collect(toList()); // or .count() or .forEach()
+    ```
+
+3. Use `.flatMap()` to flatten each stream into a single stream.
+
+    ```java
+    List<String> uniqueCharacters =
+        words.stream()
+        .map(word -> word.split(""))
+        .flatMap(Arrays::stream)
+        .distinct()
+        .collect(toList());
+    ```
+
+4. `.anyMatch()`, `.allMatch()`, and `.nonMatch()` return a bool.
+
 ## Default methods
 
 1. Default methods for an interface allow concrete implementations not have to change.
@@ -111,6 +138,22 @@ Notes for the modern Java (Java 8+.)
         Collections.sort(this, c);
     }
     // This made it possible to call apples.sort().
+    ```
+
+## Optional
+
+1. `Optional<T>` is a better null type:
+
+    ```java
+    menu.stream()
+        .filter(Dish::isVegetarian)
+        .findAny() // or findFirst()
+        .ifPresent(dish -> System.out.println(dish.getName()));
+
+    isPresent() // returns a bool
+    isPresent(Consumer<T> block) // executed only when the optional is not null
+    get() // returns the value if present; otherwise it throws NoSuchElementException
+    orElse(T other) // other is the default value if it's not present.
     ```
 
 ## Miscellaneous
