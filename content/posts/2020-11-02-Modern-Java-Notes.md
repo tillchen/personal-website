@@ -128,6 +128,47 @@ Notes for the modern Java (Java 8+.)
 
 4. `.anyMatch()`, `.allMatch()`, and `.nonMatch()` return a bool.
 
+5. Some other functions:
+
+    ```java
+    int sum = number.stream().reduce(0, (a, b) -> a + b);
+    sum = numbers.stream().reduce(0, Integer::sum);
+    Optional<Integer> sum = numbers.stream().reduce(Integer::sum);
+    Optional<Integer> max = numbers.stream().reduce(Integer::max);
+    ```
+
+6. Numeric streams. Summing a stream is expensive due to boxing. We can use `IntStream` instead.
+
+    ```java
+    int calories = menu.stream()
+                        .mapToInt(Dish::getCalories)
+                        .sum();
+    // We can convert IntStream back using .boxed().
+    // For max and min, IntStream returns OptionalInt.
+
+    // range() is end exclusive.
+    IntStream evenNumbers = Intstream.rangeClosed(1, 100)
+                                     .filter(x -> x % 2 == 0);
+    int fifty = evenNumbers.count()
+    ```
+
+7. Create streams:
+
+    ```java
+    Stream<String> stream = Stream.of("Modern", "Java", "In", "Action");
+    stream.map(String::toUpperCase).forEach(System.out::println)
+    int[] nums = [1, 2, 3, 4]
+    int ten = Arrays.stream(nums).sum();
+    // For unbounded infinite streams:
+    IntStream.iterate(0, n -> n + 4)
+            .takeWhile(n -> n < 100)
+            .forEach(System.out::println);
+    Stream.generate(Math::random)
+        .limit(5)
+        .forEach(System.out::println);
+    IntStream ones = IntStream.generate(() -> 1);
+    ```
+
 ## Default methods
 
 1. Default methods for an interface allow concrete implementations not have to change.
