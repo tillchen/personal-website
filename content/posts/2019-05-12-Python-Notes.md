@@ -3,7 +3,7 @@ draft = false
 date = 2019-05-12
 title = "Python Notes"
 description = "Some notes for Python"
-tags = ["Programming Languages"]
+tags = ["Programming Languages", "Python"]
 +++
 
 * [Basics](#basics)

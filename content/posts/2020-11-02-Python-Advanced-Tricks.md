@@ -3,7 +3,7 @@ title: "Python Advanced Tricks"
 date: 2020-11-02T17:45:00+01:00
 draft: false
 description: "Advanced tricks in Python that could be useful for tech interviews."
-tags: ["Programming Languages"]
+tags: ["Programming Languages", "Python"]
 ---
 * [Decorators](#decorators)
   * [functools](#functools)

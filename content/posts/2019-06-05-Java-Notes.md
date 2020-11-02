@@ -3,7 +3,7 @@ draft = false
 date = 2019-06-05
 title = "Java Notes"
 description = "Some notes for Java"
-tags = ["Programming Languages"]
+tags = ["Programming Languages", "Java"]
 +++
 
 * [Basics](#basics)
