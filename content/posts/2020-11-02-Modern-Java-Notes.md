@@ -147,7 +147,7 @@ Notes for the modern Java (Java 8+.)
     // For max and min, IntStream returns OptionalInt.
 
     // range() is end exclusive.
-    IntStream evenNumbers = Intstream.rangeClosed(1, 100)
+    IntStream evenNumbers = IntStream.rangeClosed(1, 100)
                                      .filter(x -> x % 2 == 0);
     int fifty = evenNumbers.count()
     ```
@@ -167,6 +167,33 @@ Notes for the modern Java (Java 8+.)
         .limit(5)
         .forEach(System.out::println);
     IntStream ones = IntStream.generate(() -> 1);
+    ```
+
+8. Collectors: `.toList()`, `.counting()`, `.maxBy()`, `.groupingBy()` for `.collect()`.
+
+9. Summarization:
+
+    ```java
+    int totalCalories = menu.stream().collect(summingInt(Dish::getCalories); // or averagingInt(), summarizingInt().
+    // is the same as:
+    int totalCalories = menu.stream().collect(reducing(
+                                        0, Dish::getCalories, (i, j) -> i + j));
+    // and:
+    int totalCalories = menu.stream().collect(reducing(
+                                        0, Dish::getCalories, Integer::sum));
+
+    String shortMenu = menu.stream().map(Dish::getName).collect(joining(", "));
+    // .map() can be omitted if there's a toString() implemented.
+
+    // .groupingBy() and .partitioningBy()
+    public boolean isPrime(int candidate) {
+        int candidateRoot = (int) Math.sqrt((double) candidate);
+        return IntStream.rangeClosed(2, candidateRoot).nonMatch(i -> candidate % i == 0);
+    }
+    public Map<Boolean, List<Integer>> partitionPrimes(int n) {
+        return IntStream.rangeClosed(2, n).boxed()
+                        .collect(partitioningBy(candidate -> isPrime(candidate)));
+    }
     ```
 
 ## Default methods
