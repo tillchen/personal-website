@@ -94,10 +94,10 @@ Notes for the modern Java (Java 8+.)
 
     ```java
     import static java.util.stream.Collectors.toList;
-    // Sequential
+    // Sequential.
     List<Apple> heavyApples = inventory.stream()
         .filter((Apple a) -> a.getWeight() > 150).collect(toList());
-    // Parallel
+    // Parallel. Or we can also use .parallel().
     List<Apple> heavyApples = inventory.parallelStream()
         .filter((Apple a) -> a.getWeight() > 150).collect(toList());
     ```
