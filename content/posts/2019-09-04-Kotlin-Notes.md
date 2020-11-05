@@ -39,7 +39,7 @@ tags = ["Programming Languages"]
 
 4. Primitive types are also objects controlled by references.
 
-5. Similar to Swift, we can define the type:
+5. Similar to Swift, we can specify the type:
 
     ```kotlin
     var z: Int = 6
@@ -83,7 +83,7 @@ tags = ["Programming Languages"]
     ```kotlin
     for (x in 1..100) println(x) // end inclusive
     for (x in 1 until 100) println(x) // not end inclusive
-    for (x in 15 downTo 1) println(x)
+    for (x in 15 downTo 1) println(x) // end inclusive
     for (x in 1..100 step 2) println(x)
     for (item in items) println(item)
     ```
@@ -162,13 +162,14 @@ tags = ["Programming Languages"]
 
 11. Add `data` to the start of the class to make it behave like a `struct` in Swift. Then we can use `==` or `.equals` to test the equivalence. (Equal objects have the same `.hashCode()` value.) (And `.toString()` returns the value of each property.) (BTW, `===` is used for referential check (identity).)
 
-12. For `data`, we have:
+12. For `data` objects, we have:
 
     ```kotlin
     val (title, number) = r
     // is equivalent to
     val title = r.component1
     val number = r.component2
+    // And this can be used to return multiple values from a function, or we can use Pair.
     ```
 
 13. Named arguments (`var r = Recipe(title = "title", foo = "bar")`) are also available like in Swift.
