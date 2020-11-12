@@ -283,9 +283,9 @@ tags = ["Programming Languages"]
 
 4. `.min()` and `.max()` work with basic types: `val mMax = mList.max()`
 
-5. `minBy {}` and `maxBy {}` work with all types: `val mMaxQuantity = groceries.maxBy {it.quantity}`. Also `sumBy {}` and `sumByDouble {}` : `mMap.values.sumBy {it}`
+5. `minBy {}` and `maxBy {}` work with all types: `val mMaxQuantity = groceries.maxBy {it.quantity}`. Also `sumBy {}` and `sumByDouble {}` : `mMap.values.sumBy {it}`. We can also use `::` reference like in Java 8 (`::foo` calls the top-level function `foo`).
 
-6. `filter {}`: `val pricesOver3 = groceries.filter {it.price > 3.0}`. Also `filterNot {}`.
+6. `filter {}`: `val pricesOver3 = groceries.filter {it.price > 3.0}`. Also `filterNot {}`. We can also use `.count()` instead of `.filter().size`.
 
 7. `map {}`: `val doubleInts = ints.map {it * 2}`
 
@@ -296,6 +296,12 @@ tags = ["Programming Languages"]
 10. `groupBy {}` returns a `Map`.
 
 11. `fold {}`: `val sumOfInts = ints.fold(0) {mSum, item -> mSum + item}`
+
+12. `all` and `any`:
+
+    ```kotlin
+    listOf(Person("Alice", 27), Person("Bob", 31)).all {it.age < 28}
+    ```
 
 ## References
 
