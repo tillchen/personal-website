@@ -293,7 +293,7 @@ tags = ["Programming Languages"]
 
 9. Closure means that a lambda can access any local variable that it captures.
 
-10. `groupBy {}` returns a `Map`.
+10. `groupBy {}` returns a `Map<Key, List>` (Key depends on the key's type).
 
 11. `fold {}`: `val sumOfInts = ints.fold(0) {mSum, item -> mSum + item}`
 
@@ -301,6 +301,28 @@ tags = ["Programming Languages"]
 
     ```kotlin
     listOf(Person("Alice", 27), Person("Bob", 31)).all {it.age < 28}
+    ```
+
+13. `flatMap {}` and `flatten()`:
+
+    ```kotlin
+    val books = listOf(Book("Thursday Next", listOf("Jasper Fforde")),
+                        Book("Mort", listOf("Terry Pratchett")),
+                        Book("Good Omens", listOf("Terry Pratchett","Neil Gaiman")))
+
+    println(books.flatMap { it.authors }.toSet())
+    // [Jasper Fforde, Terry Pratchett, Neil Gaiman]
+    // Or use .flatten() when we don't do any transformation:
+    listOfLists.flatten()
+    ```
+
+14. Like a Python generator or Java stream, Kotlin also has the lazy sequence:
+
+    ```kotlin
+    people.asSequence()
+        .map(Person::name)
+        .filter {it.startsWith("A")}
+        .toList()  // Converts the sequence back.
     ```
 
 ## References
