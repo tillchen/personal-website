@@ -325,6 +325,28 @@ tags = ["Programming Languages"]
         .toList()  // Converts the sequence back.
     ```
 
+15. For SAM (Single Abstract Method) interface, we can pass a lambda instead of implementing a class:
+
+    ```kotlin
+    fun interface IntPredicate {
+        fun accept(i: Int): Boolean
+    }
+
+    val isEven = IntPredicate {it % 2 == 0}
+    // Instead of
+    val isEven = object : IntPredicate {
+        override fun accpet(i: Int): Boolean {
+            return i % 2 == 0
+        }
+    }
+
+    println(isEven.accept(8))
+    // Another example:
+    button.setOnClickListener { view ->
+        ...
+    }
+    ```
+
 ## References
 
 * [Head First Kotlin: A Brain-Friendly Guide](https://www.amazon.com/Head-First-Kotlin-Brain-Friendly-Guide/dp/1491996692/ref=sr_1_1?keywords=head+first+kotlin&qid=1567580813&s=gateway&sr=8-1)
