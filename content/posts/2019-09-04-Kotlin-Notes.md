@@ -10,9 +10,9 @@ tags = ["Programming Languages"]
 
 * [Table of Contents](#table-of-contents)
 * [Basics](#basics)
+* [Collections](#collections)
 * [OOP](#oop)
 * [Nulls and Exceptions](#nulls-and-exceptions)
-* [Collections](#collections)
 * [Lambdas and Higher-Order Functions](#lambdas-and-higher-order-functions)
 * [References](#references)
 
@@ -119,6 +119,24 @@ tags = ["Programming Languages"]
     // We can also use when without the argument, then each case needs to be a Boolean.
     ```
 
+## Collections
+
+1. `List`, `Set`, `Map`, `MutableList`, `MutableSet`, `MutableMap`.
+
+2. `listOf()`, `mutableListOf()`. `mList.set(1, "foo")`, `.shuffle()`, `.last()`, `.max()`.
+
+3. `mapOf(0 to 'a', 1 to 'b', 2 to 'c')` `for ((key, value) in mMap)`. (`to` actually creates a `Pair<K, V>`).
+
+4. Add `out` (`<out E>`) to make the generics covariant (use a subtype instead of a supertype) - achieving polymorphism. Add `in` to make it contravariant - the opposite of covariance.
+
+5. We can use `in` to check existence just like in Python.
+
+6. Like `enumerate()` in Python, we have `.withIndex()`:
+
+    ```kotlin
+    for ((index, element) in collection.withIndex()) {...}
+    ```
+
 ## OOP
 
 1. Example class:
@@ -209,6 +227,16 @@ tags = ["Programming Languages"]
 
 16. Everything is `public` by default. We also have `private`, `protected`, and `internal` (for a module).
 
+17. Operator overloading:
+
+    ```kotlin
+    data class Point(val x: Int, val y: Int) {
+        operator fun plus(other: Point): Point {
+            return Point(x + other.x, y + other.y)
+        }
+    }
+    ```
+
 ## Nulls and Exceptions
 
 1. Use `?` for nullable objects just like in Swift.
@@ -249,24 +277,6 @@ tags = ["Programming Languages"]
     ```
 
 8. `.filterNotNull()` returns a list with null filtered out.
-
-## Collections
-
-1. `List`, `Set`, `Map`, `MutableList`, `MutableSet`, `MutableMap`.
-
-2. `listOf()`, `mutableListOf()`. `mList.set(1, "foo")`, `.shuffle()`, `.last()`, `.max()`.
-
-3. `mapOf(0 to 'a', 1 to 'b', 2 to 'c')` `for ((key, value) in mMap)`. (`to` actually creates a `Pair<K, V>`).
-
-4. Add `out` (`<out E>`) to make the generics covariant (use a subtype instead of a supertype) - achieving polymorphism. Add `in` to make it contravariant - the opposite of covariance.
-
-5. We can use `in` to check existence just like in Python.
-
-6. Like `enumerate()` in Python, we have `.withIndex()`:
-
-    ```kotlin
-    for ((index, element) in collection.withIndex()) {...}
-    ```
 
 ## Lambdas and Higher-Order Functions
 
