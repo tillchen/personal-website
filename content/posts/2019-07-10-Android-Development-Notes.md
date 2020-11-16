@@ -12,7 +12,7 @@ tags = ["Mobile Development"]
 * [Basics](#basics)
 * [App Resources](#app-resources)
 * [Permissions](#permissions)
-* [AndroidManifest.xml](#androidmanifestxml)
+* [Gradle](#gradle)
 * [Layout](#layout)
 * [Activities](#activities)
 * [Fragments](#fragments)
@@ -61,9 +61,12 @@ tags = ["Mobile Development"]
 
 2. [Use an intent instead](https://developer.android.com/training/permissions/usage-notes#perms_vs_intents)
 
-## AndroidManifest.xml
+## Gradle
 
-1. The `minSdkVersion` attribute declares the minimum version with which your app is compatible and the `targetSdkVersion` attribute declares the highest version on which you've optimized your app: `<uses-sdk android:minSdkVersion="4" android:targetSdkVersion="15" />`
+1. `compileSdkVersion` vs `targetSdkVersion` vs `minSdkVersion`:
+    * `compileSdkVersion`: The app can use all the API features from this version and lower.
+    * `targetSdkVersion`: The version we've tested our app.
+    * `minSdkVersion`: The minimum version the app can support.
 
 ## Layout
 
