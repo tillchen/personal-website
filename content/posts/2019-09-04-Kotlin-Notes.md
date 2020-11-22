@@ -119,6 +119,8 @@ tags = ["Programming Languages"]
     // We can also use when without the argument, then each case needs to be a Boolean.
     ```
 
+12. We can use the qualified `this` to access the `this` from an outer scope: `this@MainActivity`.
+
 ## Collections
 
 1. `List`, `Set`, `Map`, `MutableList`, `MutableSet`, `MutableMap`.
