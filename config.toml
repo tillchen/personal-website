@@ -13,7 +13,7 @@ disablePathToLower = true
   defaultTheme = "auto"
   fingerprint = "sha256"
   dateformat = "January 2, 2006"
-  images = ["/images/Tianyao_Chen_resume.jpeg"]
+  images = ["/images/avatar.jpg"]
 
    # LoveIt NEW | 0.2.0 App icon config
   [params.app]
@@ -116,7 +116,7 @@ disablePathToLower = true
       # Gravatar Email for preferred avatar in home page
       gravatarEmail = ""
       # URL of avatar shown in home page
-      avatarURL = "/images/resume_photo.jpeg"
+      avatarURL = "/images/avatar.jpg"
       # LoveIt CHANGED | 0.2.7 title shown in home page (HTML format is supported)
       title = "Tianyao Chen"
       # subtitle shown in home page
@@ -236,17 +236,17 @@ disablePathToLower = true
       [params.page.seo.publisher]
         name = "Tianyao Chen"
         [params.page.seo.publisher.logo]
-          url = "/images/resume_photo.jpeg"
+          url = "/images/avatar.jpg"
           width = 127
           height = 40
       # Logo info
       [params.page.seo.logo]
-        url = "/images/resume_photo.jpeg"
+        url = "/images/avatar.jpg"
         width = 127
         height = 40
       # Image info
       [params.page.seo.image]
-        url = "/images/resume_photo.jpeg"
+        url = "/images/avatar.jpg"
         width = 800
         height = 600
 
