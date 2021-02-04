@@ -333,14 +333,6 @@ disablePathToLower = true
 
 [menu]
   [[menu.main]]
-    identifier = "about"
-    pre = ""
-    post = ""
-    name = "About"
-    url = "/about/"
-    title = ""
-    weight = 1
-  [[menu.main]]
     identifier = "blog"
     # you can add extra information before the name (HTML format is supported), such as icons
     pre = ""
@@ -350,7 +342,7 @@ disablePathToLower = true
     url = "/posts/"
     # title will be shown when you hover on this menu link
     title = ""
-    weight = 2
+    weight = 1
   [[menu.main]]
     identifier = "tags"
     pre = ""
@@ -358,7 +350,7 @@ disablePathToLower = true
     name = "Tags"
     url = "/tags/"
     title = ""
-    weight = 3
+    weight = 2
   [[menu.main]]
     identifier = "resume"
     pre = ""
@@ -366,4 +358,4 @@ disablePathToLower = true
     name = "Resume"
     url = "/pdfs/Tianyao_Chen_resume.pdf"
     title = ""
-    weight = 4
+    weight = 3
