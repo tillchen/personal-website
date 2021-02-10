@@ -104,7 +104,7 @@ This post is about some basic machine learning concepts.
 
 1. $x_{l,u}^{(j)}$ in a neural net means the feature j of unit u in layer l.
 
-2. $x$ is by default a column vector and $x^T$ a row vector. Then vector is on the left side of a matrix, we usually do $x^TA$.
+2. $x$ is by default a column vector and $x^T$ a row vector. When vector is on the left side of a matrix, we usually do $x^TA$.
 
 3. $argmax_{a \in A}f(a)$ returns the element a of the set A that maximizes f(a).
 
