@@ -1,9 +1,9 @@
 +++
 draft = false
 date = 2019-05-12
-title = "Python Notes"
-description = "Some notes for Python"
-tags = ["Programming Languages", "Python"]
+title = 'Python Notes'
+description = 'Some notes for Python'
+tags = ['Programming Languages', 'Python']
 +++
 
 * [Basics](#basics)
@@ -40,12 +40,12 @@ tags = ["Programming Languages", "Python"]
 
 5. `type()` gives the type of the object.
 
-6. `bool()` returns False if it"s False/0/empty/None; it returns True if it"s not empty.
+6. `bool()` returns False if it's False/0/empty/None; it returns True if it's not empty.
 
 7. Generator is surrounded by parentheses: (it produces one item at a time, unlike listcomp that produces all data at once).
 
     ```python
-    for i in (x*3 for x in [1,2,3,4,5]):
+    for i in (x * 3 for x in [1,2,3,4,5]):
         print(i)
     ```
 
@@ -57,8 +57,8 @@ tags = ["Programming Languages", "Python"]
 2. f-strings are preferred.
 
     ```python
-    name = "foo"
-    print(f"The name is {name}.")
+    name = 'foo'
+    print(f'The name is {name}.')
     ```
 
 3. Stripping Whitespace: `.lstrip()` `.rstrip()` `.strip()`
@@ -66,24 +66,24 @@ tags = ["Programming Languages", "Python"]
 4. `join`: joins the elements of an iterable (list/tuple/dictionary) into a single string:
 
     ```python
-    A = ["A", "B", "C"]
-    x = "#".join(A) # A#B#C
+    A = ['A', 'B', 'C']
+    x = '#'.join(A) # A#B#C
     ```
 
-5. Multiline string (" and " are equivalent):
+5. Multiline string (' and ' are equivalent):
 
     ```python
-    a = """ First line
+    a = ''' First line
     second line
     third line
-    """
+    '''
     ```
 
-6. string to list: `string.split("delimiter")`
+6. string to list: `string.split('delimiter')`
 
     ```python
-    my_string = "Hello World"
-    my_list = my_string.split(" ") # ["Hello", "World"]
+    my_string = 'Hello World'
+    my_list = my_string.split(' ') # ['Hello', 'World']
     ```
 
 7. Be consistent with single and double quotes. For triple-quoted strings, always use double quotes.
@@ -149,9 +149,9 @@ tags = ["Programming Languages", "Python"]
     ```python
     A = [1,2,3,4,5]
     if 1 in A:
-        print("1 in A")
+        print('1 in A')
     if 6 not in A:
-        print("6 not in A")
+        print('6 not in A')
     ```
 
 9. With while loops:
@@ -166,29 +166,29 @@ tags = ["Programming Languages", "Python"]
 
     ```python
     for i, item in enumerate(a):
-        print(f"{i} - {item}")
+        print(f'{i} - {item}')
     ```
 
 ## Tuples
 
-1. Tuples can"t be modified: `A = (1,2)` `A[0] = 3` doesn"t work. (Immutable list)
+1. Tuples can't be modified: `A = (1,2)` `A[0] = 3` doesn't work. (Immutable list)
 
 2. But tuples can be reassigned: `A = (1,2)` `A = (3,2)` works.
 
-3. For a single-object tuple like `t = ("Python")`, it becomes a string. But if we add a comma, it becomes a tuple `t = ("Python",)`
+3. For a single-object tuple like `t = ('Python')`, it becomes a string. But if we add a comma, it becomes a tuple `t = ('Python',)`
 
 ## Dictionaries
 
 1. Basic usage:
 
     ```python
-    A = {"language": "python", "age": 19}
-    print(A["language"])
-    A["height"] = 190 # adding a new pair
-    A["language"] = "C++" # modifying
+    A = {'language': 'python', 'age': 19}
+    print(A['language'])
+    A['height'] = 190 # adding a new pair
+    A['language'] = 'C++' # modifying
     ```
 
-2. get() (When not sure if the key exists): `print (A.get("weight", "no weight assigned"))` (preferred)
+2. get() (When not sure if the key exists): `print (A.get('weight', 'no weight assigned'))` (preferred)
 
 3. Looping through:
 
@@ -208,13 +208,13 @@ tags = ["Programming Languages", "Python"]
 5. Check for membership with `in` and `not in`:
 
     ```python
-    if "bananas" in fruits:
-        fruits["bananas"] += 1
+    if 'bananas' in fruits:
+        fruits['bananas'] += 1
     else: # not in
-        fruits["bananas"] = 1
+        fruits['bananas'] = 1
     ```
 
-6. `setdefault()` to avoid KeyError: `x = fruits.setdefault(fruit, 0)` (it returns the value. If it doesn"t exist, insert the key with the specified value.)
+6. `setdefault()` to avoid KeyError: `x = fruits.setdefault(fruit, 0)` (it returns the value. If it doesn't exist, insert the key with the specified value.)
 
 7. `import pprint` `pprint.pprint()` pretty-print for complex data structures.
 
@@ -223,7 +223,7 @@ tags = ["Programming Languages", "Python"]
     ```python
     flights = {k: v.title()
                for k,v in flights.items()
-               if v == "foo"} # optional filter
+               if v == 'foo'} # optional filter
     ```
 
 ## Sets
@@ -232,10 +232,10 @@ tags = ["Programming Languages", "Python"]
 
     ```python
     empty_set = set()
-    languages = {"python", "C++", "C", "python"}
+    languages = {'python', 'C++', 'C', 'python'}
     print(languages)
-    # Output {"python", "C++", "C"}
-    word = "hello"
+    # Output {'python', 'C++', 'C'}
+    word = 'hello'
     wordSet = set(word)
     ```
 
@@ -245,7 +245,7 @@ tags = ["Programming Languages", "Python"]
 
 ## Input
 
-1. Reading an int: `n = int(input("Please input a number: "))`
+1. Reading an int: `n = int(input('Please input a number: '))`
 
 ## Functions
 
@@ -268,13 +268,13 @@ tags = ["Programming Languages", "Python"]
     print(minus(1))
     ```
 
-3. We can make an argument optional by using None or "":
+3. We can make an argument optional by using None or '':
 
     ```python
     def build_person(first, last, age=None):
-        person = {"first_name": first, "last_name": last}
+        person = {'first_name': first, 'last_name': last}
         if age:
-            person["age"] = age
+            person['age'] = age
         return person
     ```
 
@@ -285,7 +285,7 @@ tags = ["Programming Languages", "Python"]
     ```python
     def print_languages(*languages): # The * makes an empty tuple and packs any value it receives
         for language in languages:
-            print(f"- {language}")
+            print(f'- {language}')
     # more generically, *args
     # **kwargs for key-value pairs
     # * works on the way in as well: *foo expands the list foo to individual arguments
@@ -308,18 +308,18 @@ tags = ["Programming Languages", "Python"]
     ```python
     def foo():
         """This is a docstring."""
-        return "bar"
+        return 'bar'
     ```
 
 8. Use annotations/type hints to improve the docs: (optional and informational only)
 
     ```python
     def foo(word: str) -> str:
-        """Take a string and return a string"""
+        """Take a string and return a string."""
         return word
     ```
 
-9. Python supports both pass-by-value and pass-by-reference. Variables in Python are object references. If there"s only assignment, the original object won"t change.
+9. Python supports both pass-by-value and pass-by-reference. Variables in Python are object references. If there's only assignment, the original object won't change.
 
 ## OOP
 
@@ -366,7 +366,7 @@ tags = ["Programming Languages", "Python"]
 1. Reading an entire file:
 
     ```python
-    with open("file.txt") as file_obj: # "r" is the default mode
+    with open('file.txt') as file_obj: # 'r' is the default mode
         contents = file_obj.read()
         # lines = file_obj.readlines() -> a list of lines
         # for line in lines:
@@ -378,7 +378,7 @@ tags = ["Programming Languages", "Python"]
 2. Reading line by line:
 
     ```python
-    with open("file.txt") as file_obj:
+    with open('file.txt') as file_obj:
         for line in file_obj:
             print(line.rstrip())
     ```
@@ -387,8 +387,8 @@ tags = ["Programming Languages", "Python"]
 
     ```python
     # python only writes strings, use str() if necessary
-    with open("file.txt", "w") as file_obj: # "a", "r+"
-        file_obj.write("Python.")
+    with open('file.txt', 'w') as file_obj: # 'a', 'r+'
+        file_obj.write('Python.')
     ```
 
 ## Exceptions
@@ -399,16 +399,16 @@ tags = ["Programming Languages", "Python"]
     try:
         print(1/0)
     except ZeroDivisionError as err:
-        print("Can't divide by 0.", str(err))
+        print('Can't divide by 0.', str(err))
     else: # optional
-        print("Success")
+        print('Success')
     ```
 
 2. Failing silently using *pass*:
 
     ```python
     try:
-        with open("file.txt") as file_obj:
+        with open('file.txt') as file_obj:
             content = file_obj.read()
     except FileNotFoundError:
         pass
@@ -416,7 +416,7 @@ tags = ["Programming Languages", "Python"]
          print(len(content.split())) # word count
     ```
 
-3. Raise an error: `raise FileNotFoundError("foo")`
+3. Raise an error: `raise FileNotFoundError('foo')`
 
 ## Testing
 
@@ -431,7 +431,7 @@ tags = ["Programming Languages", "Python"]
             result = function_1(value)
             self.assertEqual(result, foo)
 
-    if __name__ = "__main__":
+    if __name__ = '__main__':
         unittest.main()
     ```
 
@@ -479,9 +479,9 @@ tags = ["Programming Languages", "Python"]
 6. Use methods instead of modules:
 
     ```python
-    if foo.startswith("bar"): # or endswith
+    if foo.startswith('bar'): # or endswith
     # is better than
-    if foo[:3] == "bar"
+    if foo[:3] == 'bar'
 
     if isinstance(obj, int):
     # is better than
@@ -500,7 +500,7 @@ tags = ["Programming Languages", "Python"]
 
 8. `pip3 install autopep8` `autopep8 --in-place foo.py` auto-formats the code.
 
-9. Prefix with an underscore for "private" properties/methods. (As a convention but not a protection.)
+9. Prefix with an underscore for 'private' properties/methods. (As a convention but not a protection.)
 
 10. Add parentheses for continuing a long line of code.
 
