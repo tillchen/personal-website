@@ -111,7 +111,6 @@ tags = ['Programming Languages', 'Python']
 1. Adding:
     * Insert: `A.insert(0, foo)`
     * Append: `A.append(foo)`
-    * Extend: `A.extend([1,2])`
     * Concatenate: `A += B`
 
 2. Removing:
@@ -121,7 +120,7 @@ tags = ['Programming Languages', 'Python']
             * `last = A.pop()`
             * `first = A.pop(0)`
     * By value
-        * remove(): `A.remove(foo)`
+        * remove(): `A.remove('foo')`
 
 3. Organizing:
     * Sorting (Alphabetically): `A.sort()` `A.sort(reverse=True)` `print(sorted(A))`
@@ -133,7 +132,7 @@ tags = ['Programming Languages', 'Python']
     * `A = [a ** 2 for a in range(1,3)]` `A = [1,4]`
     * `foo = [k for k,v in foo_dictionary.items()]`
 
-6. Slicing (not end-inclusive): `A = [0,1,2,3,4]`
+6. Slicing (not end-inclusive): `A = [0, 1, 2, 3, 4]`
     * `print(A[1:4])` gives 1,2,3
     * `print(A[:4])` is equivalent to `print (A[0:4])`
     * `print(A[1:])` is equivalent to `print (A[1:5])`
@@ -171,9 +170,9 @@ tags = ['Programming Languages', 'Python']
 
 ## Tuples
 
-1. Tuples can't be modified: `A = (1,2)` `A[0] = 3` doesn't work. (Immutable list)
+1. Tuples can't be modified: `A = (1, 2)` `A[0] = 3` doesn't work. (Immutable list)
 
-2. But tuples can be reassigned: `A = (1,2)` `A = (3,2)` works.
+2. But tuples can be reassigned: `A = (1, 2)` `A = (3, 2)` works.
 
 3. For a single-object tuple like `t = ('Python')`, it becomes a string. But if we add a comma, it becomes a tuple `t = ('Python',)`
 
@@ -193,7 +192,7 @@ tags = ['Programming Languages', 'Python']
 3. Looping through:
 
     ```python
-    for k,v in A.items(): # keys and values
+    for k, v in A.items(): # keys and values
 
     for k in A.keys(): # equivalent to the line below
     for k in A: # since looping through the keys is default
@@ -222,7 +221,7 @@ tags = ['Programming Languages', 'Python']
 
     ```python
     flights = {k: v.title()
-               for k,v in flights.items()
+               for k, v in flights.items()
                if v == 'foo'} # optional filter
     ```
 
@@ -268,7 +267,7 @@ tags = ['Programming Languages', 'Python']
     print(minus(1))
     ```
 
-3. We can make an argument optional by using None or '':
+3. We can make an argument optional by using None:
 
     ```python
     def build_person(first, last, age=None):
@@ -300,7 +299,7 @@ tags = ['Programming Languages', 'Python']
     import module_name as m # alias
     from module_name import * # all functions
     # We must import everything at the beginning of each file
-    # Searching in 1.wd 2. site-packages 3. standard library locations
+    # Searching in 1. wd 2. site-packages 3. standard library locations
     ```
 
 7. Add docstrings for functions:
@@ -323,7 +322,16 @@ tags = ['Programming Languages', 'Python']
 
 ## OOP
 
-1. Default value:
+1. Example:
+
+    ```python
+    class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    ```
+
+2. Default value:
 
     ```python
     class foo:
@@ -331,17 +339,18 @@ tags = ['Programming Languages', 'Python']
             self.value = 0
     ```
 
-2. Inheritance:
+3. Inheritance:
 
     ```python
     from foo import Foo
+
     class Foo(Bar): # Bar is the parent class
         def __init__(self, value):
             super().__init__(value) # superclass
     # we can also override a method by redefining it in the child class.
     ```
 
-3. Conventions:
+4. Conventions:
     * Capitalize the first letter of each word, **without** underscores. Instances and module names use underscores and are in lowercase.
 
 ## Random
