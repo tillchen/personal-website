@@ -127,8 +127,9 @@ It applies the function cumulatively to the iterable.
 ```py
 from functools import reduce
 from math import gcd
+from typing import List
 
-def gcd_for_list(items: int) -> int:
+def gcd_for_list(items: List[int]) -> int:
     return reduce(gcd, items)
 
 print(gcd_for_list([2, 4, 6, 8, 10]))
@@ -260,7 +261,7 @@ print(read_only)
 
 #### array.array
 
-It is a basic C-style typed array that's more space-efficient. Unlike list, it can only have on e type.
+It is a basic C-style typed array that's more space-efficient. Unlike list, it can only have one type.
 
 ```py
 import array
@@ -377,6 +378,8 @@ counter.update(['a'])
 print(counter)
 n = 1
 print(counter.most_common()[:-n-1:-1])  # n lest common elements.
+for k, v in counter.items():
+    print(f'{k}: {v}')
 ```
 
 ```sh
@@ -388,6 +391,8 @@ print(counter.most_common()[:-n-1:-1])  # n lest common elements.
     Counter({'a': 3, 'b': 1})
     Counter({'a': 3, 'b': 1})
     [('b', 1)]
+    a: 3
+    b: 1
 ```
 
 ### Stacks
@@ -521,7 +526,7 @@ list can be used to implement a prioity queue. But insertion is a slow O(n)
 
 ```py
 q = []
-q.appen†d((2, 'code'))
+q.append((2, 'code'))
 q.append((1, 'eat'))
 q.append((3, 'sleep'))
 q.sort(reverse=True)
@@ -751,7 +756,7 @@ print(sum((x * 2 for x in range(10))))
 
 ### Equality
 
-A dictionary key is equal is they have the same `__hash__` and `__eq__`.
+A dictionary key is equal when they have the same `__hash__` and `__eq__`.
 
 ## Itertools
 
