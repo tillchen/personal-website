@@ -6,22 +6,19 @@ description = "Some notes for JavaScript"
 tags = ["Programming Languages"]
 +++
 
+* [Basics](#basics)
+* [OOP](#oop)
+* [DOM (Document Object Model)](#dom-document-object-model)
+* [Handling events](#handling-events)
+* [References](#references)
+
 ## Basics
 
 1. Variables:
     * Global variables live as long as the page.
     * If we forget to declare a variable before using it, it'll always be global even if we first use it in a function.
 
-2. The syntax for an array is similar to Python, using `[]` instead of `{}`:
-
-    ```javascript
-    var foo = [1, 2, 3, 4, 5];
-    foo.push(6);
-    console.log(foo.length);
-    foo[6] = 7; // We can do this, but be sure to avoid creating a sparse array
-    ```
-
-3. `undefined` vs `null` vs `isNaN()`:
+2. `undefined` vs `null` vs `isNaN()`:
     * `undefined` is used for;
         * Unassigned/ Uninitiated variables;
         * A missing property for an object;
@@ -29,11 +26,50 @@ tags = ["Programming Languages"]
     * `null` is used for uncreated objects (like `.getElementById()`'s returned value;)
     * `isNaN(foo)` is true if foo is the number can't be represented by a computer like 0/0.
 
-4. `===` is the strict equality check (both the type and value) while `==` is not strict.
+3. `===` is the strict equality check (both the type and value) while `==` is not strict.
 
-5. `===` between two object references will be true only if they refer to the same object.
+4. `===` between two object references will be true only if they refer to the same object.
 
-6. A function in JavaScript can behave just like any data type. It can be assigned to, passed, and returned.
+5. JavaScript has first-class support for functions.
+
+6. Tow built-in numeric types: `Number` and `BigInt`. Integers are implicitly floats: `3 / 2 = 1.5`.
+
+7. `parseInt()` and `parseFloat()`:
+
+    ```js
+    parseInt('123'); // 123
+    parseInt('11', 2); // 3
+    parseInt('hi'); // NaN
+    parseFloat('1.2'); // 1.2
+    parseFloat('123.2abc'); // 123.2. Parse until invalid char.
+    ```
+
+8. `NaN`:
+
+    ```js
+    Number.isNaN(NaN); // true. It's only true when the parameter is truly NaN.
+    // The global isNaN gives unintuitive behavior, do not use!
+    ```
+
+9. `Infinity`:
+
+    ```js
+    1 / 0; // Infinity
+    - 1 / 0; // -Infinity
+    isFinite(Infinity); // false
+    isFinite(NaN); // false
+    ```
+
+10. Strings:
+
+    ```js
+    'hello'.length; // 5
+    'hello'.charAt(1); // e
+    ```
+
+11. Like Python, JavaScript also has truthy and falsy booleans:
+    * false: false, 0, '', NaN, null, undefined.
+    * true: all the others.
 
 ## OOP
 
