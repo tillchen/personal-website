@@ -16,7 +16,19 @@ tags = ["Programming Languages"]
 
 1. Variables:
     * Global variables live as long as the page.
-    * If we forget to declare a variable before using it, it'll always be global even if we first use it in a function.
+    * If we forget to declare a variable before using it, it’ll always be global even if we first use it in a function.
+    * `let` creates clock-level variables.
+    * `const` creates constants.
+    * `var` is the traditional way of declaring variables.
+
+        ```js
+        // i visible here.
+        for (var i = 0; i < 3; i++) {
+            // i visible here.
+        }
+        // i visible here.
+        // let i = 0 makes i only visible in the for loop.
+        ```
 
 2. `undefined` vs `null` vs `isNaN()`:
     * `undefined` is used for;
@@ -64,24 +76,40 @@ tags = ["Programming Languages"]
 
     ```js
     'hello'.length; // 5
-    'hello'.charAt(1); // e
+    'hello'.charAt(1); // 'e'
+    '1' + 2 + 3; // '123'
+    1 + 2 + 3; // '33'
+    '' + 2; // '2'. A useful way to convert to string.
     ```
 
 11. Like Python, JavaScript also has truthy and falsy booleans:
     * false: false, 0, '', NaN, null, undefined.
     * true: all the others.
 
+12. Two other ways of for loops:
+
+    ```js
+    for (let object in objects) {
+    }
+    for (let num of array) {
+    }
+    ```
+
 ## OOP
 
-1. Example:
+1. Objects are like Dictionaries in Python and HashMaps in Java.
+
+2. `let obj = {};` is the preferred way to create an empty object.
+
+3. Example:
 
     ```javascript
     var foo = {
-        name: "bar", // A comma here
+        name: "bar",
         coding: function() {
-            this.name = "coding bar"; // Must add `this.`
+            this.name = "coding bar";
             alert.log("I'm coding now.");
-        }, // A comma here
+        },
         age: 17 // NO comma here. But can be added after ES5. However, not in JSON.
     };
     foo.height = 190; // This adds a new property
@@ -92,9 +120,9 @@ tags = ["Programming Languages"]
     }
     ```
 
-2. Like in Java, use `this` and `new` for constructors.
+4. Like in Java, use `this` and `new` for constructors.
 
-3. JavaScript (before ES6) doesn't have classes. For inheritance, we have prototypal inheritance. (Prototype is like the parent class.)
+5. JavaScript (before ES6) doesn't have classes. For inheritance, we have prototypal inheritance. (Prototype is like the parent class.)
 
     ```javascript
     function Foo(bar, stuff) {
@@ -138,5 +166,7 @@ tags = ["Programming Languages"]
     ```
 
 ## References
+
+* [A re-introduction to JavaScript (JS tutorial)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
 
 * [Head First JavaScript Programming: A Brain-Friendly Guide, 1st Edition](https://www.amazon.com/Head-First-JavaScript-Programming-Brain-Friendly/dp/144934013X/ref=sr_1_1?crid=2NISC4BUYXL03&keywords=head+first+javascript+programming&qid=1562253717&s=gateway&sprefix=head+first+javascript%2Caps%2C402&sr=8-1)
