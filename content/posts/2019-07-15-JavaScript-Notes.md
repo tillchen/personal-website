@@ -92,7 +92,20 @@ tags = ["Programming Languages"]
     for (let object in objects) {
     }
     for (let num of array) {
+        // for in only iterates over the array indices.
     }
+    ```
+
+13. Arrays are a special type of object:
+
+    ```js
+    let array = ['dog', 'cat', 'panda'];
+    array.length; // 3
+    array[100] = 'fox'; // Create a sparse array.
+    array.length; // 101
+    typeof array[90]; // undefined.
+    array.push('new_item');
+    array.forEach(element => console.log(element));
     ```
 
 ## OOP
@@ -104,25 +117,23 @@ tags = ["Programming Languages"]
 3. Example:
 
     ```javascript
-    var foo = {
+    let foo = {
         name: "bar",
         coding: function() {
             this.name = "coding bar";
             alert.log("I'm coding now.");
         },
-        age: 17 // NO comma here. But can be added after ES5. However, not in JSON.
+        age: 17
     };
-    foo.height = 190; // This adds a new property
-    console.log(foo["name"]); // Also works
-    delete foo.age; // This deletes the property
-    for (var prop in foo) { // Prints all properties
+    foo.height = 190; // This adds a new property.
+    console.log(foo["name"]); // Also works.
+    delete foo.age; // This deletes the property.
+    for (let prop in foo) { // Print all properties.
         console.log(prop + ": " + foo[prop]);
     }
     ```
 
-4. Like in Java, use `this` and `new` for constructors.
-
-5. JavaScript (before ES6) doesn't have classes. For inheritance, we have prototypal inheritance. (Prototype is like the parent class.)
+4. JavaScript (before ES6) doesn't have classes. For inheritance, we have prototypal inheritance. (Prototype is like the parent class.)
 
     ```javascript
     function Foo(bar, stuff) {
