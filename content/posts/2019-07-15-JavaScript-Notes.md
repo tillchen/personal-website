@@ -7,6 +7,7 @@ tags = ["Programming Languages"]
 +++
 
 * [Basics](#basics)
+* [Functions](#functions)
 * [OOP](#oop)
 * [DOM (Document Object Model)](#dom-document-object-model)
 * [Handling events](#handling-events)
@@ -108,6 +109,41 @@ tags = ["Programming Languages"]
     array.forEach(element => console.log(element));
     ```
 
+## Functions
+
+1. The named parameters are more like guidelines:
+    * Calling a function without enough parameters gives undefined.
+    * Calling a function with more parameters than expected ignores the extra parameters.
+    * `arguments` is an array-like object holding all the values passed in. The rest parameter syntax `...args` is preferred for ES6. We can also pass in an array with the spread operator `...numbers`.
+
+        ```js
+        function foo(...args) {
+            for (let arg of args) {}
+        }
+        ```
+
+2. Anonymous functions:
+
+    ```js
+    let foo = function() {}; // Equivalent to function foo().
+    ```
+
+3. Arrow function expressions are compact alternatives to traditional functions, but they can't be used in all situations.
+
+    ```js
+    const animals = ['cat', 'dog', 'panda'];
+    console.log(animals.map(animal => animal.length));
+    // Multiple arguments or no arguments require the parentheses.
+    (a, b) => a + b;
+    () => console.log('No arguments.');
+    // Multiline body requires braces and return.
+    (a, b) => {
+        let foo = 42;
+        return a + b + foo;
+    }
+    let foo = a => a + 100; // Named function.
+    ```
+
 ## OOP
 
 1. Objects are like Dictionaries in Python and HashMaps in Java.
@@ -181,3 +217,5 @@ tags = ["Programming Languages"]
 * [A re-introduction to JavaScript (JS tutorial)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
 
 * [Head First JavaScript Programming: A Brain-Friendly Guide, 1st Edition](https://www.amazon.com/Head-First-JavaScript-Programming-Brain-Friendly/dp/144934013X/ref=sr_1_1?crid=2NISC4BUYXL03&keywords=head+first+javascript+programming&qid=1562253717&s=gateway&sprefix=head+first+javascript%2Caps%2C402&sr=8-1)
+
+* <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions>
