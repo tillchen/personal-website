@@ -37,17 +37,15 @@ tags = ["Programming Languages"]
         * A missing property for an object;
         * A missing value for an array;
     * `null` is used for uncreated objects (like `.getElementById()`'s returned value;)
-    * `isNaN(foo)` is true if foo is the number can't be represented by a computer like 0/0.
+    * `isNaN(foo)` is true if foo is a number that can't be represented (0/0).
 
 3. `===` is the strict equality check (both the type and value) while `==` is not strict.
 
 4. `===` between two object references will be true only if they refer to the same object.
 
-5. JavaScript has first-class support for functions.
+5. Two built-in numeric types: `Number` and `BigInt`. Integers are implicitly floats: `3 / 2 = 1.5`.
 
-6. Tow built-in numeric types: `Number` and `BigInt`. Integers are implicitly floats: `3 / 2 = 1.5`.
-
-7. `parseInt()` and `parseFloat()`:
+6. `parseInt()` and `parseFloat()`:
 
     ```js
     parseInt('123'); // 123
@@ -57,14 +55,14 @@ tags = ["Programming Languages"]
     parseFloat('123.2abc'); // 123.2. Parse until invalid char.
     ```
 
-8. `NaN`:
+7. `NaN`:
 
     ```js
     Number.isNaN(NaN); // true. It's only true when the parameter is truly NaN.
     // The global isNaN gives unintuitive behavior, do not use!
     ```
 
-9. `Infinity`:
+8. `Infinity`:
 
     ```js
     1 / 0; // Infinity
@@ -73,7 +71,7 @@ tags = ["Programming Languages"]
     isFinite(NaN); // false
     ```
 
-10. Strings:
+9.  Strings:
 
     ```js
     'hello'.length; // 5
@@ -83,11 +81,11 @@ tags = ["Programming Languages"]
     '' + 2; // '2'. A useful way to convert to string.
     ```
 
-11. Like Python, JavaScript also has truthy and falsy booleans:
+10. Like Python, JavaScript also has truthy and falsy booleans:
     * false: false, 0, '', NaN, null, undefined.
     * true: all the others.
 
-12. Two other ways of for loops:
+11. Two other ways of for loops:
 
     ```js
     for (let object in objects) {
@@ -97,7 +95,7 @@ tags = ["Programming Languages"]
     }
     ```
 
-13. Arrays are a special type of object:
+12. Arrays are a special type of object:
 
     ```js
     let array = ['dog', 'cat', 'panda'];
@@ -111,7 +109,9 @@ tags = ["Programming Languages"]
 
 ## Functions
 
-1. The named parameters are more like guidelines:
+1. JavaScript has first-class support for functions.
+
+2. The named parameters are more like guidelines:
     * Calling a function without enough parameters gives undefined.
     * Calling a function with more parameters than expected ignores the extra parameters.
     * `arguments` is an array-like object holding all the values passed in. The rest parameter syntax `...args` is preferred for ES6. We can also pass in an array with the spread operator `...numbers`.
@@ -122,13 +122,13 @@ tags = ["Programming Languages"]
         }
         ```
 
-2. Anonymous functions:
+3. Anonymous functions:
 
     ```js
     let foo = function() {}; // Equivalent to function foo().
     ```
 
-3. Arrow function expressions are compact alternatives to traditional functions, but they can't be used in all situations.
+4. Arrow function expressions are compact alternatives to traditional functions, but they can't be used in all situations.
 
     ```js
     const animals = ['cat', 'dog', 'panda'];
