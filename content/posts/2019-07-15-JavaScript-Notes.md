@@ -169,24 +169,16 @@ tags = ["Programming Languages"]
     }
     ```
 
-4. JavaScript (before ES6) doesn't have classes. For inheritance, we have prototypal inheritance. (Prototype is like the parent class.)
+4. We use functions to define custom objects and prototypes to add methods. A prototype is an object shared by all instances of that class. This is similar to extension functions in Kotlin and Swift. We can do the same for built-in objects.
 
-    ```javascript
-    function Foo(bar, stuff) {
-        this.bar = bar;
-        this.stuff = stuff;
+    ```js
+    function Person(first, last) {
+        this.first = first;
+        this.last = last;
     }
-
-    Foo.prototype.foobar = "hello";
-    var bob = new Foo("this is", "cool");
-    console.log(bob.foobar) // "hello"
-    function Foooo(bar, stuff, more) {
-        Foo.call(this, bar, stuff); // calling the Foo constructor
-        this.more = more;
-    }
-    Foooo.prototype = new Foo();
-    Foooo.prototype.new_property = "blah";
-    Foooo.prototype.constructor = Foooo;
+    Person.prototype.fullName = function() {
+        return this.first + ' ' + this.last;
+    };
     ```
 
 ## DOM (Document Object Model)
