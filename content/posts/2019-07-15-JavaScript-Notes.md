@@ -174,11 +174,14 @@ tags = ["Programming Languages"]
         age: 17
     };
     foo.height = 190; // This adds a new property.
-    console.log(foo["name"]); // Also works.
+    console.log(foo["name"]); // Also works,though the dot notation is preferred.
     delete foo.age; // This deletes the property.
     for (let prop in foo) { // Print all properties.
         console.log(prop + ": " + foo[prop]);
     }
+    let bar = foo.bar || "default"; // || gives the default value,
+    foo.bar.foobar; // Throw TypeError, as foo.bar is undefined.
+    foo.bar && foo.bar.foobar; // Prevent TypeError.
     ```
 
 4. We use functions to define custom objects and prototypes to add methods. A prototype is an object shared by all instances of that class. This is similar to extension functions in Kotlin and Swift. We can do the same for built-in objects.
@@ -192,6 +195,10 @@ tags = ["Programming Languages"]
         return this.first + ' ' + this.last;
     };
     ```
+
+5. Delegation is used for prototype chaining. A retrieval looks up the property in the object, then the prototype, then the prototype's prototype, and eventually `Object.prototype`.
+
+6. `typeof` looks up the prototype chain. We can use `hasOwnProperty()` to check if the object has a property without looking up the chain: `flight.hasOwnProperty('constructor')`.
 
 ## DOM (Document Object Model)
 
