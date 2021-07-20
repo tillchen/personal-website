@@ -7,6 +7,7 @@ tags = ["Programming Languages"]
 +++
 
 * [Basics](#basics)
+* [Numbers](#numbers)
 * [Functions](#functions)
 * [OOP](#oop)
 * [DOM (Document Object Model)](#dom-document-object-model)
@@ -32,60 +33,35 @@ tags = ["Programming Languages"]
         ```
 
 2. `undefined` vs `null` vs `isNaN()`:
-    * `undefined` is used for;
+    * `undefined` is used for:
         * Unassigned/ Uninitiated variables;
         * A missing property for an object;
         * A missing value for an array;
     * `null` is used for uncreated objects (like `.getElementById()`'s returned value;)
-    * `isNaN(foo)` is true if foo is a number that can't be represented (0/0).
+    * `NaN` is a number that can't be represented (0/0).
 
 3. `===` is the strict equality check (both the type and value) while `==` is not strict.
 
 4. `===` between two object references will be true only if they refer to the same object.
 
-5. Two built-in numeric types: `Number` and `BigInt`. Integers are implicitly floats: `3 / 2 = 1.5`.
-
-6. `parseInt()` and `parseFloat()`:
+5. Strings:
 
     ```js
-    parseInt('123'); // 123
-    parseInt('11', 2); // 3
-    parseInt('hi'); // NaN
-    parseFloat('1.2'); // 1.2
-    parseFloat('123.2abc'); // 123.2. Parse until invalid char.
-    ```
-
-7. `NaN`:
-
-    ```js
-    Number.isNaN(NaN); // true. It's only true when the parameter is truly NaN.
-    // The global isNaN gives unintuitive behavior, do not use!
-    ```
-
-8. `Infinity`:
-
-    ```js
-    1 / 0; // Infinity
-    - 1 / 0; // -Infinity
-    isFinite(Infinity); // false
-    isFinite(NaN); // false
-    ```
-
-9.  Strings:
-
-    ```js
+    // There's no character type in JS.
     'hello'.length; // 5
     'hello'.charAt(1); // 'e'
+    'hello'.toUpperCase(); // 'HELLO'
     '1' + 2 + 3; // '123'
     1 + 2 + 3; // '33'
     '' + 2; // '2'. A useful way to convert to string.
+    'A' === '\u0041'; // \ is the escape character.
     ```
 
-10. Like Python, JavaScript also has truthy and falsy booleans:
+6. Like Python, JavaScript also has truthy and falsy booleans:
     * false: false, 0, '', NaN, null, undefined.
     * true: all the others.
 
-11. Two other ways of for loops:
+7. Two other ways of for loops:
 
     ```js
     for (let object in objects) {
@@ -95,7 +71,7 @@ tags = ["Programming Languages"]
     }
     ```
 
-12. Arrays are a special type of object:
+8. Arrays are a special type of object:
 
     ```js
     let array = ['dog', 'cat', 'panda'];
@@ -106,6 +82,42 @@ tags = ["Programming Languages"]
     array.push('new_item');
     array.forEach(element => console.log(element));
     ```
+
+9. `/**/` can also occur in regular expression literals, so it's recommended to use `//` instead.
+
+## Numbers
+
+1. Two built-in numeric types: `Number` and `BigInt`. Integers are implicitly floats (64-bit like `Double`): `3 / 2 = 1.5`. This is good as short integer overflows are avoided.
+
+2. `parseInt()` and `parseFloat()`:
+
+    ```js
+    parseInt('123'); // 123
+    parseInt('11', 2); // 3
+    parseInt('hi'); // NaN
+    parseFloat('1.2'); // 1.2
+    parseFloat('123.2abc'); // 123.2. Parse until invalid char.
+    ```
+
+3. `NaN`:
+
+    ```js
+    Number.isNaN(NaN); // true. It's only true when the parameter is truly NaN.
+    // The global isNaN gives unintuitive behavior, do not use!
+    ```
+
+4. `Infinity`:
+
+    ```js
+    1 / 0; // Infinity
+    - 1 / 0; // -Infinity
+    isFinite(Infinity); // false
+    isFinite(NaN); // false
+    ```
+
+5. `1e2` is the same as 100.
+
+6. `Math.floor()` converts a number to an integer.
 
 ## Functions
 
@@ -211,3 +223,5 @@ tags = ["Programming Languages"]
 * [Head First JavaScript Programming: A Brain-Friendly Guide, 1st Edition](https://www.amazon.com/Head-First-JavaScript-Programming-Brain-Friendly/dp/144934013X/ref=sr_1_1?crid=2NISC4BUYXL03&keywords=head+first+javascript+programming&qid=1562253717&s=gateway&sprefix=head+first+javascript%2Caps%2C402&sr=8-1)
 
 * <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions>
+
+* [JavaScript: The Good Parts by Douglas Crockford](https://www.goodreads.com/book/show/2998152-javascript?from_search=true&from_srp=true&qid=a2NTYmkfEm&rank=1)
