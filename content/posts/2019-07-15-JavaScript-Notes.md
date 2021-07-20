@@ -121,7 +121,7 @@ tags = ["Programming Languages"]
 
 ## Functions
 
-1. JavaScript has first-class support for functions.
+1. JavaScript has first-class support for functions. Functions are linked to `Function.prototype`, which is self is linked to `Object.prototype`.
 
 2. The named parameters are more like guidelines:
     * Calling a function without enough parameters gives undefined.
@@ -156,6 +156,8 @@ tags = ["Programming Languages"]
     let foo = a => a + 100; // Named function.
     ```
 
+5. JS has by default function scopes instead of block scopes, which means a variable defined anywhere in a function is visible everywhere in the function. This also causes it to be better to declare all the variables in a function at the top instead of as late as possible. (ONLY applicable to `var` instead of `let`.)
+
 ## OOP
 
 1. Objects are like Dictionaries in Python and HashMaps in Java.
@@ -184,7 +186,7 @@ tags = ["Programming Languages"]
     foo.bar && foo.bar.foobar; // Prevent TypeError.
     ```
 
-4. We use functions to define custom objects and prototypes to add methods. A prototype is an object shared by all instances of that class. This is similar to extension functions in Kotlin and Swift. We can do the same for built-in objects.
+4. We use functions to define custom objects and prototypes to add methods. A prototype is an object shared by all instances of that class. This is similar to extension functions in Kotlin and Swift. We can do the same for built-in objects (augmenting types).
 
     ```js
     function Person(first, last) {
@@ -194,11 +196,24 @@ tags = ["Programming Languages"]
     Person.prototype.fullName = function() {
         return this.first + ' ' + this.last;
     };
+    let person = new Person('foo', 'bar');
     ```
 
 5. Delegation is used for prototype chaining. A retrieval looks up the property in the object, then the prototype, then the prototype's prototype, and eventually `Object.prototype`.
 
 6. `typeof` looks up the prototype chain. We can use `hasOwnProperty()` to check if the object has a property without looking up the chain: `flight.hasOwnProperty('constructor')`.
+
+7. Exceptions:
+
+    ```js
+    throw {
+        name: 'TypeError',
+        message: 'foo'
+    }
+    try {
+    } catch (e) {
+    }
+    ```
 
 ## DOM (Document Object Model)
 
