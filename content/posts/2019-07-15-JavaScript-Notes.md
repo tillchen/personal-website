@@ -77,13 +77,25 @@ tags = ["Programming Languages"]
     let array = ['dog', 'cat', 'panda'];
     array.length; // 3
     array[100] = 'fox'; // Create a sparse array.
-    array.length; // 101
+    array.length; // 101.
     typeof array[90]; // undefined.
     array.push('new_item');
+    let new_item = array.pop(); // new_item.
     array.forEach(element => console.log(element));
+    delete array[1]; // Because arrays are really objects.
+    typeof array; // object.
+    let foo = array.concat([1, 2, 3]); // ['dog', 'cat', 'panda', 1, 2, 3].
+    let bar = array.join('#');
+    array.reverse();
+    array.sort(function (a, b) {
+        return a - b;
+    });
+    array.slice(1, 3);
     ```
 
 9. `/**/` can also occur in regular expression literals, so it's recommended to use `//` instead.
+
+10. `regexp.test(string)` returns true if the string matches.
 
 ## Numbers
 
@@ -157,6 +169,8 @@ tags = ["Programming Languages"]
     ```
 
 5. JS has by default function scopes instead of block scopes, which means a variable defined anywhere in a function is visible everywhere in the function. This also causes it to be better to declare all the variables in a function at the top instead of as late as possible. (ONLY applicable to `var` instead of `let`.)
+
+6. `function.apply(thisArg, argArray)` sets `this` with the first parameter.
 
 ## OOP
 
