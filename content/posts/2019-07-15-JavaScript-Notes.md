@@ -12,6 +12,7 @@ tags = ["Programming Languages"]
 * [OOP](#oop)
 * [DOM (Document Object Model)](#dom-document-object-model)
 * [Handling events](#handling-events)
+* [Pitfalls](#pitfalls)
 * [References](#references)
 
 ## Basics
@@ -251,6 +252,24 @@ tags = ["Programming Languages"]
         images[i].onclick = bar();
     }
     ```
+
+## Pitfalls
+
+1. `typeof null` gives `object`. A better null test is simply `foo === null`. `typeof []` also gives `object`. `typeof NaN` gives `number`.
+
+2. `parseInt('16 tons')` returns 16 without warnings.
+
+3. `NaN === NaN` returns false.
+
+4. Always use `===` and `!==` to avoid surprises.
+
+5. Bitwise operations in JS are very slow and far from the hardware, as JS doesn't have integers and have to to conversions.
+
+6. JS declarations are hoisted. This means a variable with `var` can be used before the declaration. Hoisting moves all declarations to the top of the scope.
+
+7. If we forget to use `new`, `this` is bound to the global object and the function will clobber  global variables.
+
+8. Avoid `void`.
 
 ## References
 
