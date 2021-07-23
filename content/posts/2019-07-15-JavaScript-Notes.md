@@ -13,6 +13,7 @@ tags = ["Programming Languages"]
 * [DOM (Document Object Model)](#dom-document-object-model)
 * [Handling events](#handling-events)
 * [Pitfalls](#pitfalls)
+* [JSON](#json)
 * [References](#references)
 
 ## Basics
@@ -270,6 +271,12 @@ tags = ["Programming Languages"]
 7. If we forget to use `new`, `this` is bound to the global object and the function will clobber  global variables.
 
 8. Avoid `void`.
+
+## JSON
+
+1. JSON strings use double quotes.
+
+2. `JSON.parse()` converts JSON into a JS object.
 
 ## References
 
