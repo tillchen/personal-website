@@ -58,6 +58,9 @@ tags = ["Programming Languages"]
     1 + 2 + 3; // '33'
     '' + 2; // '2'. A useful way to convert to string.
     'A' === '\u0041'; // \ is the escape character.
+    const foo = 42;
+    `The answer is ${foo}`; // Back ticks give us template literals. They also allow multiline strings.
+    // JS uses UTF-16, which is not enough for all the symbols. So a single 16-bit code unit is used for common characters but two code units are used for rare ones.
     ```
 
 6. Like Python, JavaScript also has truthy and falsy booleans:
@@ -93,7 +96,9 @@ tags = ["Programming Languages"]
     array.sort(function (a, b) {
         return a - b;
     });
-    array.slice(1, 3);
+    array.slice(1, 3); // Like in Python.
+    let squared = array.map(a => a * a);
+    let filtered = array.filter(a => a.length > 3);
     ```
 
 9. `/**/` can also occur in regular expression literals, so it's recommended to use `//` instead.
