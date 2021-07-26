@@ -100,6 +100,15 @@ tags = ["Programming Languages"]
 
 10. `regexp.test(string)` returns true if the string matches.
 
+11. Destructuring (similar to Python and Kotlin):
+
+    ```js
+    const x = [1, 2];
+    const [y, z] = x; // y = 1, z = 2.
+    let a = 1, b = 2;
+    [a, b] = [b, a]; // Swap like in Python.
+    ```
+
 ## Numbers
 
 1. Two built-in numeric types: `Number` and `BigInt`. Integers are implicitly floats (64-bit like `Double`): `3 / 2 = 1.5`. This is good as short integer overflows are avoided.
