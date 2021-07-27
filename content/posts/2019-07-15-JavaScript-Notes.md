@@ -114,6 +114,18 @@ tags = ["Programming Languages"]
     [a, b] = [b, a]; // Swap like in Python.
     ```
 
+12. Exceptions:
+
+    ```js
+    throw {
+        name: 'TypeError',
+        message: 'foo'
+    }
+    try {
+    } catch (e) {
+    }
+    ```
+
 ## Numbers
 
 1. Two built-in numeric types: `Number` and `BigInt`. Integers are implicitly floats (64-bit like `Double`): `3 / 2 = 1.5`. This is good as short integer overflows are avoided.
@@ -196,7 +208,7 @@ tags = ["Programming Languages"]
 
 2. `let obj = {};` is the preferred way to create an empty object.
 
-3. Example:
+3. Classic prototype-based example:
 
     ```javascript
     let foo = {
@@ -235,16 +247,31 @@ tags = ["Programming Languages"]
 
 6. `typeof` looks up the prototype chain. We can use `hasOwnProperty()` to check if the object has a property without looking up the chain: `flight.hasOwnProperty('constructor')`.
 
-7. Exceptions:
+7. Classes are built on prototypes, so they are also special functions.
 
     ```js
-    throw {
-        name: 'TypeError',
-        message: 'foo'
-    }
-    try {
-    } catch (e) {
-    }
+    // Class declarations are not hoisted.
+    class Rectangle {
+        constructor(height, width) {
+            this.height = height;
+            this.width = width;
+        }
+        get area() {
+            return this.calcArea();
+        }
+        calcArea() {
+            return this.height * this.width;
+        }
+    };
+    const square = new Rectangle(10, 10);
+    console.log(square.area);
+    // Class expressions are hoisted.
+    let Rectangle = class {
+        constructor(height, width) {
+            this.height = height;
+            this.width = width;
+        }
+    };
     ```
 
 ## DOM (Document Object Model)
@@ -303,3 +330,5 @@ tags = ["Programming Languages"]
 * <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions>
 
 * [JavaScript: The Good Parts by Douglas Crockford](https://www.goodreads.com/book/show/2998152-javascript?from_search=true&from_srp=true&qid=a2NTYmkfEm&rank=1)
+
+* <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes>
