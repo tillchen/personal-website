@@ -256,6 +256,11 @@ tags = ["Programming Languages"]
             this.height = height;
             this.width = width;
         }
+        // Static can't be called with an instance. We must use the class name.
+        static displayName = "Foo";
+        static bar() {
+            console.log("I'm bar");
+        }
         get area() {
             return this.calcArea();
         }
@@ -265,6 +270,8 @@ tags = ["Programming Languages"]
     };
     const square = new Rectangle(10, 10);
     console.log(square.area);
+    square.displayName; // undefined.
+    Rectangle.displayName; // Correct!
     // Class expressions are hoisted.
     let Rectangle = class {
         constructor(height, width) {
