@@ -21,12 +21,12 @@ tags = ["Programming Languages"]
 1. Variables:
     * Global variables live as long as the page.
     * If we forget to declare a variable before using it, it’ll always be global even if we first use it in a function.
-    * `let` creates clock-level variables.
+    * `let` creates block-level variables.
     * `const` creates constants.
     * `var` is the traditional way of declaring variables.
 
         ```js
-        // i visible here.
+        // i visible here (undefined).
         for (var i = 0; i < 3; i++) {
             // i visible here.
         }
