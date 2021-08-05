@@ -126,6 +126,17 @@ tags = ["Programming Languages"]
     }
     ```
 
+13. Maps are better than objects for key-value pairs, as prototype properties are also present in objects. And objects can only have strings as keys.
+
+    ```js
+    let ages = new Map();
+    ages.set('Bob', 1);
+    ages.set('Jack', 10);
+    ages.set('Kate', 0);
+    ages.get('Bob'); // 1.
+    ages.has('Kate'); // True.
+    ```
+
 ## Numbers
 
 1. Two built-in numeric types: `Number` and `BigInt`. Integers are implicitly floats (64-bit like `Double`): `3 / 2 = 1.5`. This is good as short integer overflows are avoided.
@@ -279,7 +290,21 @@ tags = ["Programming Languages"]
             this.width = width;
         }
     };
+    class Square extends Polygon {
+      constructor(length) {
+        super(length, length);
+        // Note: In derived classes, super() must be called before you
+        // can use 'this'. Leaving this out will cause a reference error.
+        this.name = 'Square';
+      }
+
+      get area() {
+        return this.height * this.width;
+      }
+    }
     ```
+
+8. `a instanceof b` is the same as Python's `isinstance(a, b)`.
 
 ## DOM (Document Object Model)
 
