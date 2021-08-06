@@ -103,7 +103,7 @@ tags = ["Programming Languages"]
 
 9. `/**/` can also occur in regular expression literals, so it's recommended to use `//` instead.
 
-10. `regexp.test(string)` returns true if the string matches.
+10. `regexp.test(string)` returns true if the string matches. `let re1 = /abc/;` and `let re1 = new RegExp('abc');` are equivalent.
 
 11. Destructuring (similar to Python and Kotlin):
 
@@ -117,10 +117,7 @@ tags = ["Programming Languages"]
 12. Exceptions:
 
     ```js
-    throw {
-        name: 'TypeError',
-        message: 'foo'
-    }
+    throw new Error('Foo.');
     try {
     } catch (e) {
     }
@@ -136,6 +133,8 @@ tags = ["Programming Languages"]
     ages.get('Bob'); // 1.
     ages.has('Kate'); // True.
     ```
+
+14. `'use strict;'` at the top of a file or a function body enables the strict mode to catch errors.
 
 ## Numbers
 
