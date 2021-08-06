@@ -136,6 +136,8 @@ tags = ["Programming Languages"]
 
 14. `'use strict;'` at the top of a file or a function body enables the strict mode to catch errors.
 
+15. `import ordinal from "ordinal";` is the ES module syntax for importing.
+
 ## Numbers
 
 1. Two built-in numeric types: `Number` and `BigInt`. Integers are implicitly floats (64-bit like `Double`): `3 / 2 = 1.5`. This is good as short integer overflows are avoided.
