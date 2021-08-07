@@ -418,7 +418,7 @@ tags = ["Programming Languages"]
     async function getProcessedData(url) {
         let v;
         try {
-            v = await downloadData(url)
+            v = await downloadData(url);
         } catch (e) {
             v = await downloadFallbackData(url);
         }
