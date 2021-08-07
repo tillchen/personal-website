@@ -14,6 +14,7 @@ tags = ["Programming Languages"]
 * [Handling events](#handling-events)
 * [Pitfalls](#pitfalls)
 * [JSON](#json)
+* [Asynchronicity](#asynchronicity)
 * [References](#references)
 
 ## Basics
@@ -354,6 +355,77 @@ tags = ["Programming Languages"]
 
 2. `JSON.parse()` converts JSON into a JS object. `JSON.stringify()` converts a JS object to a JSON string.
 
+## Asynchronicity
+
+1. `Promise` is like `Future` in Java.
+
+    ```js
+    const promise2 = doSomething().then(successCallback, failureCallback);
+    // Chaining:
+    doSomething()
+    .then(result => doSomethingElse(result))
+    .then(newResult => doThirdThing(newResult))
+    .then(finalResult => {
+        console.log(`Got the final result: ${finalResult}`);
+    })
+    .catch(failureCallback);
+    const myPromise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve('foo');
+        }, 300);
+    });
+    // Promise.all rejects immediately when any input rejects.
+    var p1 = Promise.resolve(3);
+    var p2 = 1337;
+    var p3 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("foo");
+        }, 100);
+    });
+    Promise.all([p1, p2, p3]).then(values => {
+        console.log(values); // [3, 1337, "foo"].
+    });
+    ```
+
+2. `async` and `await` are like in Dart. Async functions always return a promise.
+
+    ```js
+    async function foo() { // This returns a different reference.
+        return 1;
+    }
+    // is similar to
+    function foo() { // This returns the same reference.
+        return Promise.resolve(1);
+    }
+
+    async function foo() {
+        await 1;
+    }
+    // is equivalent to
+    function foo() {
+        return Promise.resolve(1).then(() => undefined);
+    }
+    // Rewrite chaining:
+    function getProcessedData(url) {
+        return downloadData(url) // returns a promise
+            .catch(e => {
+                return downloadFallbackData(url);  // returns a promise
+            })
+            .then(v => {
+                return processDataInWorker(v);  // returns a promise
+            })
+    }
+    async function getProcessedData(url) {
+        let v;
+        try {
+            v = await downloadData(url)
+        } catch (e) {
+            v = await downloadFallbackData(url);
+        }
+        return processDataInWorker(v);
+    }
+    ```
+
 ## References
 
 * [A re-introduction to JavaScript (JS tutorial)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
@@ -365,3 +437,7 @@ tags = ["Programming Languages"]
 * [JavaScript: The Good Parts by Douglas Crockford](https://www.goodreads.com/book/show/2998152-javascript?from_search=true&from_srp=true&qid=a2NTYmkfEm&rank=1)
 
 * <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes>
+
+* <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises>
+
+* <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function>
