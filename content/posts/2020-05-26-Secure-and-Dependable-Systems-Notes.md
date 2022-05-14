@@ -1,7 +1,7 @@
 ---
 title: "Secure and Dependable Systems Notes"
 date: 2020-05-26T16:11:13+02:00
-draft: false
+draft: true
 description: "Course notes for Secure and Dependable Systems at Jacobs University Bremen"
 tags: ["Computer Science"]
 ---

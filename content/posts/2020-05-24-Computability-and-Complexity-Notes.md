@@ -1,5 +1,5 @@
 +++
-draft = false
+draft = true
 date = 2020-05-24T08:45:46+02:00
 title = "Computability and Complexity Notes"
 description = "Course notes for Computability and Complexity at Jacobs University Bremen"
@@ -16,7 +16,7 @@ tags = ["Computer Science"]
       * [Random Access Machine](#random-access-machine)
   * [Decidability](#decidability)
     * [Decidable Languages](#decidable-languages)
-    * [Undecidability of $A_{TM}$](#undecidability-of-math-xmlns%22httpwwww3org1998mathmathml%22semanticsmrowmsubmiamimrowmitmimimmimrowmsubmrowannotation-encoding%22applicationx-tex%22atmannotationsemanticsmathatm%e2%80%8b)
+    * [Undecidability of $A_{TM}$](#undecidability-of-a_tm)
     * [A Turing-Unrecognizable Language](#a-turing-unrecognizable-language)
   * [Reducibility](#reducibility)
 * [Complexity Theory](#complexity-theory)

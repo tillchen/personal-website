@@ -1,5 +1,5 @@
 +++
-draft = false
+draft = true
 date = 2020-05-21
 title = "Software Engineering Notes"
 description = "This is the course notes for Software Engineering at Jacobs University Bremen."
