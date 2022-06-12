@@ -56,6 +56,7 @@ tags: ["Programming Languages", "Python"]
   * [Generators](#generators)
   * [Equality](#equality)
 * [Itertools](#itertools)
+  * [islice](#islice)
   * [groupby](#groupby)
   * [permutations and combinations](#permutations-and-combinations)
 * [Miscellaneous](#miscellaneous)
@@ -65,7 +66,7 @@ tags: ["Programming Languages", "Python"]
   * [Walrus operator](#walrus-operator)
   * [Compare with zip](#compare-with-zip)
 
-This contains some advanced tricks in Python that could be useful for tech interviews.
+Python advanced tricks.
 
 ## Decorators
 
@@ -550,14 +551,19 @@ q = []
 heapq.heappush(q, (2, 'code'))
 heapq.heappush(q, (1, 'eat'))
 heapq.heappush(q, (3, 'sleep'))
+heapq.heappushpop(q, (4, 'repeat'))
 while q:
     print(heapq.heappop(q))
+x = [3, 2, 6]
+heapq.heapify(x)
+print(x)
 ```
 
 ```sh
-    (1, 'eat')
     (2, 'code')
     (3, 'sleep')
+    (4, 'repeat')
+    [2, 3, 6]
 ```
 
 #### queue.PriorityQueue
@@ -674,6 +680,10 @@ xs = {
     'b': 3,
 }
 print(sorted(xs.items(), key=lambda x: x[1], reverse=True))
+
+# Use a tuple as the key to sort by multiple keys.
+tuples = [(1, 'd'), (3, 'a'), (2, 'b'), (2, 'a')]
+print(sorted(tuples, key=lambda x: (x[0], x[1])))
 ```
 
 ```sh
@@ -682,6 +692,7 @@ print(sorted(xs.items(), key=lambda x: x[1], reverse=True))
     [0, 2, 4, 6, 8, 10, 12, 14]
     [0, 2, 4, 6, 8, 10, 12, 14]
     [('a', 4), ('b', 3), ('c', 2)]
+    [(1, 'd'), (2, 'a'), (2, 'b'), (3, 'a')]
 ```
 
 ## Classes and OOP
@@ -759,6 +770,18 @@ print(sum((x * 2 for x in range(10))))
 A dictionary key is equal when they have the same `__hash__` and `__eq__`.
 
 ## Itertools
+
+### islice
+
+The `Iterator`'s equivalence of `slice()` is `islice()`.
+
+```py
+from itertools import islice
+
+stream = iter(range(10))
+for x in islice(stream, 5):
+    print(x)
+```
 
 ### groupby
 
