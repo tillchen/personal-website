@@ -1,5 +1,5 @@
 +++
-draft = true
+draft = false
 date = 2020-05-24T08:45:46+02:00
 title = "Computability and Complexity Notes"
 description = "Course notes for Computability and Complexity at Jacobs University Bremen"

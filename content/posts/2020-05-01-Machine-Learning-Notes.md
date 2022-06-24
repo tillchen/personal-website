@@ -1,5 +1,5 @@
 +++
-draft = true
+draft = false
 date = 2020-05-01T09:25:01+02:00
 title = "Machine Learning Notes"
 description = "Some notes for basic machine learning concepts."
