@@ -351,11 +351,3 @@ disablePathToLower = true
     url = "/tags/"
     title = ""
     weight = 2
-  [[menu.main]]
-    identifier = "resume"
-    pre = ""
-    post = ""
-    name = "Resume"
-    url = "/pdfs/Tianyao_Chen_resume.pdf"
-    title = ""
-    weight = 3
