@@ -323,14 +323,14 @@ tags = ["Programming Languages"]
 1. `onclick`:
 
     ```javascript
-    var image = document.getElementById("foo");
+    const image = document.getElementById("foo");
     image.onclick = bar();
     function bar() {
-        var image = document.getElementById("foo");
-        image.src = "new.png"; // We can change the property when we have the element.
+        let img = document.getElementById("foo");
+        img.src = "new.png"; // We can change the property when we have the element.
     }
-    var images = document.getElementsByTagName("img"); // Get a bunch
-    for (var i = 0; i < images.length; i++) {
+    const images = document.getElementsByTagName("img"); // Get a bunch
+    for (let i = 0; i < images.length; i++) {
         images[i].onclick = bar();
     }
     ```
