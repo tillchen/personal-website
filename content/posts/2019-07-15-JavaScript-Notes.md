@@ -237,7 +237,7 @@ tags = ["Programming Languages"]
         age: 17
     };
     foo.height = 190; // This adds a new property.
-    console.log(foo["name"]); // Also works,though the dot notation is preferred.
+    console.log(foo["name"]); // Also works, though the dot notation is preferred.
     delete foo.age; // This deletes the property.
     for (let prop in foo) { // Print all properties.
         console.log(prop + ": " + foo[prop]);
