@@ -1,4 +1,4 @@
-# Personal_Website_LoveIt
+# Personal Website
 
 My personal website and blog built using Hugo with the LoveIt theme.
 
