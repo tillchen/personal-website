@@ -59,3 +59,22 @@ tags: ["Programming Languages", "TypeScript", "Web Development"]
 7. `null` and `undefined` are subtypes of all other types. So we can do `let foo: number = null`. We can turn on `strictNullChecks` in `tsconfig.json`,and then the compiler will complain if we assign null or undefined to any variable except if it is declared as type any. If we do `let foo = null`, we can only assign null to it due to the inferred null type.
 
 8. `void` is typically used only when the function returns no value.
+
+9. Type alias.
+
+    ```ts
+    type Person = {
+        firstName: string, lastName: string, age: number
+    }
+    const person1: Person = {
+        firstName: 'Mike', lastName: 'White', age: 42
+    }
+    ```
+
+10. Union types.
+
+    ```ts
+    let foo: number | string;
+    foo = 42
+    foo = '42'
+    ```
