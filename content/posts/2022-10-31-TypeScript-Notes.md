@@ -1,5 +1,5 @@
 ---
-title: "2022 10 31 TypeScript Notes"
+title: "TypeScript Notes"
 date: 2022-10-31T10:57:10-07:00
 draft: false
 description: "TypeScript notes"
