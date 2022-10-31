@@ -7,6 +7,7 @@ tags: ["Programming Languages", "TypeScript", "Web Development"]
 ---
 
 * [Basics](#basics)
+* [ES6](#es6)
 
 ## Basics
 
@@ -77,4 +78,28 @@ tags: ["Programming Languages", "TypeScript", "Web Development"]
     let foo: number | string;
     foo = 42
     foo = '42'
+    ```
+
+## ES6
+
+1. We get ES6 features out-of-the-box when using TypeScript.
+
+2. Arrow functions and default parameters:
+
+    ```ts
+    const addNums = (a: number, b: number = 10): number => a + b
+    ```
+
+3. Spread, rest, and optional arguments:
+
+    ```ts
+    const addNums = (a?: number, b?: number): number => a + b // optional arguments
+    const nums: number[] = [5, 6]
+    addNums(...nums) // spread
+    ```
+
+    ```ts
+    const addNums = (...a: number[]) : number => a.reduce((acc, val) => acc + val) // rest
+    const nums: number[] = [5, 6]
+    addNums(...nums)
     ```
