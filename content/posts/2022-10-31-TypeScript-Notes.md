@@ -22,5 +22,36 @@ tags: ["Programming Languages", "TypeScript", "Web Development"]
 3. Tuples are just arrays with a specific number of elements of specific types. There are no enforcements in JS, but it's all enforced in TS.
 
     ```ts
-    const author: [ string, number ] = ['Bob', 42];
+    const author: [string, number] = ['Bob', 42];
+    ```
+
+4. Enums are TS only.
+
+    ```ts
+    enum Food {
+        Pizza, // 0
+        Burger = 500,
+        Rice // 501
+    }
+    const myFavorite = Food.Burger
+    console.log(myFavorite) // 500
+    ```
+
+5. Functions.
+
+    ```ts
+    function add(x: number, y: number): string {
+        return '' + x + y
+    }
+    let f: (x: number, y: number) => string = add
+    ```
+
+6. Objects.
+
+    ```ts
+    const car: {type: string, model: string, year: number} = {
+        type: 'Toyota',
+        model: 'Corolla',
+        year: 2009
+    }
     ```
