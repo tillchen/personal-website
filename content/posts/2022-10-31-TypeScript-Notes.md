@@ -8,6 +8,7 @@ tags: ["Programming Languages", "TypeScript", "Web Development"]
 
 * [Basics](#basics)
 * [ES6](#es6)
+* [OOP](#oop)
 
 ## Basics
 
@@ -114,4 +115,36 @@ tags: ["Programming Languages", "TypeScript", "Web Development"]
     const a = ['abc', 11, 'wow']
     const [x, y, z] = a
     [foo, bar] = [bar, foo] // swaps the values
+    ```
+
+## OOP
+
+1. We can declare properties outside of constructors. And TS adds visibilities (private, protected).
+
+    ```ts
+    class Planet {
+        private name: string = 'none'
+        mass: number;
+        static meStatic: boolean = true
+        constructor(inName: string, inMass: number) {
+            // We can still set the properties in constructors
+            this.name = inName
+            this.mass = inMass
+        }
+    }
+    ```
+
+2. Getters and setters.
+
+    ```ts
+    class Planet {
+        private _name: string = 'no name set'
+        get name() {
+            return `Name is ${self._name}`
+        }
+        set name(inName: string) {
+            this._name = inName
+        }
+        readonly foo: string = 'read only' // or provide a getter only to make it read-only
+    }
     ```
