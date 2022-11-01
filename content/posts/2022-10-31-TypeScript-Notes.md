@@ -9,6 +9,7 @@ tags: ["Programming Languages", "TypeScript", "Web Development"]
 * [Basics](#basics)
 * [ES6](#es6)
 * [OOP](#oop)
+* [Debugging](#debugging)
 
 ## Basics
 
@@ -155,3 +156,7 @@ tags: ["Programming Languages", "TypeScript", "Web Development"]
         readonly foo: string = 'read only' // or provide a getter only to make it read-only
     }
     ```
+
+## Debugging
+
+1. `tsc --sourceMap foo.ts` generates a `foot.js.map` file, which allows us to debug the TS code in the browser by appending `//# sourceMappingURL=foo.js.map` to the TS file.
