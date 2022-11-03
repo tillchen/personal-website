@@ -157,6 +157,12 @@ tags: ["Programming Languages", "TypeScript", "Web Development"]
     }
     ```
 
+3. Generics.
+
+    ```ts
+    function echoMe<T>(inArg: T): T { return inArg; }
+    ```
+
 ## Debugging
 
 1. `tsc --sourceMap foo.ts` generates a `foot.js.map` file, which allows us to debug the TS code in the browser by appending `//# sourceMappingURL=foo.js.map` to the TS file.
