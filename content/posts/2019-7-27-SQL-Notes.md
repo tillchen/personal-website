@@ -79,6 +79,10 @@ tags = ["Programming Languages"]
     INNER JOIN Customers ON Orders.CustomerID=Customers.CustomerID;
     ```
 
+9. `LIMIT 100` limits the number of rows to 100.
+
+10. We can also use `AS` like `SELECT invoice - payment - credit AS balance_due` and `SELECT CONCAT(first_name, ' ', last_name) AS full_name`.
+
 ## DELETE
 
 1. `DELETE FROM doughnut_list WHERE doughnut_type = 'bar';`.
