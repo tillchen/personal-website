@@ -25,7 +25,8 @@ tags = ["Programming Languages"]
         doughnut_id INT NOT NULL AUTO_INCREMENT,
         doughnut_name VARCHAR(10) DEFAULT NULL,
         doughnut_type VARCHAR(8) DEFAULT NULL,
-        PRIMARY KEY (doughnut_id)
+        PRIMARY KEY (doughnut_id),
+        FOREIGN KEY (doughnut_type) REFERENCES foo(doughnut_type)
     ); -- Variable Char, up to 10 and 8 chars.
     DESC doughnut_list; -- Describe the table.
     -- DROP TABLE doughnut_list; -- Delete the table.
