@@ -85,6 +85,19 @@ tags = ["Programming Languages"]
 
 11. Use `/` for division and `DIV` for integer division. Use `%` or `MOD` for modulo.
 
+12. `LEFT`, `DATE_FORMAT`, and `ROUND`:
+
+    ```sql
+    -- LEFT for string prefixes
+    SELECT first_name, last_name, CONCAT(LEFT(first_name, 1), LEFT(last_name, 1)) AS initials FROM foo;
+    SELECT invoice_date, DATE_FORMAT(invoice_date, '%m/%d/%y') AS 'MM/DD/YY', DATE_FORMAT(invoice_date, '%e-%b-%Y') AS 'DD-Mon-YYYY'
+    FROM invoices ORDER BY invoice_date;
+    -- Round to the nearest integer
+    ROUND(total)
+    -- Round to one decimal place
+    ROUND(total, 1)
+    ```
+
 ## DELETE
 
 1. `DELETE FROM doughnut_list WHERE doughnut_type = 'bar';`.
