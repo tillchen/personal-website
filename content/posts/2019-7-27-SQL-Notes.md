@@ -81,7 +81,9 @@ tags = ["Programming Languages"]
 
 9. `LIMIT 100` limits the number of rows to 100.
 
-10. We can also use `AS` like `SELECT invoice - payment - credit AS balance_due` and `SELECT CONCAT(first_name, ' ', last_name) AS full_name`.
+10. We can also use `AS` like `SELECT invoice - payment - credit AS balance_due` and `SELECT CONCAT(first_name, ' ', last_name) AS full_name`. Simple alias are also possible `SELECT foo AS bar`.
+
+11. Use `/` for division and `DIV` for integer division. Use `%` or `MOD` for modulo.
 
 ## DELETE
 
