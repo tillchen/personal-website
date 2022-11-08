@@ -57,7 +57,7 @@ tags = ["Programming Languages"]
 
 ## SELECT
 
-1. `<>` means not equal.
+1. Both `<>` and `!=` mean not equal.
 
 2. Use `IS NULL` to select null ones: `WHERE doughnut_name IS NULL;`.
 
@@ -79,7 +79,7 @@ tags = ["Programming Languages"]
     INNER JOIN Customers ON Orders.CustomerID=Customers.CustomerID;
     ```
 
-9. `LIMIT 100` limits the number of rows to 100.
+9. `LIMIT 100` limits the number of rows to 100. `LIMIT 2, 3` gets 3 rows that start with the third row (rows are also 0-index based).
 
 10. We can also use `AS` like `SELECT invoice - payment - credit AS balance_due` and `SELECT CONCAT(first_name, ' ', last_name) AS full_name`. Simple alias are also possible `SELECT foo AS bar`.
 
@@ -97,6 +97,10 @@ tags = ["Programming Languages"]
     -- Round to one decimal place
     ROUND(total, 1)
     ```
+
+13. `SELECT DISTINCT foo` eliminates duplicates.
+
+14. `LIKE '%foo'` matches zero or more chars and  `LIKE '-foo'` matches one char.
 
 ## DELETE
 
