@@ -44,7 +44,16 @@ tags = ["Programming Languages"]
 
 3. `\'` or `''` to insert data with the single quote.
 
-4. Single line comments: `--`; multi-line comments: `/**/`
+4. Single line comments: `--`; multi-line comments: `/**/`.
+
+5. In the terminal:
+
+    ```sh
+    mysql -u root -p ...
+    show databases;
+    use foo;
+    show tables;
+    ```
 
 ## SELECT
 
