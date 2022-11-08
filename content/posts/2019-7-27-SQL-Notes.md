@@ -60,6 +60,14 @@ tags = ["Programming Languages"]
 
 7. `ORDER BY foo DESC, bar;` can be added to the end (DESC means descending.)
 
+8. Select from two tables:
+
+    ```sql
+    SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
+    FROM Orders
+    INNER JOIN Customers ON Orders.CustomerID=Customers.CustomerID;
+    ```
+
 ## DELETE
 
 1. `DELETE FROM doughnut_list WHERE doughnut_type = 'bar';`.
