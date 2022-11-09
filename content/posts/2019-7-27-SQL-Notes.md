@@ -77,6 +77,8 @@ tags = ["Programming Languages"]
     SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
     FROM Orders o
     JOIN Customers c ON o.CustomerID=c.CustomerID;
+    -- Self-join is also possible
+    -- join a table from another db: foo.table
     ```
 
 9. `LIMIT 100` limits the number of rows to 100. `LIMIT 2, 3` gets 3 rows that start with the third row (rows are also 0-index based).
