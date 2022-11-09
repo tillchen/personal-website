@@ -91,6 +91,9 @@ tags = ["Programming Languages"]
     SELECT foo, bar
     FROM a
     NATURAL JOIN b;
+    -- Cross join creates the Cartesian product
+    SELECT foo, bar
+    FROM a CROSS JOIN b;
     ```
 
 9. `LIMIT 100` limits the number of rows to 100. `LIMIT 2, 3` gets 3 rows that start with the third row (rows are also 0-index based).
