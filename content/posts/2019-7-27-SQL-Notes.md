@@ -74,11 +74,15 @@ tags = ["Programming Languages"]
 8. Select from two tables:
 
     ```sql
-    SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
+    SELECT o.OrderID, c.CustomerName, c.OrderDate
     FROM Orders o
     JOIN Customers c ON o.CustomerID=c.CustomerID;
     -- Self-join is also possible
     -- join a table from another db: foo.table
+    -- Or do the implicit join
+    SELECT o.OrderID, c.CustomerName, c.OrderDate
+    FROM Orders o, Customers c
+    WHERE o.CustomerID=c.CustomerID;
     ```
 
 9. `LIMIT 100` limits the number of rows to 100. `LIMIT 2, 3` gets 3 rows that start with the third row (rows are also 0-index based).
