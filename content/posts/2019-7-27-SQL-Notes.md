@@ -87,6 +87,10 @@ tags = ["Programming Languages"]
     SELECT foo, bar
     FROM a
     JOIN b USING (same_column);
+    -- Or natural join (based on columns with same names)
+    SELECT foo, bar
+    FROM a
+    NATURAL JOIN b;
     ```
 
 9. `LIMIT 100` limits the number of rows to 100. `LIMIT 2, 3` gets 3 rows that start with the third row (rows are also 0-index based).
