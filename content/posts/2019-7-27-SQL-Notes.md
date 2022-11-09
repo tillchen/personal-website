@@ -119,6 +119,19 @@ tags = ["Programming Languages"]
 
 14. `LIKE '%foo'` matches zero or more chars and  `LIKE '-foo'` matches one char.
 
+15. Union.
+
+    ```sql
+    -- No duplicates
+    SELECT column_name(s) FROM table1
+    UNION
+    SELECT column_name(s) FROM table2;
+    -- Allow duplicates
+    SELECT column_name(s) FROM table1
+    UNION ALL
+    SELECT column_name(s) FROM table2;
+    ```
+
 ## DELETE
 
 1. `DELETE FROM doughnut_list WHERE doughnut_type = 'bar';`.
