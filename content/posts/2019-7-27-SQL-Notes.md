@@ -34,6 +34,9 @@ tags = ["Programming Languages"]
     SELECT * FROM doughnut_list; -- Show the table. * means all columns.
     SELECT doughnut_name FROM doughnut_list; -- Just show the name column
     SELECT * FROM doughnut_list WHERE doughnut_name = 'hello' AND doughnut_type = 'world'; -- Show the table selectively. = instead of ==
+    -- Create a copy of a table
+    CREATE TABLE foo_copy AS
+    SELECT * FROM foo;
     ```
 
 2. For `INSERT`, there are three variations from above:
