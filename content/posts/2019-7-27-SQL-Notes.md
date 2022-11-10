@@ -69,6 +69,12 @@ tags = ["Programming Languages"]
 
 10. `CHAR(9)` is tab, `CHAR(10)` is line feed, `CHAR(13)` is carriage return. `CHAR(13, 10)` is CRLF.
 
+11. An index speeds up the queries by letting the DB go directly to a row instead of doing a full scan. MySQL creates indexes for primary keys, foreign keys, and unique keys by default. Avoid creating indexes on columns that are updated frequently as it slows down the insert, update, and delete.
+
+    ```sql
+    CREATE INDEX invoice_date_index ON invoices (invoice_date);
+    ```
+
 ## SELECT
 
 1. Both `<>` and `!=` mean not equal.
@@ -182,4 +188,3 @@ tags = ["Programming Languages"]
 
 * [Head First SQL](https://www.goodreads.com/book/show/1782447.Head_First_SQL?from_search=true&from_srp=true&qid=LbMGiCAF6g&rank=1)
 * [Murach's MySQL](https://www.goodreads.com/book/show/14543964-murach-s-mysql?from_search=true&from_srp=true&qid=OPrQio6dvx&rank=2)
-
