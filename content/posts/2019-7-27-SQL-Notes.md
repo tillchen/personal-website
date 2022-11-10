@@ -31,6 +31,7 @@ tags = ["Programming Languages"]
     DESC doughnut_list; -- Describe the table.
     -- DROP TABLE doughnut_list; -- Delete the table.
     INSERT INTO doughnut_list (doughnut_name, doughnut_type) VALUES ('hello', 'world'); -- The order doesn't matter, but they must match
+    -- We can also insert multiple rows at onces (...), (...)
     SELECT * FROM doughnut_list; -- Show the table. * means all columns.
     SELECT doughnut_name FROM doughnut_list; -- Just show the name column
     SELECT * FROM doughnut_list WHERE doughnut_name = 'hello' AND doughnut_type = 'world'; -- Show the table selectively. = instead of ==
