@@ -63,6 +63,12 @@ tags = ["Programming Languages"]
 
 7. `INSERT INTO foo SELECT * FROM bar` is also possible.
 
+8. Convert data types with `CAST(x AS foo)` and `CONVERT(x, foo)`.
+
+9. `FORMAT(number, decimal)` formats the number. e.g. `FORMAT(2.3401, 2)` gives 2.34.
+
+10. `CHAR(9)` is tab, `CHAR(10)` is line feed, `CHAR(13)` is carriage return. `CHAR(13, 10)` is CRLF.
+
 ## SELECT
 
 1. Both `<>` and `!=` mean not equal.
