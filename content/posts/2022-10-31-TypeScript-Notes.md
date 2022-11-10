@@ -10,6 +10,7 @@ tags: ["Programming Languages", "TypeScript", "Web Development"]
 * [ES6](#es6)
 * [OOP](#oop)
 * [Debugging](#debugging)
+* [References](#references)
 
 ## Basics
 
@@ -166,3 +167,8 @@ tags: ["Programming Languages", "TypeScript", "Web Development"]
 ## Debugging
 
 1. `tsc --sourceMap foo.ts` generates a `foot.js.map` file, which allows us to debug the TS code in the browser by appending `//# sourceMappingURL=foo.js.map` to the TS file.
+
+## References
+
+* [Modern Full-Stack Development: Using Typescript, React, Node.Js, Webpack, and Docker](https://www.goodreads.com/book/show/50698873-modern-full-stack-development)
+* <https://www.typescriptlang.org/>

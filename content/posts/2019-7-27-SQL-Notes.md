@@ -180,4 +180,6 @@ tags = ["Programming Languages"]
 
 ## References
 
-* [Head First SQL](https://www.amazon.com/Head-First-SQL-Brain-Learners/dp/0596526849/ref=sr_1_1?keywords=head+first+sql&qid=1564318633&s=gateway&sr=8-1)
+* [Head First SQL](https://www.goodreads.com/book/show/1782447.Head_First_SQL?from_search=true&from_srp=true&qid=LbMGiCAF6g&rank=1)
+* [Murach's MySQL](https://www.goodreads.com/book/show/14543964-murach-s-mysql?from_search=true&from_srp=true&qid=OPrQio6dvx&rank=2)
+
