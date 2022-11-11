@@ -197,6 +197,10 @@ tags = ["Programming Languages"]
 
     ![with rollup](/images/with_rollup.png)
 
+4. `GROUPING` returns 1 if null because of being in a summary row. Otherwise, return 0.
+
+    ![grouping](/images/grouping.png)
+
 ## References
 
 * [Head First SQL](https://www.goodreads.com/book/show/1782447.Head_First_SQL?from_search=true&from_srp=true&qid=LbMGiCAF6g&rank=1)
