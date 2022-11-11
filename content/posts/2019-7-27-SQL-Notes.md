@@ -169,7 +169,7 @@ tags = ["Programming Languages"]
 
 2. Without `WHERE`, every possible one will be updated.
 
-3. Use comma to seperate different columns after `SET`.
+3. Use comma to separate different columns after `SET`.
 
 4. It can do basic math: `SET cost = cost + 1`.
 
@@ -193,11 +193,11 @@ tags = ["Programming Languages"]
 
 2. `GROUP BY foo_id HAVING AVG(bar) > 42` groups up the selections by foo_id and filters for each group. `HAVING` does the search after the aggregating, whereas `WHERE` does it before grouping.
 
-3. `WITH ROLLUP` adds a summary roll at the end of `GROUP BY`.
+3. `WITH ROLLUP` adds a summary roll at the end of each `GROUP`.
 
     ![with rollup](/images/with_rollup.png)
 
-4. `GROUPING` returns 1 if null because of being in a summary row. Otherwise, return 0.
+4. `GROUPING` returns 1 if null because of being in a summary row from `WITH ROLLUP`. Otherwise (in a grouped row), return 0.
 
     ![grouping](/images/grouping.png)
 
