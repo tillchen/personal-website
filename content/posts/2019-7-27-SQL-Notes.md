@@ -205,6 +205,10 @@ tags = ["Programming Languages"]
 
     ![over](/images/over.png)
 
+6. Frames with `ROWS` and `RANGE`
+
+    ![frames](/images/sql_frames.png)
+
 ## References
 
 * [Head First SQL](https://www.goodreads.com/book/show/1782447.Head_First_SQL?from_search=true&from_srp=true&qid=LbMGiCAF6g&rank=1)
