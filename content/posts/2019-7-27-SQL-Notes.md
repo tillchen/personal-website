@@ -201,6 +201,10 @@ tags = ["Programming Languages"]
 
     ![grouping](/images/grouping.png)
 
+5. Aggregate window functions don't collapse each group into one row. An empty `OVER()` treats the entire result set as a partition. `ORDER BY` makes the values cumulative.
+
+    ![over](/images/over.png)
+
 ## References
 
 * [Head First SQL](https://www.goodreads.com/book/show/1782447.Head_First_SQL?from_search=true&from_srp=true&qid=LbMGiCAF6g&rank=1)
