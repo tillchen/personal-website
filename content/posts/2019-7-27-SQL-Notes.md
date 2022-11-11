@@ -12,6 +12,7 @@ tags = ["Programming Languages"]
 * [UPDATE](#update)
 * [ALTER](#alter)
 * [Summary Queries](#summary-queries)
+* [Subqueries](#subqueries)
 * [References](#references)
 
 ## Basics
@@ -210,6 +211,28 @@ tags = ["Programming Languages"]
     ![frames](/images/sql_frames.png)
 
 7. Named windows can also be used `WINDOW vendor_window AS (PARTITION BY vendor_id)`. And then `OVER vendor_window` is possible.
+
+## Subqueries
+
+1. Example.
+
+    ```SQL
+    SELECT foo FROM bar WHERE foo_id IN
+        (SELECT foo_id FROM foobar WHERE x = 'x');
+    ```
+
+2. `ANY`, `SOME`, `ALL` can be used. E.g., `WHERE x > ALL (...)`.
+
+3. Correlated subqueries are executed once for each row in the main query, whereas uncorrelated subqueries are run only once.
+
+    ```sql
+    -- Correlated subquery
+    SELECT vendor_id, invoice_number, invoice_total FROM invoices i WHERE invoice_total >
+        (SELECT AVG(invoice_total) FROM invoices WHERE vendor_id = i.vendor_id);
+    -- Correlated subquery with EXISTS
+    SELECT vendor_id, vendor_name, vendor_state FROM vendors WHERE NOT EXISTS
+        (SELECT * FROM invoices WHERE vendor_id = vendors.vendor_id);
+    ```
 
 ## References
 
