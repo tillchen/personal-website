@@ -75,6 +75,8 @@ tags = ["Programming Languages"]
     CREATE INDEX invoice_date_index ON invoices (invoice_date);
     ```
 
+12. `DECIMAL(5, 2)` means 5 digits in total with 2 decimal points inside (e.g. 123.45).
+
 ## SELECT
 
 1. Both `<>` and `!=` mean not equal.
