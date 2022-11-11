@@ -193,6 +193,10 @@ tags = ["Programming Languages"]
 
 2. `GROUP BY foo_id HAVING AVG(bar) > 42` groups up the selections by foo_id and filters for each group. `HAVING` does the search after the aggregating, whereas `WHERE` does it before grouping.
 
+3. `WITH ROLLUP` adds a summary roll at the end of `GROUP BY`.
+
+    ![with rollup](/images/with_rollup.png)
+
 ## References
 
 * [Head First SQL](https://www.goodreads.com/book/show/1782447.Head_First_SQL?from_search=true&from_srp=true&qid=LbMGiCAF6g&rank=1)
