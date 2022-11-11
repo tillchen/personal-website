@@ -229,7 +229,7 @@ tags = ["Programming Languages"]
     -- Correlated subquery
     SELECT vendor_id, invoice_number, invoice_total FROM invoices i WHERE invoice_total >
         (SELECT AVG(invoice_total) FROM invoices WHERE vendor_id = i.vendor_id);
-    -- Correlated subquery with EXISTS
+    -- Correlated subquery with EXISTS. EXISTS tests if the subquery returns a result set.
     SELECT vendor_id, vendor_name, vendor_state FROM vendors WHERE NOT EXISTS
         (SELECT * FROM invoices WHERE vendor_id = vendors.vendor_id);
     ```
