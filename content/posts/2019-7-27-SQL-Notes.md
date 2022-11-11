@@ -209,6 +209,8 @@ tags = ["Programming Languages"]
 
     ![frames](/images/sql_frames.png)
 
+7. Named windows can also be used `WINDOW vendor_window AS (PARTITION BY vendor_id)`. And then `OVER vendor_window` is possible.
+
 ## References
 
 * [Head First SQL](https://www.goodreads.com/book/show/1782447.Head_First_SQL?from_search=true&from_srp=true&qid=LbMGiCAF6g&rank=1)
