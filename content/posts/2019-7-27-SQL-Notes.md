@@ -191,7 +191,7 @@ tags = ["Programming Languages"]
 
 1. `AVG()`, `SUM()`, `MIN()`, `MAX()`, `COUNT()` are aggregate functions.
 
-2. `GROUP BY foo_id HAVING AVG(bar) > 42` groups up the selections by foo_id and filters for each group. `HAVING` does the search after the aggregating, whereas `WHERE` does it before grouping.
+2. `GROUP BY foo_id HAVING AVG(bar) > 42` collapses each group into one row. `HAVING` does the search after the aggregating, whereas `WHERE` does it before grouping.
 
 3. `WITH ROLLUP` adds a summary roll at the end of each `GROUP`.
 
