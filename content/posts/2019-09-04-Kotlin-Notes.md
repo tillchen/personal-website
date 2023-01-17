@@ -312,7 +312,7 @@ tags = ["Programming Languages"]
 
 8. `forEach {}`: `groceries.forEach {println(it.name)}`
 
-9. Closure means that a lambda can access any local variable that it captures (the variables declared in the outer scope).
+9. Closure means that a lambda can access any local variable that it captures (the variables declared in the outer scope). Closures are functions that are aware of the surroundings.
 
     ```kt
     var sum = 0
