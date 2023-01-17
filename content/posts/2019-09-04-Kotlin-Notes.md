@@ -312,7 +312,15 @@ tags = ["Programming Languages"]
 
 8. `forEach {}`: `groceries.forEach {println(it.name)}`
 
-9. Closure means that a lambda can access any local variable that it captures.
+9. Closure means that a lambda can access any local variable that it captures (the variables declared in the outer scope).
+
+    ```kt
+    var sum = 0
+    ints.filter { it > 0 }.forEach {
+        // sum is captured
+        sum += it
+    }
+    ```
 
 10. `groupBy {}` returns a `Map<Key, List>` (Key depends on the key's type).
 
