@@ -129,7 +129,18 @@ tags = ["Programming Languages"]
 
 3. `mapOf(0 to 'a', 1 to 'b', 2 to 'c')` `for ((key, value) in mMap)`. (`to` actually creates a `Pair<K, V>`).
 
-4. Add `out` (`<out E>`) to make the generics covariant (use a subtype instead of a supertype) - achieving polymorphism. Add `in` to make it contravariant - the opposite of covariance.
+4. Add `out` (`<out T>`) to make the generics covariant (use a subtype when a supertype is expected) - achieving polymorphism (like `<? extends E>` in Java). Add `in` to make it contravariant - the opposite of covariance (use a supertype when a subtype is expected) (like `<? super E>` in Java). Producer (read-only) out, consumer in (write-only).
+
+    ```kt
+    fun <T> copy(src: List<out T>, dst: MutableList<in T>) {
+        for (x in src) {
+            dst.add(x)
+        }
+    }
+    val src = listOf<Int>(1, 2, 3)
+    val dst = mutableListOf<Any>()
+    copy<Number>(src, dst)
+    ```
 
 5. We can use `in` to check existence just like in Python.
 
