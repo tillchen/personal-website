@@ -215,7 +215,7 @@ Notes for the modern Java (Java 8+.)
     ```java
     menu.stream()
         .filter(Dish::isVegetarian)
-        .findAny() // or findFirst()
+        .findAny() // or findFirst(). Returns Optional<T>
         .ifPresent(dish -> System.out.println(dish.getName()));
 
     isPresent() // returns a bool
