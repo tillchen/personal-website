@@ -121,6 +121,12 @@ tags = ["Programming Languages"]
 
 12. We can use the qualified `this` to access the `this` from an outer scope: `this@MainActivity`.
 
+13. How to compile and run in the command line:
+
+    ```sh
+    kotlinc main.kt -include-runtime -d main.jar && java -jar main.jar "optional args"
+    ```
+
 ## Collections
 
 1. `List`, `Set`, `Map`, `MutableList`, `MutableSet`, `MutableMap`.
