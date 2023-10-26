@@ -87,6 +87,8 @@ tags = ["Programming Languages", "Java"]
             A.remove("hello"); // by value
             A.remove(0); // by index
             System.out.println("Empty? " + A.isEmpty());
+            List<String> myStringList = Arrays.asList("apple", "banana", "cherry");
+            String result = String.join(", ", myStringList); // double quotes
         }
     }
     ```
@@ -102,6 +104,8 @@ tags = ["Programming Languages", "Java"]
             return interval1[0] - interval2[0]; // negative, smaller; 0, equal; positive, bigger
         }
     });
+    // Java 8:
+    Arrays.sort(intervals, (interval1, interval2) -> (interval1[0] - interval2[0]));
     ```
 
 4. When using an interface, we usually use implementations like: `List<T> = new ArrayList<T>()`, `Queue<T> = new LinkedList<T>()`
@@ -109,7 +113,7 @@ tags = ["Programming Languages", "Java"]
 5. Array:
    * `int[] array = new int[]{1,2,3};`
 
-   * Array static methods: `binarySearch(A, 42)`, `copyOf(A)`, `sort(A)`.
+   * Arrays static methods: `binarySearch(A, 42)`, `copyOf(A)`, `sort(A)`.
 
 6. String:
    * Methods: `charAt(1)`, `indexOf('A')`, `replace('a', 'A')`, `replace("a", "abc")`, `substring(1,4)`, `toCharArray()`, `toLowerCase()`, `String[] words = s.split(" ")`
