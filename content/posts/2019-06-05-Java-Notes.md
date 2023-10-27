@@ -119,6 +119,9 @@ tags = ["Programming Languages", "Java"]
 
    * Arrays static methods: `binarySearch(A, 42)`, `copyOf(A)`, `sort(A)`.
 
+   * `Arrays.sort(intervals, (x, y) -> Integer.compare(x[0], y[0]));`
+
+
 6. String:
    * Methods: `charAt(1)`, `indexOf('A')`, `replace('a', 'A')`, `replace("a", "abc")`, `substring(1,4)`, `toCharArray()`, `toLowerCase()`, `String[] words = s.split(" ")`
 
