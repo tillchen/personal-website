@@ -168,7 +168,7 @@ tags = ["Programming Languages", "Java"]
 
     * Initialization: `Queue<Integer> queue = new LinkedList<>();`
     * Common Methods:
-        * offer(element): Adds an element to the end.
+        * offer(element): Adds an element to the end (returns true if success, false if not). Or we can use add(), but it throws an exception when it fails to add.
         * poll(): Removes and returns the front element.
         * peek(): Returns the front element without removal.
 
