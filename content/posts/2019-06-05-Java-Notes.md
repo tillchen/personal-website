@@ -179,7 +179,7 @@ tags = ["Programming Languages", "Java"]
         * offer(element): Adds an element.
         * poll(): Removes and returns the smallest element.
         * peek(): Returns the smallest element without removal
-    * Max heap: `PriorityQueue<Integer> maxHeap = new PriorityQueue<>((x, y) -> y - x);`
+    * Max heap: `PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Comparator.reverseOrder());`
 
 11. Ternary operator: `x = y == z ? y : z`;
 
