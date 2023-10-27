@@ -72,7 +72,7 @@ tags = ["Programming Languages", "Java"]
 
 13. `Character.toLowerCase()` and `Character.isLetterOrDigit()`.
 
-14. Convert a char array to string `new String(charArray)`;
+14. Convert a char array to string `String.valueOf(charArray)`;
 
 ## Java Data Structures
 
