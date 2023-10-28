@@ -211,7 +211,7 @@ tags = ["Programming Languages", "Java"]
     // 1 active reference, 1 reachable object
     ```
 
-2. Array of objects:
+2. Array of objects or collections:
 
     ```java
     Book[] books;
@@ -219,7 +219,11 @@ tags = ["Programming Languages", "Java"]
     // By far, only an array of references, no objects created.
     // To create the objects:
     for (int i = 0; i < 10; i++) {
-        Book[i] = new Book();
+        books[i] = new Book();
+    }
+    Set<Integer>[] sets = new HashSet[10];
+    for (int i = 0; i < 10; i++>) {
+        sets[i] = new HashSet<>();
     }
     ```
 
