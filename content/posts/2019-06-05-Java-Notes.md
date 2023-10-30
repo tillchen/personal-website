@@ -125,12 +125,21 @@ tags = ["Programming Languages", "Java"]
 
    * 2D array `int[][] grid = new int[10][10]`;
 
+   * Array of lists:
+
+        ```java
+        List<Integer>[] foo = new List[10];
+        for (int i = 0; i < 10; i++) {
+            foo[i] = new ArrayList<>();
+        };
+        ```
+
 6. String:
    * Methods: `charAt(1)`, `indexOf('A')`, `replace('a', 'A')`, `replace("a", "abc")`, `substring(1,4)`, `toCharArray()`, `toLowerCase()`, `String[] words = s.split(" ")`
 
    * `if (string == null || string.isEmpty())`
 
-   * StringBuilder: `String reversed = new StringBuilder(s).reverse().toString()`, `.trim()` (removes leading and trailing spaces)
+   * StringBuilder: `String reversed = new StringBuilder(s).reverse().toString()`, `.trim()` (removes leading and trailing spaces). `append()` and `deleteCharAt()`.
 
 7. Map:
     * Initialize a map:
@@ -188,6 +197,8 @@ tags = ["Programming Languages", "Java"]
     * Max heap: `PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Comparator.reverseOrder());`
 
 11. Ternary operator: `x = y == z ? y : z`;
+
+12. ceiling is `Math.ceil((double) x / y)`;
 
 ## References and Garbage Collection
 
