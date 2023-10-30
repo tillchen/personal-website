@@ -74,6 +74,8 @@ tags = ["Programming Languages", "Java"]
 
 14. Convert a char array to string `String.valueOf(charArray)`;
 
+15. `Arrays.fill(arr, 1)` fills the array with 1s.
+
 ## Java Data Structures
 
 1. ArrayList: (inside the java.util (utility) class) (for primitive types, Java 5 and above enabled autoboxing: `ArrayList<Integer>`)
@@ -99,7 +101,7 @@ tags = ["Programming Languages", "Java"]
     }
     ```
 
-2. `Arrays.asList(foo)` converts arrays to lists and `.toArray(new int[0])` converts lists to arrays (new int[0]) is the type hint.
+2. `Arrays.asList(foo)` converts arrays to lists and `.toArray(new Integer[0])` converts lists to arrays (new int[0]) is the type hint. Can't convert to a primitive array directly.
 
 3. `Comparator`:
 
