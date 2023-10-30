@@ -74,8 +74,6 @@ tags = ["Programming Languages", "Java"]
 
 14. Convert a char array to string `String.valueOf(charArray)`;
 
-15. `Arrays.fill(arr, 1)` fills the array with 1s.
-
 ## Java Data Structures
 
 1. ArrayList: (inside the java.util (utility) class) (for primitive types, Java 5 and above enabled autoboxing: `ArrayList<Integer>`)
@@ -135,6 +133,8 @@ tags = ["Programming Languages", "Java"]
             foo[i] = new ArrayList<>();
         };
         ```
+
+   * `Arrays.fill(arr, 1)` fills the array with 1s.
 
 6. String:
    * Methods: `charAt(1)`, `indexOf('A')`, `replace('a', 'A')`, `replace("a", "abc")`, `substring(1,4)`, `toCharArray()`, `toLowerCase()`, `String[] words = s.split(" ")`
