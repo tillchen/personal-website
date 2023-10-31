@@ -278,7 +278,7 @@ tags = ["Programming Languages"]
 
 5. `!!` is like `!` in Swift. It throws a NullPointerException if the value is null: `w!!.hunger`.
 
-6. Like Java, the same `try catch finally` block for exception handling. And the same `throw`. But we ca use `try` as an expression, which returns the value to the variable:
+6. Like Java, the same `try catch finally` block for exception handling. And the same `throw`. But we can use `try` as an expression, which returns the value to the variable:
 
     ```kotlin
     val number = try {
