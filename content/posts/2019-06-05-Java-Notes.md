@@ -194,7 +194,7 @@ tags = ["Programming Languages", "Java"]
 
     * Initialization: `PriorityQueue<Integer> pq = new PriorityQueue<>();`
     * Common Methods:
-        * offer(element): Adds an element.
+        * offer(element): Adds an element. (Can also use add()).
         * poll(): Removes and returns the smallest element.
         * peek(): Returns the smallest element without removal
     * Max heap: `PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Comparator.reverseOrder());`
