@@ -44,7 +44,7 @@ tags = ["Programming Languages"]
 
     ```kotlin
     var z: Int = 6
-    var x: Long = z.toLong() // similarly, toFloat(), to Byte(), etc.
+    var x: Long = z.toLong() // similarly, toFloat(), toByte(), etc.
     ```
 
 6. Arrays:
