@@ -62,7 +62,7 @@ tags = ["Programming Languages"]
     var myString = "x is $x"
     // When accessing a property or function of a object, use ${}
     var myArray = arrayOf(1, 2, 3)
-    var arraySize = "The size if ${myArray.size}"
+    var arraySize = "The size is ${myArray.size}"
     var firstItem = "The first item is ${myArray[0]}"
     "12.345-6.A".split(".", "-")  // splits at both . and -
     // We don't need to escape for triple quote strings for regular expressions.
