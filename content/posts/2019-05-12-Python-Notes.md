@@ -355,14 +355,16 @@ tags = ['Programming Languages', 'Python']
 
 ## Random
 
-1. randint:
+1. randint (end inclusive):
 
     ```python
     from random import randint
     print(randint(1,6))
     ```
 
-2. choice:
+2. randrange (end exclusive)
+
+3. choice:
 
     ```python
     from random import choice
