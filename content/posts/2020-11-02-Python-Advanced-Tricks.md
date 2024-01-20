@@ -7,8 +7,8 @@ tags: ["Programming Languages", "Python"]
 ---
 * [Decorators](#decorators)
   * [functools](#functools)
-    * [cached_property](#cached_property)
-    * [lru_cache](#lru_cache)
+    * [cached\_property](#cached_property)
+    * [lru\_cache](#lru_cache)
     * [reduce](#reduce)
   * [dataclasses](#dataclasses)
     * [dataclass](#dataclass)
@@ -883,6 +883,7 @@ string.whitespace
 s = '121211'
 print(s.count('1'))
 print('1'.isnumeric())
+'1a'.isalnum()
 ```
 
 ```sh
@@ -894,6 +895,7 @@ print('1'.isnumeric())
 
 
     4
+    True
     True
 ```
 
