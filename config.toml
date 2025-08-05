@@ -1,5 +1,5 @@
 baseurl = "https://tillchen.com"
-title = "Tianyao (Till) Chen"
+title = "Till Chen"
 theme = "LoveIt"
 languagecode = "en"
 defaultcontentlanguage = "en"
@@ -8,7 +8,7 @@ disablePathToLower = true
 [params]
   # LoveIt theme version
   version = "0.2.X"
-  description = "Tianyao (Till) Chen's personal website"
+  description = "Till Chen's personal website"
   keywords = "Tianyao Chen, Till Chen, tech, software"
   defaultTheme = "auto"
   fingerprint = "sha256"
@@ -18,7 +18,7 @@ disablePathToLower = true
    # LoveIt NEW | 0.2.0 App icon config
   [params.app]
     # optional site title override for the app when added to an iOS home screen or Android launcher
-    title = "Tianyao (Till) Chen"
+    title = "Till Chen"
     # whether to omit favicon resource links
     noFavicon = false
     # modern SVG favicon to use in place of older style .png and .ico files
@@ -62,7 +62,7 @@ disablePathToLower = true
       # URL of the LOGO
       logo = ""
       # title name
-      name = "Tianyao (Till) Chen"
+      name = "Till Chen"
       # you can add extra information before the name (HTML format is supported), such as icons
       pre = ""
       # you can add extra information after the name (HTML format is supported), such as icons
@@ -116,9 +116,9 @@ disablePathToLower = true
       # Gravatar Email for preferred avatar in home page
       gravatarEmail = ""
       # URL of avatar shown in home page
-      avatarURL = "/images/avatar.jpg"
+      avatarURL = "/images/profile_pic.jpg"
       # LoveIt CHANGED | 0.2.7 title shown in home page (HTML format is supported)
-      title = "Tianyao (Till) Chen"
+      title = "Till Chen"
       # subtitle shown in home page
       subtitle = "Software Engineer"
       # whether to use typeit animation for subtitle
@@ -137,12 +137,8 @@ disablePathToLower = true
       defaultHiddenFromHomePage = false
 
   [params.social]
-    GitHub = "tillchen"
     Linkedin = "tillchen"
-    Goodreads = "70012245-tianyao-chen"
-    Stackoverflow = "11674859/tianyao-chen"
-    Email = "tillchen417@gmail.com"
-    RSS = true
+    Stackoverflow = "11674859/till-chen"
 
  # LoveIt CHANGED | 0.2.0 Page config
   [params.page]
@@ -233,7 +229,7 @@ disablePathToLower = true
     [params.page.seo]
       # Publisher info
       [params.page.seo.publisher]
-        name = "Tianyao (Till) Chen"
+        name = "Till Chen"
         [params.page.seo.publisher.logo]
           url = "/images/avatar.jpg"
           width = 127
@@ -300,7 +296,7 @@ disablePathToLower = true
 
 # Author config
 [author]
-  name = "Tianyao (Till) Chen"
+  name = "Till Chen"
   email = "tillchen417@gmail.com"
   link = "https://tillchen.com"
 
