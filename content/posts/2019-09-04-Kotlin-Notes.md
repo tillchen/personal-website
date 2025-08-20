@@ -164,10 +164,30 @@ tags = ["Programming Languages"]
 
 5. We can use `in` to check existence just like in Python.
 
-6. Like `enumerate()` in Python, we have `.withIndex()`:
+6. Like `enumerate()` in Python, we have `.withIndex()` or we can use `.forEachIndex {i, num ->}`:
 
     ```kotlin
     for ((index, element) in collection.withIndex()) {...}
+
+    collection.forEachIndexed{ i, num ->
+        ...
+    }
+    ```
+
+7. Sorting
+
+    ```kt
+    val arr = intArrayOf(3, 5, 1)
+    arr.sort()
+    arr.sortByDescending()
+    arr.sortWith(compareBy({ it % 2}, { it })) // Primary key and secondary key
+    val sorted = arr.sorted() // sortedBy(), sortedDescending()
+    val intervals = arrayOf(
+        intArrayOf(1, 2),
+        intArrayOf(3, 4),
+        intArrayOf(5, 6)
+    )
+    intervals.sortWith(compareBy({ it[0] }, { it[1] }))
     ```
 
 ## OOP
