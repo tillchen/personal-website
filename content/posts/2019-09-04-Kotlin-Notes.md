@@ -55,6 +55,9 @@ tags = ["Programming Languages"]
     var explicitArray: Array<Int> = arrayOf(1, 2, 3)
     val fixedArray = IntArray(26) // 26 0s
     val fixedArray1 = IntArray(26) { 1 } // 26 0s
+    val allZero: Boolean = fixArray.all { it == 0 }
+    fixedArray[0]++
+    fixedArray[0]--
     ```
 
 7. Strings:
