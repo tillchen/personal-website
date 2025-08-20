@@ -53,6 +53,8 @@ tags = ["Programming Languages"]
     var myArray = arrayOf(1, 2, 3)
     var myLength = myArray.size
     var explicitArray: Array<Int> = arrayOf(1, 2, 3)
+    val fixedArray = IntArray(26) // 26 0s
+    val fixedArray1 = IntArray(26) { 1 } // 26 0s
     ```
 
 7. Strings:
