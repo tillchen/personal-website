@@ -68,6 +68,8 @@ tags = ["Programming Languages"]
     // We don't need to escape for triple quote strings for regular expressions.
     val regex = """(.+)/(.+)\.(.+)""".toRegex()
     // We can also use triple quotes for multiline strings like in Python.
+
+    val sortedString = myString.toCharArray().sorted().joinToString("")
     ```
 
 8. Functions;
