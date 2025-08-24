@@ -164,6 +164,13 @@ tags = ["Programming Languages"]
     }
     ```
 
+    ```kt
+    val myMap = mapOf(1 to 2, 3 to 4)
+    for ((k, v) in myMap)
+    for (k in myMap.keys)
+    for (v in myMap.values)
+    ```
+
 4. Add `out` (`<out T>`) to make the generics covariant (use a subtype when a supertype is expected) - achieving polymorphism (like `<? extends E>` in Java). Add `in` to make it contravariant - the opposite of covariance (use a supertype when a subtype is expected) (like `<? super E>` in Java). Producer (read-only) out, consumer in (write-only).
 
     ```kt
@@ -195,7 +202,7 @@ tags = ["Programming Languages"]
     val arr = intArrayOf(3, 5, 1)
     arr.sort()
     arr.sortByDescending()
-    arr.sortWith(compareBy({ it % 2}, { it })) // Primary key and secondary key
+    arr.sortWith(compareBy({ it % 2 }, { it })) // Primary key and secondary key
     val sorted = arr.sorted() // sortedBy(), sortedDescending()
     val intervals = arrayOf(
         intArrayOf(1, 2),
@@ -203,6 +210,17 @@ tags = ["Programming Languages"]
         intArrayOf(5, 6)
     )
     intervals.sortWith(compareBy({ it[0] }, { it[1] }))
+    ```
+
+8. Heap/Priority queue
+
+    ```kt
+    val minHeap = PriorityQueue<Int>()
+    val maxHeap = PriorityQueue<Int>(compareByDescending { it })
+    minHeap.add(1)
+    maxHeap.add(2)
+    minHeap.peek()
+    minHeap.poll()
     ```
 
 ## OOP
