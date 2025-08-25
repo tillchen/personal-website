@@ -223,6 +223,19 @@ tags = ["Programming Languages"]
     minHeap.poll() // removes the element
     ```
 
+9. Stacks && Queues
+
+    ```kt
+    val stack = ArrayDeque<Int>()
+    stack.addLast(1)
+    stack.last()
+    stack.removeLast()
+    val queue = ArrayDeque<Int>()
+    queue.addFirst(1)
+    queue.first()
+    queue.removeLast()
+    ```
+
 ## OOP
 
 1. Example class:
