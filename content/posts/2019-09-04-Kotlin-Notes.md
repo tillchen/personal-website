@@ -240,7 +240,7 @@ tags = ["Programming Languages"]
     queue.removeLast()
     ```
 
-10. Kotlin list to array is `toTypedArray()` instead of `toArray()`.
+10. Kotlin list to array `Array<>` is `toTypedArray()` instead of `toArray()`. Otherwise it's `toIntArray()` for `IntArray`.
 
 ## OOP
 
