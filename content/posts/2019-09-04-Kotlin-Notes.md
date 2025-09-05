@@ -112,6 +112,7 @@ tags = ["Programming Languages"]
     for (x in 15 downTo 1) println(x) // end inclusive
     for (x in 1..100 step 2) println(x)
     for (item in items) println(item)
+    for (i in nums.indices) // instead of i in 0 until nums.size
     ```
 
 10. Input:
