@@ -78,6 +78,7 @@ tags = ["Programming Languages"]
     val regex = """(.+)/(.+)\.(.+)""".toRegex()
     // We can also use triple quotes for multiline strings like in Python.
 
+    val length = myString.length
     val sortedString = myString.toCharArray().sorted().joinToString("")
     //
     .isLetterOrDigit()
