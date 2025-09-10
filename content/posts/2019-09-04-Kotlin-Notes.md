@@ -152,7 +152,7 @@ tags = ["Programming Languages"]
 
 1. `List`, `Set`, `Map`, `MutableList`, `MutableSet`, `MutableMap`.
 
-2. `listOf()`, `mutableListOf()`. `mList.set(1, "foo")`, `.shuffle()`, `.last()`, `.max()`, modify a List directly: `myList + 1` creates a new list with 1 at the end.
+2. `listOf()`, `mutableListOf()`. `mList.set(1, "foo")`, `.shuffle()`, `.last()`, `.max()`, `.maxOrNull()`, modify a List directly: `myList + 1` creates a new list with 1 at the end.
 
 3. `mapOf(0 to 'a', 1 to 'b', 2 to 'c')` `for ((key, value) in mMap)`. (`to` actually creates a `Pair<K, V>`, pair.first, pair.second).
 
