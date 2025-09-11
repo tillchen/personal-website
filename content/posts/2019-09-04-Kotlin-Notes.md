@@ -114,6 +114,10 @@ tags = ["Programming Languages"]
     for (x in 1..100 step 2) println(x)
     for (item in items) println(item)
     for (i in nums.indices) // instead of i in 0 until nums.size
+
+    repeat(n) {
+        // Easy way of iterating n times the same thing
+    }
     ```
 
 10. Input:
