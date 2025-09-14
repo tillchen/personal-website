@@ -62,6 +62,7 @@ tags = ["Programming Languages"]
     val m = 3
     val n = 4
     val matrix: Array<IntArray> = Array(m) { IntArray(n) }
+    val graph = Array(numCourses) { mutableListOf<Int>() }
     ```
 
 7. Strings:
