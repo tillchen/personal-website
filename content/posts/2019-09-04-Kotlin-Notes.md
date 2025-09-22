@@ -166,7 +166,9 @@ tags = ["Programming Languages"]
     # TwoSum
     fun twoSum(nums: IntArray, target: Int): IntArray {
         val valToIndex = mutableMapOf<Int, Int>()
-        nums.forEachIndexed { i, num ->
+        for ((i, num) in nums.withIndex()) {
+        // or this one
+        // nums.forEachIndexed { i, num ->
             valToIndex[target - num]?.let {
                 return intArrayOf(it, i)
             }
@@ -181,6 +183,9 @@ tags = ["Programming Languages"]
     for ((k, v) in myMap)
     for (k in myMap.keys)
     for (v in myMap.values)
+
+    myMap.getOrPut(5) { 10 } // the same as computeIfAbsent() or defaultdict
+    myMap[5] = myMap.getOrDefault(5, 0) + 1
     ```
 
 4. Add `out` (`<out T>`) to make the generics covariant (use a subtype when a supertype is expected) - achieving polymorphism (like `<? extends E>` in Java). Add `in` to make it contravariant - the opposite of covariance (use a supertype when a subtype is expected) (like `<? super E>` in Java). Producer (read-only) out, consumer in (write-only).
