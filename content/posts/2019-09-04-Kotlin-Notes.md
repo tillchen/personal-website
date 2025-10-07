@@ -65,6 +65,7 @@ tags = ["Programming Languages"]
     val graph = Array(numCourses) { mutableListOf<Int>() }
     val a = IntArray(n) { it } // [0, 1, 2, 3]
     val visited = Array(m) { BooleanArray(n) }
+    println(myArray.contentToString()) // for debugging. direct printing only gives us the memory address
     ```
 
 7. Strings:
