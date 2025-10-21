@@ -66,6 +66,7 @@ tags = ["Programming Languages"]
     val a = IntArray(n) { it } // [0, 1, 2, 3]
     val visited = Array(m) { BooleanArray(n) }
     println(myArray.contentToString()) // for debugging. direct printing only gives us the memory address
+    array1.contentEquals(array2) // array1 == array2 won't work as == checks for the reference
     ```
 
 7. Strings:
