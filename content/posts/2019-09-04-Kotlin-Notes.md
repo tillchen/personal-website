@@ -408,6 +408,8 @@ tags = ["Programming Languages"]
     val result = addFive.invoke(1) // 6
     // or
     val result = addFive(1)
+    val addition: (Int, Int) -> Int = {x: Int, y: Int -> x + y}
+    println(addition(2, 3)) // 5
     ```
 
 2. `{it + 5}` is equivalent to `{x -> x + 5}`.
