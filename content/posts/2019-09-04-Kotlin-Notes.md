@@ -258,6 +258,15 @@ tags = ["Programming Languages"]
 
 10. Kotlin list to array `Array<>` is `toTypedArray()` instead of `toArray()`. Otherwise it's `toIntArray()` for `IntArray`.
 
+11. `.zip()` and `.unzip()` for lists in Kotlin (similar to Python)
+
+    ```kt
+    val list1 = listOf(1, 2, 3)
+    val list2 = listOf('a', 'b', 'c')
+    val zipped: List<Pair<Int, Char>> = list1.zip(list2) // [1 to a, 2 to b, 3 to c]
+    val (nums, chars) = zipped.unzip()
+    ```
+
 ## OOP
 
 1. Example class:
