@@ -230,6 +230,10 @@ tags = ["Programming Languages"]
         intArrayOf(5, 6)
     )
     intervals.sortWith(compareBy({ it[0] }, { it[1] }))
+
+    val pairs = mutableListOf(1 to 2, 5 to 1, 3 to 3)
+    pairs.sortBy { it[0]}
+    pairs.sortByDescending { it[0] }
     ```
 
 8. Heap/Priority queue
