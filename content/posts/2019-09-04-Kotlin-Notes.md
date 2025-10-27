@@ -240,11 +240,13 @@ tags = ["Programming Languages"]
 
     ```kt
     val minHeap = PriorityQueue<Int>()
-    val maxHeap = PriorityQueue<Int>(compareByDescending { it })
+    val maxHeap = PriorityQueue<Int>(compareByDescending { it }) // or just add the negatives similar to Python
     minHeap.add(1)
     maxHeap.add(2)
     minHeap.peek()
     minHeap.poll() // removes the element
+
+    val minHeapOfPairs = PriorityQueue<Pair<Int, Int>>(compareBy { it.first })
     ```
 
 9. Stacks && Queues
