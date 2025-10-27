@@ -230,6 +230,8 @@ tags = ["Programming Languages"]
         intArrayOf(5, 6)
     )
     intervals.sortWith(compareBy({ it[0] }, { it[1] }))
+    // Or
+    interval.sortWith(compareBy { it[0] }.thenBy { it[1] }) // can also do .thenByDescending
 
     val pairs = mutableListOf(1 to 2, 5 to 1, 3 to 3)
     pairs.sortBy { it[0]}
