@@ -221,7 +221,7 @@ tags = ["Programming Languages"]
     ```kt
     val arr = intArrayOf(3, 5, 1)
     arr.sort()
-    arr.sortByDescending()
+    arr.sortDescending()
     arr.sortWith(compareBy({ it % 2 }, { it })) // Primary key and secondary key
     val sorted = arr.sorted() // sortedBy(), sortedDescending(), sortedByDescending { it }
     val intervals = arrayOf(
