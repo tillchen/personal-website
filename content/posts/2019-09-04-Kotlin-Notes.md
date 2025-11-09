@@ -189,6 +189,9 @@ tags = ["Programming Languages"]
 
     myMap.getOrPut(5) { 10 } // the same as computeIfAbsent() or defaultdict
     myMap[5] = myMap.getOrDefault(5, 0) + 1
+
+    val anotherMap = mutableMapOf<Int, MutableList<Int>>()
+    anotherMap.getOrPut(1) { mutableListOf() }.add(1) // this is the closest thing that emulates defaultdict in python
     ```
 
 4. Add `out` (`<out T>`) to make the generics covariant (use a subtype when a supertype is expected) - achieving polymorphism (like `<? extends E>` in Java). Add `in` to make it contravariant - the opposite of covariance (use a supertype when a subtype is expected) (like `<? super E>` in Java). Producer (read-only) out, consumer in (write-only).
