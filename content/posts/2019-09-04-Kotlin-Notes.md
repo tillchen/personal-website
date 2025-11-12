@@ -278,6 +278,8 @@ tags = ["Programming Languages"]
     val (nums, chars) = zipped.unzip()
     ```
 
+12. `.binarySearch()` is avaiable for List and Array: `myList.binarySearch(3)`
+
 ## OOP
 
 1. Example class:
