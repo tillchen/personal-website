@@ -280,6 +280,8 @@ tags = ["Programming Languages"]
 
 12. `.binarySearch()` is avaiable for List and Array: `myList.binarySearch(3)`
 
+13. `.lastIndex` instead `.size - 1` for lots of collections
+
 ## OOP
 
 1. Example class:
